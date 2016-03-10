@@ -1,0 +1,100 @@
+http://progcours.ulg.ac.be/cocoon/cours/MATH2010-1.html
+
+MATH2010-1  
+
+    Logiciels mathématiques
+
+Durée :
+
+    10h Th, 20h Pr
+
+Nombre de crédits :
+
+    Bachelier en sciences mathématiques     4
+
+Nom du professeur :
+
+    Emilie Charlier
+
+Suppléant(s) :
+
+    Sébastien Labbé
+
+Langue(s) du cours :
+
+    Langue française
+
+Organisation et évaluation :
+
+    Enseignement au deuxième quadrimestre
+
+Unités d'enseignement prérequises et corequises :
+
+    Les unités prérequises ou corequises sont présentées au sein de chaque programme
+
+Contenus du cours :
+
+    Le cours est une introduction aux logiciels de mathématiques et de calcul
+    formel (calculatrice, arithmétique, algèbre, analyse, calcul symbolique,
+    résolution d'équations, trouver les racines d'une fonction, dérivation,
+    intégration, équations différentielles, séries, algèbre linéaire, tracer
+    des graphiques) ainsi qu'une introduction à la programmation (variables,
+    expressions, affectation, fonctions, conditions, itérations, chaînes de
+    caractères, listes, dictionnaires).
+
+Acquis d'apprentissage (objectifs d'apprentissage) du cours :
+
+    Savoir analyser un problème et utiliser un logiciel de mathématiques pour
+    résoudre une question de mathématiques préuniversitaires. Savoir utiliser
+    les bases de la programmation pour résoudre une question élémentaire de
+    mathématiques discrètes.
+
+Savoirs et compétences prérequis :
+
+    Mathématiques préuniversitaires, notions de base de calcul différentiel et
+    intégral et en algèbre linéaire.
+
+Activités d'apprentissage prévues et méthodes d'enseignement :
+
+    Dix séances travaux pratique de 2 heures pour résoudre des exercices.
+
+Mode d'enseignement (présentiel ; enseignement à distance) :
+
+    présentiel
+
+Lectures recommandées ou obligatoires et notes de cours :
+
+    Des notes reprenant l'ensemble de la matière enseignée au cours théorique
+    seront disponibles sur internet. Ces notes sont amplement suffisantes et
+    téléchargeables sur http://www.slabbe.org/Enseignements/MATH2010/. Les
+    étudiants souhaitant disposer d'autres sources d'information peuvent par
+    exemple consulter : 
+
+    Langtangen, Hans Petter. A Primer on Scientific Programming with Python.
+    Vol. 6. Texts in Computational Science and Engineering. Berlin,
+    Heidelberg: Springer Berlin Heidelberg, 2014.
+    http://dx.doi.org/10.1007/978-3-642-54959-5
+
+    Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers,
+    How to Think Like a Computer Scientist - Learning with Python, 3nd
+    Edition, 2012.
+    http://openbookproject.net/thinkcs/python/english3e/
+
+Modalités d'évaluation et critères :
+
+    Les étudiants auront à remettre deux devoirs pendant la session (10%
+    chacun). L'évaluation finale (examen écrit 30% et examen pratique 50%)
+    portera sur l'intégralité du cours. 
+
+Stage(s) :
+
+Remarques organisationnelles :
+
+Contacts : 
+
+    S. Labbé
+    Institut de Mathématique (B37) -
+    Grande Traverse 12 -
+    Sart Tilman, 4000 Liège
+    Tél. : (04) 366.95.64 -
+    Courriel : slabbe@ulg.ac.be
