@@ -1,0 +1,264 @@
+\documentclass[10pt,a4]{article}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+
+% always noindent
+% \setlength\parindent{0pt}
+
+\begin{document}
+
+\begin{center}
+\sffamily
+\bfseries
+\Large MATH2010-1 Logiciels mathématiques -- Université de Liège\\[1mm]
+\Large Plan de cours -- Hiver 2016
+%\large (proposition en date du \today)
+\end{center}
+
+\subsection*{Contacts}
+
+\begin{description}
+    \item[Maître de conférence:] Sébastien Labbé (B37 0/25) \url{slabbe@ulg.ac.be}
+    \item[Assistante:] Émilie Clette (B37 0/62) \url{eclette@ulg.ac.be}
+    \item[Assistant:] Thomas Kleyntssens (B37 1/67) \url{tkleyntssens@ulg.ac.be}
+\end{description}
+
+\subsection*{Objectifs du cours (10h de théorie, 20h de travaux pratiques
+\footnote{\url{http://progcours.ulg.ac.be/cocoon/cours/MATH2010-1.html}})}
+
+Selon le programme de bachelier en sciences mathématiques sur la page du
+département
+\footnote{\url{http://www.math.ulg.ac.be/programme.html}}:
+\begin{quote} \it
+Le nouveau cours de logiciels mathématiques a pour but de familiariser les
+étudiants à l'informatique, outil omniprésent en sciences, en entreprises ou
+encore pour l'enseignement.
+\end{quote}
+
+\subsection*{Contenu du cours} 
+
+\begin{description}
+\item[Partie 1:] Utiliser un logiciel de mathématiques --
+    Jupyter, Python, SymPy (4h, 8h)\\
+Calculatrice,
+arithmétique,
+algèbre,
+analyse,
+calcul symbolique,
+résolution d'équations,
+trouver les racines d'une fonction,
+dérivation,
+intégration,
+équations différentielles,
+séries,
+algèbre linéaire,
+tracer des graphiques.
+\item[Partie 2:] Mathématiques avec d'autres logiciels --
+    Mathematica, GeoGebra, LibreOffice et/ou Panda (3h, 6h)\\
+%Calcul numérique (numpy),
+%théorie des groupes (GAP),
+%théorie des nombres (Pari/GP),
+%images et animations (matplotlib, PIL),
+Mathématiques avec Mathematica,
+géométrie,
+traitement de données, tableurs.
+\item[Partie 3:] Introduction à la programmation -- Python (3h, 6h)\\
+Variables, expressions, affectation,
+fonctions,
+conditions,
+itérations,
+chaînes de caractères, listes, dictionnaires.
+\end{description}
+
+\subsection*{Horaire des cours et travaux pratiques:}
+
+\begin{itemize}
+    \item Théorie semaine 1: lundi 1er février et mercredi 3 février de 11h à
+	12h, B37-01.
+    \item Théorie: mardi de 8h30 à 9h30, B37-01 (sauf semaine 1 et 7).
+    \item Travaux pratiques (groupe du lundi, A à K): lundi 15h15 à 17h15,
+	B37-0.42 (sauf semaine 8).
+    \item Travaux pratiques (groupe du mardi, L à Z): mardi 15h15 à 17h15,
+	B37-0.42 (sauf semaine 8).
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{l|c|c|c|c}
+    Semaine&  No&    Théorie&  Travaux pratiques & Évaluations\\
+    \hline
+   1 fév.&   1&     1h + 1h&  2h\\
+   8 fév.&   2&     Congé&    Congé\\
+   15 fév.&  3&     1h&       2h\\
+   22 fév.&  4&     1h&       2h\\
+   29 fév.&  5&     1h&       2h\\
+   7 mars&   6&     1h&       2h\\
+   14 mars&  7&       &       2h\\
+   21 mars&  8&     1h&                      & Devoir 1\\
+    \hline
+   28 mars&  9&  Vacances &  Printemps       \\
+   4 avril&  10& Vacances &  Printemps       \\
+    \hline
+   11 avril& 11&    1h&       2h\\
+   18 avril& 12&    1h&       2h\\
+   25 avril& 13&    1h&       2h\\
+   2 mai&    14&      &       2h\\
+   9 mai&    15&      &         & Devoir 2\\
+    \hline
+   mai--juin &      &    &                     & Examen
+\end{tabular}
+\end{center}
+
+\textbf{Activités d'enseignement}:
+du lundi 1er février au samedi 14 mai 2016.
+\textbf{Congés}:
+Lundi 8 février. 
+Mardi 9 février.
+Jeudi 5 mai.
+\textbf{Vacances printemps}:
+du lundi 28 mars au samedi 9 avril 2016.
+\textbf{Remarque}: les semaines du 2 mai et du 9 mai pourront servir pour
+reprendre un cours annulé.
+\textbf{Heures de consultation}: à déterminer.
+\textbf{Absences}: 
+S. Labbé sera absent (conférence) du 14 au 18 mars.
+T. Kleyntssens sera absent du 8 au 15 avril.
+\textbf{Session d'examen}:
+du mardi 17 mai au jeudi 30 juin.
+\textbf{Délibérations}:
+16 septembre.
+
+\subsection*{Environnement de travail - Python, Sage, Mathematica} 
+
+L'environnement de travail proposé pour le cours est l'environnement
+scientifique \textbf{Python} permettant d'atteindre le mieux les objectifs
+du cours. En effet, le langage Python est un langage \textbf{utilisé dans les
+entreprises} et sa connaissance est un atout pour les chercheurs d'emploi. De
+plus, les librairies scientifiques de l'environnement Python
+(\textbf{Jupyter}, \textbf{SymPy}) sont des logiciels libres permettant aux
+futurs enseignants d'utiliser ces outils \textbf{pour l'enseignement dans les
+écoles secondaires} sans avoir à payer des licences dispendieuses.
+
+Le cours sera donné en tenant compte du contexte européen et international
+actuel dans le domaine des \textbf{logiciels mathématiques} dont le logiciel
+\textbf{Sage} fait partie.
+% \footnote{Sage est un logiciel libre de mathématiques créé par
+% Willam Stein (Université de Washington) en 2006 et développé par plus de 300
+% contributeurs universitaires. \url{http://www.sagemath.org}}
+% permettant les
+% meilleures retombées pour les étudiants et le département.  
+Notamment nous profiterons du projet OpenDreamKit financé par la
+\emph{Commission européenne} 
+\footnote{Dans le cadre du programme Horizon 2020: \url{http://cordis.europa.eu/project/rcn/198334_en.html}}
+et dont le but est d'enrichir l'écosystème de logiciels
+libres en mathématiques
+\footnote{LinBox, MPIR, SageMath, GAP, Pari/GP,
+LMFDB, Singular, et l'environnement de travail interactif IPython/Jupyter.}
+%Le budget total est d'environ 7,6 millions d'euros.
+ pour l'enseignement et la recherche.
+
+Dans le cours, nous aborderons aussi d'autres logiciels de mathématiques
+complémentaires tels que \textbf{Mathematica}, \textbf{Geogebra} et
+\textbf{tableurs} (version Excel ou LibreOffice).
+
+\subsection*{Évaluation} 
+
+Les étudiants auront à remettre deux devoirs pendant la session (l'un sera à
+rendre avant les vacances du printemps et l'autre, au début mai).
+L'évaluation finale (examen écrit et examen pratique) se fera en mai ou juin et
+portera sur l'intégralité du cours. 
+% Aucun document n'est permis pour ces examens.
+% Seulement les calculatrices avec les fonctions de base sont permises. 
+La pondération est indiquée ci-dessous:
+
+\begin{center}
+\begin{tabular}{lcc}
+    Devoir 1                    & 10  \%   \\
+    Devoir 2                    & 10  \%   \\
+    Examen final pratique (3h)  & 50  \%   \\
+    Examen final écrit (1h)     & 30  \%        
+\end{tabular}
+\end{center}
+
+\subsection*{Notes de cours} 
+
+Toutes les informations et les documents au sujet du cours seront sur la page
+:
+\begin{center}
+    \url{http://www.slabbe.org/Enseignements/MATH2010/}
+\end{center}
+La référence principale pour le cours sera des \textit{Notes de cours}
+rédigées pour l'occasion. Comme elles sont en cours de rédaction, elles seront
+mises à jour régulièrement sur le site web. 
+
+D'autres références adaptées et plus approndies pour les scientifiques et les
+mathématiciens \cite{primer,doingmathwithpython,sympystarter} (anglais
+seulement) ou sur l'introduction à la programmation en Python \cite{thinklike}
+(traduit en français \cite{apprendre}) peuvent être utiles pour en savoir plus
+mais ne sont pas obligatoires.
+% Références Sage:
+Une référence importante et en français pour faire des mathématiques plus
+avancées dans l'environnement Python est le livre (en français) sur le
+logiciel SageMath \cite{calcul}.
+
+% More advanced: \cite{cookbooks}
+% 
+
+% D'autres références utiles et adaptées pour les scientifiques et les
+% mathématiciens nous serons utiles \cite{bard,sdsu-sage-tutorial} mais
+% ne sont disponibles qu'en anglais.
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{primer} 
+    Langtangen, Hans Petter. A Primer on Scientific Programming with Python.
+    Vol. 6. Texts in Computational Science and Engineering. Berlin,
+    Heidelberg: Springer Berlin Heidelberg, 2014.
+    \url{http://dx.doi.org/10.1007/978-3-642-54959-5}
+
+\bibitem{doingmathwithpython} Amit Saha, Doing Math with Python, No Starch
+    Press, 2015.  \url{http://www.nostarch.com/doingmathwithpython}
+
+\bibitem{sympystarter} Ronan Lamy, Instant SymPy Starter, Packt Publishing,
+    May 2013.
+    \url{http://www.safaribooksonline.com/library/view/instant-sympy-starter/9781782163626/}
+
+\bibitem{thinklike} 
+    Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers,
+    How to Think Like a Computer Scientist - Learning with Python, 3nd
+    Edition, 2012.
+    \url{http://openbookproject.net/thinkcs/python/english3e/}
+
+\bibitem{apprendre} Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
+%\url{http://inforef.be/swi/python.htm}
+\url{http://inforef.be/swi/download/apprendre_python3_5.pdf}
+
+% \bibitem{cookbooks} Cyrille Rossant, IPython Cookbooks, \url{http://ipython.org/books.html}
+
+\bibitem{calcul} 
+    Zimmermann, Paul, Laurent Fousse, François Maltey, Matthias Meulien, Marc
+    Mezzarobba, Clément Pernet, Nicolas M. Thiéry, et al. Calcul mathématique
+    avec Sage. S. l.: CreateSpace Independent Publishing Platform, 2013.
+    \url{http://sagebook.gforge.inria.fr/}
+
+% \bibitem{bard}
+%     Bard, Gregory V. Sage for Undergraduates. Vol. 87. American Mathematical
+%     Soc., 2015.
+%     \url{http://www.gregorybard.com/SAGE.html}
+% 
+% \bibitem{sdsu-sage-tutorial}
+%     SageMath Tutorial by Mike O'Sullivan, Ryan Rosenbaum, and David Monarres
+%     \url{http://www-rohan.sdsu.edu/~mosulliv/Teaching/sdsu-sage-tutorial/index.html}
+% 
+
+\end{thebibliography}
+
+
+\end{document}
