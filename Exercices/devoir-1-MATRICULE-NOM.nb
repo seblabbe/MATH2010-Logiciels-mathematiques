@@ -1,0 +1,496 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14972,        487]
+NotebookOptionsPosition[     12790,        408]
+NotebookOutlinePosition[     13128,        423]
+CellTagsIndexPosition[     13085,        420]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Devoir 1", "Title"],
+ "\n\nEn utilisant SymPy ou Mathematica mais un seul des deux, \
+r\[EAcute]pondre aux questions suivantes.\n\n\[CapitalEAcute]crire vos r\
+\[EAcute]ponses dans le fichier ",
+ StyleBox["Devoir-1-MATRICULE-NOM.ipynb ",
+  FontFamily->"Courier"],
+ "ou ",
+ StyleBox["Devoir-1-MATRICULE-NOM.nb",
+  FontFamily->"Courier"],
+ " selon que vous utilisiez SymPy ou Mathematica \
+t\[EAcute]l\[EAcute]chargeable sur la page web du cours. Inclure la \
+d\[EAcute]marche, les r\[EAcute]ponses aux questions et les justifications. \
+Envoyer votre fichier avant le ",
+ StyleBox["jeudi 24 mars \[AGrave] 23h59",
+  FontWeight->"Bold"],
+ " par courriel \[AGrave] l\[CloseCurlyQuote]adresse ",
+ StyleBox["slabbe@ulg.ac.be",
+  FontFamily->"Courier"],
+ " en rempla\[CCedilla]ant ",
+ StyleBox["MATRICULE",
+  FontFamily->"Courier"],
+ " par votre num\[EAcute]ro de matricule et ",
+ StyleBox["NOM",
+  FontFamily->"Courier"],
+ " par votre nom.\n\nPour \[EAcute]crire du texte entre les cellules et \
+justifier une r\[EAcute]ponse, utiliser ",
+ StyleBox["Format > Style > Text",
+  FontFamily->"Courier"],
+ " en Mathematica, et ",
+ StyleBox["Cell > Cell Type > Markdown",
+  FontFamily->"Courier"],
+ " en SymPy et Jupyter.\n\nLe plagiat sera d\[EAcute]tect\[EAcute] et entra\
+\[IHat]nera une note de z\[EAcute]ro pour les personnes impliqu\[EAcute]es."
+}], "Text",
+ CellChangeTimes->{{3.6664174564687023`*^9, 3.666417503854073*^9}, {
+   3.666417563954137*^9, 3.6664176174254313`*^9}, 3.66641764924122*^9, {
+   3.666420049725913*^9, 3.666420084213828*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.666417634404957*^9, 3.666417646590293*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666417660250798*^9, 3.666417687285001*^9}, {
+  3.666417931250156*^9, 3.666417931504847*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.6664176760410624`*^9, 3.666417687859144*^9}, 
+   3.666417931893396*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Question 1", "Section"],
+ "\nLe Th\[EAcute]or\[EGrave]me de Gauss--Wantzel \
+(https://fr.wikipedia.org/wiki/Th\[EAcute]or\[EGrave]me_de_Gauss-Wantzel) dit \
+qu\[CloseCurlyQuote]un polygone r\[EAcute]gulier \[AGrave] n c\[OHat]t\
+\[EAcute]s est constructible avec la r\[EGrave]gle et le compas si et \
+seulement si n est le produit d\[CloseCurlyQuote]une puissance de 2 et de \
+nombres premiers de Fermat distincts dont les seuls connus sont 3, 5, 17, 257 \
+et 65537.\nEst-ce qu\[CloseCurlyQuote]un polygone r\[EAcute]gulier \[AGrave] \
+6 c\[OHat]t\[EAcute]s est constructible?"
+}], "Text",
+ CellChangeTimes->{{3.6664177148755074`*^9, 3.666417743409328*^9}, {
+  3.666417822944417*^9, 3.666417848238636*^9}, {3.666418593210904*^9, 
+  3.666418648675188*^9}, {3.666421418005323*^9, 3.666421418581759*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418636860821*^9, 3.666418637199835*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418637683319*^9}]
+}, Open  ]],
+
+Cell["\<\
+Est-ce qu\[CloseCurlyQuote]un polygone r\[EAcute]gulier \[AGrave] 24480 c\
+\[OHat]t\[EAcute]s est constructible?\
+\>", "Text",
+ CellChangeTimes->{3.666418609507142*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418613210465*^9, 3.6664186157436237`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418616392869*^9}]
+}, Open  ]],
+
+Cell["\<\
+Est-ce qu\[CloseCurlyQuote]un polygone r\[EAcute]gulier \[AGrave] \
+88305875025920 c\[OHat]t\[EAcute]s est constructible?\
+\>", "Text",
+ CellChangeTimes->{3.6664185999787493`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.66641792005237*^9, 3.66641793619063*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.666417921030032*^9, 3.666417936597474*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Text", "Input",
+ CellChangeTimes->{{3.666417668800029*^9, 3.666417668816484*^9}}],
+
+Cell[TextData[{
+ StyleBox["Question 2", "Section"],
+ "\nR\[EAcute]soudre l\[CloseCurlyQuote]\[EAcute]quation",
+ StyleBox[" ", "InlineFormula"],
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "3"], "-", 
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "2"]}], "-", "5"}], "=", "0"}]]],
+ " et donner une valeur num\[EAcute]rique approch\[EAcute]e des solutions."
+}], "Text",
+ CellChangeTimes->{{3.666417894698759*^9, 3.666417900431336*^9}, 
+   3.666417961790419*^9, {3.666420251743408*^9, 3.666420295971962*^9}, {
+   3.666420354236178*^9, 3.666420395044561*^9}, 3.666420514700757*^9, {
+   3.666420562804699*^9, 3.666420571692644*^9}, {3.666420849414981*^9, 
+   3.666420849415551*^9}, {3.666421414564505*^9, 3.666421415213212*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666417967048773*^9, 3.666417967424407*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.6664179678785667`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Question 3", "Section"],
+ "\nTracer la surface de Dini (https://en.wikipedia.org/wiki/Dini\
+\[CloseCurlyQuote]s_surface)\ndont les \[EAcute]quations \
+param\[EAcute]triques sont:\nx = a cos(u) sin(v)\ny = a sin(u) sin(v)\nz = a \
+(cos(v) + ln(tan(v/2))) + bu\npour a=1, b=1 sur les intervalles",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    FormBox[
+     RowBox[{"0", "<=", "u", "<=", "5"}],
+     TraditionalForm]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Pi] et 0.01 \\<= v <=1."
+}], "Text",
+ CellChangeTimes->{{3.66641798547476*^9, 3.666418040511355*^9}, {
+  3.6664182274106617`*^9, 3.6664182542021437`*^9}, {3.666420879378785*^9, 
+  3.666420934720463*^9}, {3.66642122280186*^9, 3.666421373604989*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418247360573*^9, 3.666418247915916*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418248422308*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Question 4", "Section"],
+ "\nSoit ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"p", " ", 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["x", "4"]}], "+", 
+    RowBox[{"28", " ", 
+     SuperscriptBox["x", "3"]}], "-", 
+    RowBox[{"221", " ", 
+     SuperscriptBox["x", "2"]}], "+", 
+    RowBox[{"350", " ", "x"}], "+", "600"}]}]]],
+ " un polyn\[OHat]me. Trouver l\[CloseCurlyQuote]ensemble des valeurs de x \
+telles que p(x) atteint un optimum local. Dire s\[CloseCurlyQuote]il s\
+\[CloseCurlyQuote]agit d\[CloseCurlyQuote]un minimum ou un maximum. "
+}], "Text",
+ CellChangeTimes->{{3.666418284779565*^9, 3.6664183099060163`*^9}, 
+   3.666418564138802*^9, {3.666420949681365*^9, 3.666420982409143*^9}, {
+   3.666421395645402*^9, 3.66642139866148*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418579810528*^9, 3.666418580305231*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418580781542*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Calculer l\[CloseCurlyQuote]aire de la r\[EAcute]gion ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"x", ",", "y"}], ")"}], ":", 
+      RowBox[{"0", "<=", "y", "<=", 
+       RowBox[{"p", "(", "x", ")"}]}]}], "}"}]}], TraditionalForm]]],
+ " born\[EAcute]e sup\[EAcute]rieurement par le polyn\[OHat]me p(x) et inf\
+\[EAcute]rieurement par l\[CloseCurlyQuote]abscisse."
+}], "Text",
+ CellChangeTimes->{{3.666418569835071*^9, 3.6664185853111486`*^9}, {
+  3.6664209864892*^9, 3.6664210333127193`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.6664183065697527`*^9, 3.6664183069752913`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418307477985*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Question 5", "Section"],
+ "\nOn consid\[EGrave]re la fonction ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", " ", "x", ")"}]}], "=", 
+   SuperscriptBox["x", 
+    FractionBox["x", 
+     RowBox[{"1", "-", "x"}]]]}]]],
+ " pour tout r\[EAcute]el x>0. Donner le domaine de d\[EAcute]finition de f. \
+"
+}], "Text",
+ CellChangeTimes->{{3.666418319530634*^9, 3.666418324106721*^9}, {
+  3.666418507482777*^9, 3.6664185488080482`*^9}, {3.6664210618737593`*^9, 
+  3.666421091085438*^9}, {3.66642139186045*^9, 3.6664213927332582`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418545654158*^9, 3.66641854602421*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418546435206*^9}]
+}, Open  ]],
+
+Cell["\<\
+Calculer les limites de la fonction f aux bornes des intervalles qui \
+composent le domaine de f. \
+\>", "Text",
+ CellChangeTimes->{
+  3.66641854287506*^9, {3.6664210951931753`*^9, 3.666421097897873*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418530973209*^9, 3.666418531460073*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418531828363*^9}]
+}, Open  ]],
+
+Cell["\<\
+Expliquez comment prolonger f par continuit\[EAcute] aux points x=0 et x=1.\
+\>", "Text",
+ CellChangeTimes->{
+  3.6664185265588093`*^9, {3.6664210990571833`*^9, 3.666421103265369*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.66641834985715*^9, 3.6664183502433443`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.6664183507105227`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Question 6", "Section"],
+ "\nOn consid\[EGrave]re les vecteurs\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v1", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "8"}], ",", " ", "1", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "1", ",", " ", "6"}], ")"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v2", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "6"}], ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "2", ",", " ", "10", ",", " ", 
+      RowBox[{"-", "3"}]}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v3", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], ",", " ", "8", ",", " ", "10", ",", " ", "1", ",", 
+      " ", "10"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v4", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "14"}], ",", " ", 
+      RowBox[{"-", "9"}], ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", "11", ",", " ", "3"}], ")"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v5", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "5", ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", 
+      RowBox[{"-", "6"}]}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nDonner une base du sous espace vectoriel engendr\[EAcute] par v1, v2, \
+v3, v4 et v5."
+}], "Text",
+ CellChangeTimes->{{3.6664183400990543`*^9, 3.666418344842512*^9}, {
+  3.666418466043378*^9, 3.666418498368746*^9}, {3.6664211087291403`*^9, 
+  3.666421191673778*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.666418494894891*^9, 3.6664184952168503`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418495723443*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Le vecteur ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"w", "=", 
+    RowBox[{"(", 
+     RowBox[{"0", ",", " ", 
+      RowBox[{"-", "6"}], ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", "10"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " est-il dans ce sous-espace vectoriel? Si oui, l\[CloseCurlyQuote]exprimer  \
+comme combinaison lin\[EAcute]aire des vecteurs de la base."
+}], "Text",
+ CellChangeTimes->{
+  3.666418491254435*^9, {3.666421197936569*^9, 3.666421203251058*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.6664183541830387`*^9, 3.666418354663279*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.666418355563046*^9}]
+}, Open  ]]
+},
+WindowSize->{812, 911},
+WindowMargins->{{168, Automatic}, {Automatic, -6}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1570, 37, 356, "Text"],
+Cell[2131, 59, 92, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2248, 64, 164, 3, 32, "Input"],
+Cell[2415, 69, 122, 2, 32, "Output"]
+}, Open  ]],
+Cell[2552, 74, 828, 13, 160, "Text"],
+Cell[CellGroupData[{
+Cell[3405, 91, 115, 2, 32, "Input"],
+Cell[3523, 95, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[3608, 99, 178, 4, 33, "Text"],
+Cell[CellGroupData[{
+Cell[3811, 107, 117, 2, 32, "Input"],
+Cell[3931, 111, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[4016, 115, 189, 4, 33, "Text"],
+Cell[CellGroupData[{
+Cell[4230, 123, 113, 2, 32, "Input"],
+Cell[4346, 127, 94, 1, 32, "Output"]
+}, Open  ]],
+Cell[4455, 131, 100, 1, 32, "Text"],
+Cell[4558, 134, 743, 16, 73, "Text"],
+Cell[CellGroupData[{
+Cell[5326, 154, 115, 2, 32, "Input"],
+Cell[5444, 158, 72, 1, 32, "Output"]
+}, Open  ]],
+Cell[5531, 162, 752, 17, 182, "Text"],
+Cell[CellGroupData[{
+Cell[6308, 183, 115, 2, 32, "Input"],
+Cell[6426, 187, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[6511, 191, 813, 21, 72, "Text"],
+Cell[CellGroupData[{
+Cell[7349, 216, 115, 2, 32, "Input"],
+Cell[7467, 220, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[7552, 224, 585, 15, 33, "Text"],
+Cell[CellGroupData[{
+Cell[8162, 243, 119, 2, 32, "Input"],
+Cell[8284, 247, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[8369, 251, 566, 15, 77, "Text"],
+Cell[CellGroupData[{
+Cell[8960, 270, 114, 2, 32, "Input"],
+Cell[9077, 274, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[9162, 278, 214, 5, 33, "Text"],
+Cell[CellGroupData[{
+Cell[9401, 287, 115, 2, 32, "Input"],
+Cell[9519, 291, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[9604, 295, 194, 4, 33, "Text"],
+Cell[CellGroupData[{
+Cell[9823, 303, 116, 2, 32, "Input"],
+Cell[9942, 307, 72, 1, 32, "Output"]
+}, Open  ]],
+Cell[10029, 311, 1750, 58, 204, "Text"],
+Cell[CellGroupData[{
+Cell[11804, 373, 117, 2, 32, "Input"],
+Cell[11924, 377, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[12009, 381, 550, 15, 33, "Text"],
+Cell[CellGroupData[{
+Cell[12584, 400, 117, 2, 32, "Input"],
+Cell[12704, 404, 70, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

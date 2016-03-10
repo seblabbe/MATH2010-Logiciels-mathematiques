@@ -1,0 +1,138 @@
+
+\section*{Exercices du Chapitre 8: Algèbre linéaire}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+\begin{verbatim}
+from sympy import Matrix,randMatrix,simplify,I
+from sympy.abc import m
+\end{verbatim}
+
+
+\begin{exercice}
+    En utilisant \texttt{randMatrix}, construire deux matrices carrées 
+$A$ et $B$ dont les coefficients sont choisis aléatoirement. Vérifier que
+$A+B=B+A$, $(AB)^{-1}=B^{-1}A^{-1}$ et (très probablement) $AB\neq BA$.
+\end{exercice}
+
+\begin{exercice}
+Soit la matrice
+\[
+\frac{\sqrt{2}}{2}
+\left[\begin{matrix}1 & i\\i & 1\end{matrix}\right]
+\]
+Calculer $M^9$ et le déterminant de $M$. Sans utiliser l'ordinateur, en déduire
+que $M^8=I$ et $M^{-1}=M^7$ et deviner ce que vaut $M^{2015}$. Vérifier ensuite
+les résultats avec l'ordinateur.
+\end{exercice}
+
+
+\begin{exercice}
+    Dans le graphe ci-bas, entre le sommet $0$ et le sommet $4$, il y a 
+    un chemin de longueur $1$ ($0\to4$),
+    deux chemins de longueur $2$ ($0\to3\to4$, $0\to2\to4$) et 
+    six chemins de longeurs $3$ 
+    ($0\to2\to0\to4$, $0\to3\to0\to4$, $0\to4\to0\to4$, $0\to4\to1\to4$, 
+    $0\to4\to2\to4$, $0\to4\to3\to4$).  
+    Calculer le
+    nombre de chemins de longueur $L$ du sommet $0$ au sommet $4$ pour toutes
+    les valeurs de $L\in\{4,5,6,50\}$.
+\begin{center}
+\begin{tikzpicture}
+\node (0) at (0,0) {$0$};
+\node (4) at (2,0) {$4$};
+\node (3) at (1,1) {$3$};
+\node (2) at (1,-1) {$2$};
+\node (1) at (3.5,0) {$1$};
+\draw (0) -- (4) -- (1);
+\draw (0) -- (3) -- (4) -- (2) -- (0);
+\end{tikzpicture}
+\end{center}
+% >>> L = [0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0]
+% >>> M = Matrix(5,5,L)
+% >>> M**50
+\end{exercice}
+
+\begin{exercice}
+    En calculant la forme échelonnée
+    réduite\footnote{\url{https://fr.wikipedia.org/wiki/Matrice_échelonnée}}
+    d'une matrice, résoudre les systèmes d'équations linéaires $AX=B$
+    suivants:
+\[
+A = \left[\begin{matrix}3 & 2 & -1\\2 & -3 & 4\\1 & 1 & -3\end{matrix}\right],
+B = \left[\begin{matrix}1\\3\\2\end{matrix}\right];
+\qquad
+A = \left[\begin{matrix}3 & 2 & 1\\2 & -3 & 5\\1 & 1 & 0\end{matrix}\right],
+B = \left[\begin{matrix}1\\-8\\1\end{matrix}\right].
+\]
+\end{exercice}
+
+
+\begin{exercice}
+Résoudre le système linéaire $AX=B$ suivant à un paramètre $m$. On pourra
+distinguer plusieurs cas selon les valeurs de $m$.
+\[
+A = \left[\begin{matrix}1 & 1 & m\\1 & 1 & -1\\1 & m & -1\end{matrix}\right],
+B = \left[\begin{matrix}m\\1\\1\end{matrix}\right].
+\]
+% >>> from sympy.abc import m
+% >>> M = Matrix(3,4,[1,1,m,m,1,1,-1,1,1,m,-1,1])
+% >>> simplify(M.rref()[0])
+% [          2*m ]
+% [1  0  0  -----]
+% [         m + 1]
+% [              ]
+% [0  1  0    0  ]
+% [              ]
+% [         m - 1]
+% [0  0  1  -----]
+% [         m + 1]
+\end{exercice}
+
+\begin{exercice}
+Dire si les familles de vecteurs ci-bas sont linéairement indépendants:
+\[
+\left\{
+\left(\begin{matrix}5\\3\\-2\end{matrix}\right),
+\left(\begin{matrix}8\\1\\3\end{matrix}\right)
+\right\},\qquad
+\left\{
+\left(\begin{matrix}5\\3\\-2\end{matrix}\right),
+\left(\begin{matrix}8\\1\\3\end{matrix}\right),
+\left(\begin{matrix}7\\-11\\22\end{matrix}\right)
+\right\}.
+\]
+\end{exercice}
+
+
+\begin{exercice}
+    Calculer le volume du paralépipède de $\R^3$ dont les sommets sont:
+\[
+\left(\begin{matrix}0\\0\\0\end{matrix}\right),
+\left(\begin{matrix}45\\79\\89\end{matrix}\right),
+\left(\begin{matrix}74\\26\\39\end{matrix}\right),
+\left(\begin{matrix}70\\71\\91\end{matrix}\right),
+\left(\begin{matrix}119\\105\\128\end{matrix}\right),
+\left(\begin{matrix}115\\150\\180\end{matrix}\right),
+\left(\begin{matrix}144\\97\\130\end{matrix}\right),
+\left(\begin{matrix}189\\176\\219\end{matrix}\right).
+\]
+% >>> L = [45, 79, 89, 74, 26, 39, 70, 71, 91]
+% >>> Matrix(3,3,L).det()
+% -28825
+\end{exercice}
+
+\begin{exercice}
+Soit la matrice $M$ et le vecteur $v$ suivants:
+\[
+M=
+\left[\begin{matrix}10 & \frac{7}{3} & -7\\9 & 10 & -9\\3 & \frac{7}{3} &
+0\end{matrix}\right],\qquad
+v=
+\left[\begin{matrix}1\\3\\1\end{matrix}\right].
+\]
+Calculer $Mv$. Déduire la propriété de ce vecteur. Trouver tous les vecteurs
+possédant la même propriété.
+\end{exercice}
+
+

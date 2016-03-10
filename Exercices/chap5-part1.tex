@@ -1,0 +1,37 @@
+
+\section*{Exercices du Chapitre 5: Résolution d'équations (partie 1)}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+\begin{verbatim}
+from sympy import solve, roots, Eq
+from sympy.abc import a,b,x,y,w,z
+\end{verbatim}
+
+\begin{exercice}
+    Résoudre l'équation $x^4-4x^3+2x^2-x=0$.
+%\verb|solve(x**4 - 4*x**3 + 2*x**2 - x, x)|
+\end{exercice}
+
+\begin{exercice}
+    Résoudre le système d'équations $x+y=4$, $xy=3$.
+%\verb|solve([x + y - 4, x*y - 3], [x, y])|
+\end{exercice}
+
+\begin{exercice}
+Résoudre le système d'équations $x+y+z=2$, $x-y+w=6$, $x+y-z=34$, $x+y-4w=82$.
+% >>> solve((x+y+z-2,x-y+w-6,x+y-z-34,x+y-4*w-82))
+% {w: -16, x: 20, y: -2, z: -16}
+\end{exercice}
+
+\begin{exercice}
+    Trouver les racines de $x^3 + 2x^2 + 8$.
+\end{exercice}
+
+\begin{exercice}
+Trouver l'équation de la droite $y=ax+b$ qui passe par les points
+$(8,13)$, $(5,37)$.
+% >>> solve((Eq(a*8+b, 13), Eq(a*5+b,37)))
+% {a: -8, b: 77}
+\end{exercice}
+

@@ -1,0 +1,122 @@
+\input{header.tex}
+
+\begin{document}
+
+\section*{Devoir 1}
+
+En utilisant SymPy ou Mathematica mais un seul des deux, répondre aux
+questions suivantes.
+
+Écrire vos réponses dans le fichier \texttt{Devoir-1-<MATRICULE>-<NOM>.ipynb}
+ou\\ \texttt{Devoir-1-<MATRICULE>-<NOM>.nb} selon que vous utilisiez SymPy ou
+Mathematica téléchargeable sur la page web du cours. Inclure la démarche, les
+réponses aux questions et les justifications. Envoyer votre fichier avant le
+\textbf{jeudi 24 mars à 23h59} par courriel à l'adresse
+\texttt{slabbe@ulg.ac.be} en remplaçant \texttt{<MATRICULE>} par votre numéro
+de matricule et \texttt{<NOM>} par votre nom.
+
+Pour écrire du texte entre les cellules et justifier une réponse, utiliser
+\texttt{Format > Style > Text} en Mathematica, et \texttt{Cell > Cell Type >
+Markdown} en SymPy et Jupyter.
+
+Le plagiat sera détecté et entraînera une note de zéro pour les personnes
+impliquées.
+
+\begin{question}
+Le Théorème de
+Gauss--Wantzel\footnote{\url{https://fr.wikipedia.org/wiki/Théorème_de_Gauss-Wantzel}} dit qu'un polygone régulier à $n$ côtés est
+constructible avec la règle et le compas si et seulement si $n$ est le produit
+d'une puissance de $2$ et de nombres premiers de Fermat distincts dont les seuls
+connus sont 3, 5, 17, 257 et 65537.
+Est-ce qu'un polygone régulier à 6 côtés est constructible?
+Est-ce qu'un polygone régulier à 24480 côtés est constructible?
+Est-ce qu'un polygone régulier à 88305875025920 côtés est constructible?
+\end{question}
+
+\begin{question}
+Résoudre l'équation $x^3-3x^2-5=0$ et donner une valeur numérique approchée des
+solutions.
+\end{question}
+
+\begin{question}
+Tracer la surface de Dini 
+\footnote{\url{https://en.wikipedia.org/wiki/Dini's_surface}}
+dont les équations paramétriques sont:
+\begin{align*}
+    x&=a\cos\left(u\right)\sin\left(v\right)\\
+    y&=a\sin\left(u\right)\sin\left(v\right)\\
+    z&=a\left(\cos\left(v\right)+\ln\left(\tan\left(\frac{v}{2}\right)\right)\right)+bu 
+\end{align*}
+pour $a=1$, $b=1$ sur les intervalles $0\leq u \leq 5\pi$ et $0.01 \leq v\leq
+1$.
+% In [64]: from sympy.abc import u,v
+% In [65]: x = cos(u)*sin(v)
+% In [66]: y = sin(u)*sin(v)
+% In [67]: z = (cos(v)+log(tan(v/2)))+2*u
+% In [68]: from sympy.plotting import plot3d_parametric_surface
+% In [69]: plot3d_parametric_surface(x,y,z, (u,0,5*pi), (v,0.1,1)).save('yo.png')
+\end{question}
+
+
+% from http://mathematica.stackexchange.com/users/9490/jason-b
+% \begin{verbatim}
+% a = 2;
+% f = (a + Cos[u/2] Sin[t] - Sin[u/2] Sin[2 t]) Cos[u];
+% g = (a + Cos[u/2] Sin[t] - Sin[u/2] Sin[2 t]) Sin[u];
+% h = Sin[u/2] Sin[t] + Cos[u/2] Sin[2 t];
+% ParametricPlot3D[{
+%   {f, g, h},
+%   {h, (f - a), g}},
+%  {t, 0, 2 Pi}, {u, 0, 2 Pi}, ColorFunction -> (Hue[#5] &),
+%  Mesh -> None,
+%  Boxed -> False,
+%  Axes -> False,
+%  PlotPoints -> {60, 60},
+%  ViewPoint -> {2, 1, -2.5},
+%  ViewVertical -> {2., 0.2, 0.0}
+%  ]
+% \end{verbatim}
+
+\begin{question}
+Soit $p(x)=- x^{4} + 28 x^{3} - 221 x^{2} + 350 x + 600$ un polynôme. Trouver
+l'ensemble des valeurs de $x$ telles que $p(x)$ atteint un optimum local. Dire
+s'il s'agit d'un minimum ou un maximum. Calculer l'aire de la région
+$A=\{(x,y):0\leq y\leq p(x)\}$ bornée supérieurement par le polynôme $p(x)$ et
+inférieurement par l'abscisse.
+\end{question}
+
+\begin{question}
+On considère la fonction $f(x)=x^{x\over 1-x}$ pour tout réel $x>0$. Donner le
+domaine de définition de $f$. Calculer les limites de la fonction $f$ aux bornes
+des intervalles qui composent le domaine de $f$. Expliquez comment prolonger $f$
+par continuité aux points $x=0$ et $x=1$.
+\end{question}
+
+% \begin{question}
+% %http://math.univ-lille1.fr/~tumpach/Site/Enseignement_files/interro2-groupe11.pdf
+% Résoudre, suivant les valeurs du paramètre $a$, le système
+% \[
+% \left\{
+% \begin{array}{lll}
+% ax    & +2y&=a+1\\
+% (a-1)x& -ay&=2a
+% \end{array}\right.
+% \]
+% \end{question}
+
+\begin{question}
+On considère les vecteurs
+$v_1=(-8, 1, -10, 1, 6)$,
+$v_2=(-6, -10, 2, 10, -3)$,
+$v_3=(-2, 8, 10, 1, 10)$,
+$v_4=(-14, -9, -8, 11, 3)$,
+$v_5=(-2, -3, 5, -8, -6)$.
+Donner une base du sous espace vectoriel engendré par $v_1$, $v_2$, $v_3$, $v_4$
+et $v_5$.
+Le vecteur $w=(0, -6, -1, -8, 10)$
+est-il dans ce sous-espace vectoriel? Si oui, l'exprimer  comme combinaison
+linéaire des vecteurs de la base.
+\end{question}
+
+\end{document}
+

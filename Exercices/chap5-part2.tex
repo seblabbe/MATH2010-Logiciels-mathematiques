@@ -1,0 +1,60 @@
+
+\section*{Exercices du Chapitre 5: Résolution d'équations (partie 2)}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+\begin{verbatim}
+from sympy import solve, roots, symbols
+from sympy.abc import a,b,x,y
+\end{verbatim}
+
+\begin{exercice}
+Trouver l'équation de la droite $y=ax+b$ qui passe par les points
+$(x_1,y_1)$, $(x_2,y_2)$.
+% >>> x1,x2 = symbols("x1:3")
+% >>> y1,y2 = symbols("y1:3")
+% >>> solve((Eq(a*x1+b, y1), Eq(a*x2+b,y2)))
+%      y1 - y2     x1*y2 - x2*y1  
+% [{a: -------, b: -------------}]
+%      x1 - x2        x1 - x2    
+\end{exercice}
+
+\begin{exercice}
+Trouver l'équation de la parabole $y=ax^2+bx+c$ qui passe par les points
+$(2,54)$, $(5,-63)$ et $(8,72)$.
+% >>> eq1 = Eq(a*4+b*2+c, 54)
+% >>> eq2 = Eq(a*25+b*5+c, -63)
+% >>> eq3 = Eq(a*64+b*8+c, 72)
+% >>> solve([eq1,eq2,eq3])
+% {a: 14, b: -137, c: 272}
+\end{exercice}
+
+\begin{exercice}
+Calculer les points communs à la droite $y=4x+3$ et le cercle de rayon $5$
+centré à l'origine.
+% In [383]: solve((Eq(y,4*x+3),Eq((x)**2+(y)**2,25)), (x,y))
+%              ____            ____          ____              ____       
+%     12   4*\/ 26   3    16*\/ 26       4*\/ 26    12    16*\/ 26    3   
+% [(- -- + --------, -- + ---------), (- -------- - --, - --------- + --)]
+%     17      17     17       17            17      17        17      17  
+\end{exercice}
+
+\begin{exercice}
+Calculer les points d'intersection des ellipses dont les équations sont
+$x^{2} + 9 y^{2} = 25$ et $y^{2} + 4 \left(x - 1\right)^{2} = 36$.
+%In [389]: solve((Eq(x**2+9*y**2,25),Eq(4*(x-1)**2+(y)**2,25)), (x,y))
+\end{exercice}
+
+\begin{exercice}
+Calculer les points d'intersection de la parabole $y=x^2$ et le cercle unité
+centré à l'origine.
+%In [412]: solve((y-x**2,x**2+y**2-1),(x,y))
+\end{exercice}
+
+
+
+
+
+
+%\url{https://fr.wikipedia.org/wiki/R%C3%A9solution_d'un_triangle#Triangulation}
+

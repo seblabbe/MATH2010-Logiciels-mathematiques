@@ -1,0 +1,108 @@
+
+\section*{Exercices du Chapitre 7: Calcul différentiel et intégral (partie 2)}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+\begin{verbatim}
+from sympy import integrate,diff,pi,oo,cos,sin,log,dsolve
+from sympy.abc import x,y,z,f,a,theta,rho
+\end{verbatim}
+
+\begin{exercice}
+    Est-ce que la pente de la fonction $\sin(\sin(\sin(x)))$ au point
+    $x={\pi\over5}$ est plus grande que $1\over2$?
+\end{exercice}
+
+\begin{exercice}
+    Calculer la dérivée de $x\mapsto\log(x^3+ax^2+1)$ où $a$ est un paramètre
+    réel.
+    % >>> from sympy.abc import a
+    % >>> diff(log(x**3+a*x*2+1), x)
+    % (2*a + 3*x**2)/(2*a*x + x**3 + 1)
+\end{exercice}
+
+\begin{exercice}
+    Calculer les primitives de $x\mapsto\cos^3 x$ et 
+    $x\mapsto\log(x^2+1)$.
+    % >>> integrate(cos(x)**3, x)
+    % -sin(x)**3/3 + sin(x)
+    % >>> integrate(log(x**2+1), x)
+    % x*log(x**2 + 1) - 2*x + 2*atan(x)
+\end{exercice}
+
+\begin{exercice}
+    Évaluer l'intégrale $\int_1^{\infty} \frac{dx}{x^2}$.
+%\verb|integrate(1/x**2, (x, 1, oo))|
+\end{exercice}
+
+\begin{exercice}
+    Évaluer l'intégrale double 
+    $$\int_0^{2\pi}\int_0^{\theta^2}\theta\,\rho\,d\rho\,d\theta.$$
+\end{exercice}
+
+\begin{exercice}
+    Calculer l'aire de la région 
+    $\{(x,y)\in\R^2\mid x^2-6x+3 < y < 11-x^2\}$.
+    % >>> solve(11-x**2 - (x**2-6*x+3))
+    % [-1, 4]
+    % >>> integrate(x**2-6*x+3 - (11-x**2), (x,-1,4))
+    % -125/3
+\end{exercice}
+
+\begin{exercice}
+    Calculer le volume de la région 
+    $$\{(x,y,z)\in\R^3\mid (x+y)^2 < z < 5x^2+6xy+3y^2, 0<x<10, 0<y<12\}.$$
+    % >>> integrate(4*x**2+4*x*y+2*y**2, (x,0,10), (y,0,12))
+    % 41920
+\end{exercice}
+
+\begin{exercice}
+    Calculer le développement en série d'ordre 6 de
+\[
+    \frac{1}{1-2x},\qquad
+    (1+x)^a\qquad\text{et}\qquad
+    \frac{\sin(x)}{1+x}
+\]
+en $0$ pour les deux premières et en $\pi/2$ pour la troisième.
+% >>> (1/(1 - 2*x)).series(x, 0, 10)
+% >>> series((1+x)**a, x)
+% >>> series(sin(x)/(1+x), x, pi/2)
+\end{exercice}
+
+\begin{exercice}
+     Décrire l'ensemble des fonctions $f(x)$ dont la dérivée d'ordre trois par
+     rapport à $x$ est égale à elle-même. 
+% Résoudre l'équation différentielle ${d^3\over dx^3}f(x)=f(x)$.
+% In [89]: dsolve(f(x).diff(x,3)-f(x),f(x))
+% Out[89]:
+%                      /  ___  \         /  ___  \
+%                      |\/ 3 *x|         |\/ 3 *x|
+%                C1*sin|-------| + C2*cos|-------|
+%            x         \   2   /         \   2   /
+% f(x) = C3*e  + ---------------------------------
+%                                ____
+%                               /  x
+%                             \/  e
+\end{exercice}
+
+\begin{exercice}
+    R\'{e}soudre les \'{e}quations diff\'{e}rentielles suivantes pour $u(x)$:
+\begin{enumerate}[(1)]
+\item $D^2u+2Du+u=xe^{-x}$ sur $\R$
+\item $x^3D^2u-x^2Du-3xu+16\ln(x)=0$ sur $]0,+\infty[$.
+\item $3xDu=(1+x\sin(x)-3u^{3}\sin(x))u$\; sur $]0,+\infty[$
+\item $x^2 D^2u + Du =0$ sur $]0;+\infty[$
+\end{enumerate} 
+\end{exercice}
+
+% solution item 2:
+% >>> from sympy import dsolve,log
+% >>> from sympy.abc import x,u
+% >>> expr = x**3 * u(x).diff(x,2) - x**2*u(x).diff(x) - 3*x*u(x) + 16*log(x)
+% >>> dsolve(expr, u(x))
+% Traceback (most recent call last)
+% ...
+% NotImplementedError: solve: Cannot solve x**3*Derivative(u(x), x, x) - x**2*Derivative(u(x), x) - 3*x*u(x) + 16*log(x)
+% >>> dsolve(expr/x, u(x))
+% u(x) == (C1 + C2*x**4 + 2*log(x)**2 + log(x))/x
+

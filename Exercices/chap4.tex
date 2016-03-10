@@ -1,0 +1,130 @@
+
+\begin{exercice}
+Apprendre quelques raccourcis clavier de Jupyter.
+Consulter \texttt{Help > Keyboard Shortcuts} au besoin.
+\begin{itemize}
+\item Qu'est-ce qui caractérise le mode édition (3 réponses), le mode commande
+(3 réponses)?
+\item Quelle touche du clavier permet de passer du mode édition au mode commande
+et du mode commande au mode édition?
+\item En mode commande, les fléches $\uparrow$ et $\downarrow$ permettent de
+sélectionner la cellule au-dessus et au-dessous respectivement. Quelles touches
+alphabétiques du clavier permettent de faire la même chose. Pourquoi ce sont ces
+touches-là?
+\item En mode commande, quelle touche permet d'ajouter une nouvelle cellule
+au-dessus de la cellule sélectionnée? au-dessous? Pourquoi ce sont ces touches-là?
+\item En mode commande, quelles touches permettent de couper, de copier et de
+coller une cellule? Pourquoi ce sont ces touches-là?
+\item En mode édition, quelle touche permet de compléter les mots ou le code que
+l'on écrit?
+\end{itemize}
+\end{exercice}
+
+\section*{Exercices du Chapitre 4: Calcul symbolique}
+
+% Read this \url{https://en.wikipedia.org/wiki/Pi#Polygon_approximation_era}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+\begin{verbatim}
+from sympy import expand,factor,simplify,sin,tan,sec,radsimp,ratsimp,apart,collect
+from sympy.abc import a,b,c,d,n,x,y,z
+\end{verbatim}
+
+\begin{exercice}
+Développer $(x+y)^2(x-y)(x^2+y)$.
+%\verb|((x + y)**2 * (x - y) * (x**2 + y)).expand()|
+\end{exercice}
+
+\begin{exercice}
+    Calculer le coefficient de $x^3y^7z^2$ dans l'expression $(x+y+z)^{12}$.
+% 7920
+\end{exercice}
+
+\begin{exercice}
+Simplifier $\sec(x)^2-1$.
+\end{exercice}
+
+% \begin{exercice}
+% Simplifier $\cos(7x)-\sin(7x)$.
+% \end{exercice}
+
+\begin{exercice}
+Simplifier 
+$\displaystyle
+\frac{\sqrt{a} - \sqrt{b}}{\sqrt{a} + \sqrt{b}} + 
+\frac{\sqrt{a} + \sqrt{b}}{\sqrt{a} - \sqrt{b}}$.
+\end{exercice}
+
+\begin{exercice}
+Factoriser le polynôme $25 x^{5} + 175 x^{4} - 40 x^{3} - 280 x^{2} + 16 x + 112$.
+\end{exercice}
+
+\begin{exercice}
+Montrer que $\cos^3(x)+\sin^3(x)$ peut s'écrire sous la forme
+\[
+(\cos(x)+\sin(x)) (1-\frac{1}{2}\sin(2x)).
+\]
+\end{exercice}
+
+\begin{exercice}
+Rationaliser le dénominateur de $\displaystyle\frac{2 + \sqrt{7}}{3 - \sqrt{13}}$.
+\end{exercice}
+
+\begin{exercice}
+Calculer le coefficient de $x^2$ dans l'expression $(x-a)(x-b)(x-c)(x-d)$.
+\end{exercice}
+
+\begin{exercice}
+Décomposer
+$
+\displaystyle
+\frac{x^{3} - 10 x^{2} + 40 x - 47}{x^{4} - 9 x^{3} + 17 x^{2} + 33 x - 90}
+%= \frac{1}{x + 2} - \frac{1}{x - 3} - \frac{1}{\left(x - 3\right)^{2}} + \frac{1}{x - 5}
+$
+en somme de fractions rationnelles.
+\end{exercice}
+
+\begin{exercice}
+    Écrire l'expression
+$\displaystyle\frac{5}{x + 3} + \frac{3}{x - 5} - \frac{8}{x}$
+sous un dénominateur commun.
+\end{exercice}
+
+\begin{exercice}
+Factoriser le polynôme $x^k-1$ en produit de polynômes irréductibles sur $\Q$
+lorsque $k=2,3,4,5,6,7$.  Pour quelles valeurs entières de $k\geq2$ est-ce que
+$\displaystyle\frac{x^k-1}{x-1}$ est-il égal à un polynôme irréductible sur
+$\Q$?
+\end{exercice}
+
+\begin{exercice}
+    Trouver l'expression symbolique qui calcule le volume d'un cube de côté
+    $2a$ auquel on a soustrait le volume d'une boule de rayon $a$ et de même
+    centre.
+\end{exercice}
+
+\begin{exercice}\label{exo:apotheme}
+Soit un polygone régulier à $n$ côtés dont la longueur des côtés est $a$.
+Définir dans Sympy l'expression symbolique qui donne l'apothème
+\footnote{L'\emph{apothème} est la longueur de la perpendiculaire menée du
+centre vers un côté d'un polygone régulier.} en fonction de $n$ et de $a$. 
+\end{exercice}
+
+
+\begin{exercice}
+En procédant par substitution sur l'expression symbolique obtenue à
+l'exercice précédent, calculer l'apothème d'un hexagone régulier de
+côté $3$ cm et l'apothème d'un heptadécagone régulier de côté $89$ km.
+\end{exercice}
+
+\begin{exercice}
+    Trouver l'expression $R(n)$ qui donne le rapport entre le périmètre d'un
+    polygone régulier à $n$ côté et le double de son apothème. 
+    Évaluer $R(n)$ pour des valeurs de plus en plus grandes de $n\geq3$.
+    En déduire le comportement de $R(n)$ lorsque $n$ tend vers l'infini.
+    \textit{Facultatif}: En utilisant la commande \texttt{plot} décrite dans le
+    début du chapitre 6, tracer le graphique de cette expression en fonction de $n$
+    pour $n\in[3,30]$. 
+\end{exercice}
+

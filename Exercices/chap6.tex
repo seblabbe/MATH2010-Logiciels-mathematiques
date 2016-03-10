@@ -1,0 +1,102 @@
+
+% Look at
+% \url{https://en.wikipedia.org/wiki/Parametric_equation}
+% \url{https://en.wikipedia.org/wiki/Parametric_surface}
+
+\section*{Exercices du Chapitre 6: Tracer une fonction}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+et symboles suivants:
+%matplotlib inline
+\begin{verbatim}
+from sympy import sin,cos,Eq,plot,plot_implicit,And,mpmath
+from sympy.abc import x,y,u,v,theta
+from sympy.plotting import plot3d,plot_parametric
+from sympy.plotting import plot3d_parametric_line,plot3d_parametric_surface
+\end{verbatim}
+
+\begin{exercice}
+    Tracer les courbes d'équation $x+y=4$, $xy=3$ après avoir isolé la variable
+    $y$. Est-ce que les points d'intersection, s'il y en a, correspondent bien aux
+    solutions obtenues par la commande \texttt{solve}?
+    %\verb|solve([x + y - 4, x*y - 3], [x, y])|
+\end{exercice}
+
+\begin{exercice}
+    Tracer les courbes d'équation $4x^2+Bxy+9y^2=1$ pour différentes valeurs de
+    $B$ telles que $-10\leq B\leq 10$. En déduire pour quelles valeurs de $B$
+    est-ce que l'équation décrit une ellipse.
+\end{exercice}
+
+\begin{exercice}
+Tracer en 3D la fonction $f(x,y) = 4x^2+2xy+9y^2=1$ sur un intervalle de valeurs
+de $x$ et de $y$ de votre choix.
+\end{exercice}
+
+\begin{exercice}
+% Une épitrochoïde est une courbe plane transcendante, correspondant à la
+% trajectoire d'un point fixé à un cercle mobile qui roule sans glisser sur et
+% autour d'un autre cercle dit directeur.
+Une épitrochoïde \footnote{Voir \url{https://fr.wikipedia.org/wiki/Épitrochoïde}}
+est décrite par les équations paramétriques suivantes:
+\begin{align*}
+    x &= (R + r)\cos\theta - d\cos\left({R + r \over r}\theta\right),\\
+    y &= (R + r)\sin\theta - d\sin\left({R + r \over r}\theta\right).
+\end{align*}
+% où $R$ est le rayon du cercle directeur, $r$ celui du cercle mobile, $d$ la
+% distance du point au centre du cercle mobile et $\theta$ le paramètre d'angle.
+Tracer l'épitrochoïde lorsque $r=4$, $R=16$ et $d=3$ pour $\theta\in[0,2\pi[$.
+\end{exercice}
+
+\begin{exercice}
+Tracer une courbe de votre choix parmi celles de la page
+\url{https://en.wikipedia.org/wiki/Gallery_of_curves}
+\end{exercice}
+
+% \begin{exercice}
+% Un tore peut être défini paramétriquement par:
+% \begin{align*}
+%     x(u, v) &= (R + r \cos{v}) \cos{u}\, \\
+%     y(u, v) &= (R + r \cos{v}) \sin{u}\, \\
+%     z(u, v) &= r \sin{v} \, 
+% \end{align*}
+% où $u,v$ appartiennent à l'intervalle $[0, 2\pi[$,
+%     $R$ est la distance entre le centre du tube et le centre du tore,
+%     $r$ est le rayon du tube. Tracer un tore de paramètres $R=10$, $r=3$ de
+% sorte que le tore apparaît à l'écran à la verticale (comme une roue qui roule).
+% \end{exercice}
+
+% \begin{exercice}
+% La surface de révolution de la fonction $f(x)$ pour $a\leq x\leq b$ autour de
+% l'axe des $z$ est:
+% \begin{align*}
+%     x(u, \theta) &= u\cos\theta,\\
+%     y(u, \theta) &= u\sin\theta,\\
+%     z(u, \theta) &= f(u)
+% \end{align*}
+% où $a\leq u\leq b$ et $0\leq\theta < 2\pi$. Tracer la surface de révolution de
+% $f(x)=x^2$, $f(x)=e^x$ et $f(x)=\frac{1}{1+x^2}$.
+% \end{exercice}
+
+\begin{exercice}
+La surface de révolution de la fonction $f(z)$ pour $z\in[a,b]$ autour de
+l'axe des $z$ est:
+\[
+    x(u, \theta) = f(u)\cos\theta,\quad
+    y(u, \theta) = f(u)\sin\theta,\quad
+    z(u, \theta) = u
+\]
+où $a\leq u\leq b$ et $0\leq\theta < 2\pi$. Tracer la surface de révolution de
+$f(z)=z^2$, $f(z)=e^z$ et $f(z)=\frac{1}{1+z^2}$ pour $z\in[-10,10]$.
+\end{exercice}
+
+\begin{exercice}
+Tracer la fonction complexe rationelle
+$\displaystyle f(z)= \frac{z+4}{z^5-3iz^3+2}$.
+\end{exercice}
+
+
+\begin{exercice}
+Reproduire un dessin de votre choix de la page
+\url{http://mpmath.googlecode.com/svn/gallery/gallery.html}.
+\end{exercice}

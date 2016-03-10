@@ -1,0 +1,86 @@
+
+\section*{Exercices du Chapitre 3: Calculatrice et arithmétique avec \sympy}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+suivantes:
+\begin{verbatim}
+from sympy import E,pi,I,oo,sqrt,cos,atan,log
+from sympy import Rational,factorial,simplify,factorint
+\end{verbatim}
+
+\begin{exercice}
+Calculer le numérateur et le dénominateur de la fraction 
+$\displaystyle\frac{885046}{2570670}$ après simplification.
+\end{exercice}
+
+\begin{exercice}
+Calculer le numérateur et le dénominateur du nombre rationnel égal à
+\[
+    \left(\frac{1}{678} + \frac{1}{134} + \frac{1}{904}\right)^{-1}
+\]
+\end{exercice}
+
+\begin{exercice}
+Calculer la partie réelle et imaginaire du nombre complexe
+$\displaystyle\left(\frac{1+i\sqrt{3}}{1-i}\right)^{20}$.
+\end{exercice}
+
+\begin{exercice}
+    Évaluer le nombre $e^{i\pi}+1$.
+\end{exercice}
+
+\begin{exercice}
+    Trouver les diviseurs de 406628157024.
+\end{exercice}
+
+\begin{exercice}
+Calculer 100 décimales de $\pi^e$.
+%\verb|(pi**E).n(100)|
+\end{exercice}
+
+\begin{exercice}
+Est-ce que le nombre $2\cos(\pi/5)$ est solution de l'équation $x^2-x-1=0$?
+\end{exercice}
+
+\begin{exercice}[Une formule due à Gauss]
+    Calculer la valeur de
+    \[
+	\Theta = 12\arctan\frac{1}{38}+
+	         20\arctan\frac{1}{57}+
+	          7\arctan\frac{1}{239}+
+	      24\arctan\frac{1}{268}.
+    \]
+    Quel est ce nombre (indice: calculer la valeur de $4\Theta$)?
+    % Combien de décimales sont exactes?
+\end{exercice}
+
+\begin{exercice}
+    Consulter la documentation de la fonction \texttt{factorial} de SymPy.
+\end{exercice}
+
+\begin{exercice}
+    Avec combien de zéros le nombre $100!$ se termine-t-il?
+\end{exercice}
+
+\begin{exercice}
+    Évaluer les expressions \texttt{oo + 1}, \texttt{3 ** oo},
+    \texttt{log(oo)}, \texttt{oo + oo}, \texttt{oo - oo}. Quel nombre est
+    représenté par \texttt{oo}?
+\end{exercice}
+
+\begin{exercice}[Utiliser \sympy en ligne]
+    La page \url{http://live.sympy.org/} permet d'utiliser \sympy sur
+    internet. Calculer l'intégrale $\int\sin(x)dx$ en écrivant
+    \texttt{integrate(sin(x))} après les symboles \verb|>>>|. Appuyer sur
+    \texttt{ENTRÉE} pour évaluer le résultat.
+\end{exercice}
+
+\begin{exercice}[Utiliser \sympy Gamma en ligne]
+    La page \url{http://www.sympygamma.com/} permet d'utiliser \sympy
+    sur internet. C'est une immitation de Wolfram Alpha.
+    Tracer la fonction $\sin(x)$ sur l'intervalle $[0,\pi]$ en écrivant
+    \texttt{plot(sin(x))} dans la cellule d'évaluation. Appuyer sur
+    \texttt{ENTRÉE} pour évaluer le résultat ou sur la touche \texttt{=}.
+    Tester quelques exemples aléatoires de la page d'accueil de \sympy Gamma.
+\end{exercice}
+

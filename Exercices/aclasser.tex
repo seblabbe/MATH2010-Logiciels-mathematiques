@@ -1,0 +1,96 @@
+
+\section*{Divers}
+
+\begin{exercice}
+    Vérifier si la droite qui passe par les points $(0,1)$ et $(1,1)$ est
+    tangente au cercle de centre $(5,5)$ et de rayon $3$.
+%\verb|Circle(Point(5,5), 3).is_tangent(|\\\verb|Line(Point(0,1), Point(1,1)))|
+\end{exercice}
+
+\begin{exercice}
+    TODO: BIG DATA. Mettre des ronds sur une carte.
+\end{exercice}
+
+\begin{exercice}
+Refaire le premier graphique de l'Introduction du livre de Pikkety.
+\url{http://piketty.pse.ens.fr/files/capital21c/xls/}
+Lire l'introduction ici...
+\end{exercice}
+
+\begin{exercice}
+    TODO: Hypothèse de Riemann (voir livre de W. Stein).
+\end{exercice}
+
+\begin{exercice}
+La durée d'ensoleillement $D(\beta, d)$ à un lieu donné sur la terre est donné par
+la formule
+\[
+D(\beta,d) = 24 - \frac{24}{\pi}\arccos\left( \tan \beta \cdot
+\tan\left(\arcsin\left(\sin(\kappa)\cdot \sin\left(\frac{2\pi}{365}d
+\right)\right)\right)\right)
+\]
+où $\kappa=\frac{23,44}{180}\pi$ est l'inclinaison de la terre en radians,
+$d\in[0,365]$ est le nombre de jours après l'équinoxe du printemps et
+$\beta\in[-\pi/2,\pi/2]$ est la lattitude du lieu considéré.
+
+% http://maths-au-quotidien.fr/lycee/duree.pdf
+% >>> D = 24 - S(24)/pi*acos(tan(beta)*tan(asin(sin(kappa)*sin(pi*S(2)/365*d))))
+% >>> DD = 24 - S(24)/pi*acos(tan(beta)*tan(alpha))
+
+    TODO: Courbe de la durée d'enseigement à Liège. Calculer la moyenne sur
+    une période.
+\end{exercice}
+
+\begin{exercice}
+taille de 64 fichiers:
+\begin{verbatim}
+sage: L = ["12K", "12K", "12K", "12K", "12K", "12K", "12K", "12K", "16K",
+"16K", "16K", "20K", "20K", "20K", "24K", "24K", "24K", "24K", "24K", "24K",
+"24K", "24K", "24K", "28K", "32K", "40K", "4K", "4K", "4K", "4K", "4K", "4K",
+"4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K",
+"4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K", "4K",
+"8K", "8K", "8K", "8K", "8K", "8K"] 
+\end{verbatim}
+Calculer la taille totale.
+Combien de fichier de chaque taille.
+Moyenne.
+Médiane.
+\end{exercice}
+
+
+\section{deja fait}
+
+\begin{exercice}
+% from http://docs.sympy.org/dev/tutorial/gotchas.html
+En exécutant le code ci-dessous en SymPy, qu'est-ce que la ligne
+\texttt{print(expr)} imprime à l'écran ? Expliquer pourquoi.
+\begin{verbatim}
+   from sympy.abc import x
+   expr = x + 1
+   x = 2
+   print(expr)
+\end{verbatim}
+Est-ce que Mathematica se comporte de la même façon?
+\end{exercice}
+
+\begin{exercice}
+Est-ce que le code suivant fait bien ce qui est désiré? Expliquer pourquoi.
+Si vous répondez non à la première question, comment le corriger?
+\begin{verbatim}
+>>> from sympy import factor
+>>> from sympy.abc import x
+>>> k = 5
+>>> expr = x**k + 1
+>>> factor(expr)
+>>> k = 6
+>>> factor(expr)
+\end{verbatim}
+\end{exercice}
+
+% \begin{question}
+% Soit un polygone régulier à $n$ côtés.
+% Trouver l'expression symbolique $\Theta(n)$ qui donne la mesure (en radians)
+% d'un angle intérieur du polygone en fonction de $n$.
+% Tracer la fonction $\Theta(n)$ sur l'intervalle $[1,10]$ des valeurs de $n$.
+% Déduire le comportement de $\Theta(n)$ lorsque $n$ tend vers l'infini.
+% \end{question}
