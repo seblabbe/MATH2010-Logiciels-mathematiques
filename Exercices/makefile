@@ -1,3 +1,5 @@
+now: tp6
+
 tp1:
 	pdflatex tp1.tex
 tp2:

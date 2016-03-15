@@ -3,72 +3,112 @@
 
 
 \begin{exercice}
-Dessiner un arbre et une maison.
+En créant quelques points, des cercles et des segments, dessiner une voiture.
 \end{exercice}
+
+\begin{exercice}
+La page \url{http://tube.geogebra.org/student/m60309} montre six carrés
+construits de différentes manières.  Examinez chacun des carrés en déplaçant
+\emph{tous} leurs sommets à la souris.  Découvrez quels quadrilatères sont
+vraiment des carrés et ceux qui en ont seulement l’apparence.  Essayez d'établir
+une conjecture sur la manière dont chacun des carrés a été construit.
+\end{exercice}
+
+Dans les trois prochains exercices, on cherche à construire des polygones
+réguliers qui satisfont au \emph{test du déplacement}, c'est-à-dire que le
+déplacement de ses sommets préserve la propriété d'être un polygone régulier.
 
 % voir http://www.geogebra.org/wiki/en/Tutorial:Practice_Block_I
 % pour les etapes
 \begin{exercice}
-Construire un carré. (donner les étapes)
+Construire un triangle équilatéral. 
 \end{exercice}
 
 \begin{exercice}
-Construire un hexagone régulier. (donner les étapes)
+Construire un hexagone régulier.
 \end{exercice}
 
-\begin{exercice}
-Construire un cercle circonscrit à un triangle. (donner les étapes)
-\end{exercice}
+% \begin{exercice}
+% Construire un cercle circonscrit à un triangle. (donner les étapes)
+% \end{exercice}
+
+% \begin{exercice}
+% Visualiser le théorème de Thales. (donner les étapes)
+% \end{exercice}
 
 \begin{exercice}
-Visualiser le théorème de Thales. (donner les étapes)
-\end{exercice}
-
-\begin{exercice}
-Construire un pentagone régulier. (donner les étapes)
+Construire un pentagone régulier en suivant les étapes
+suivantes:
+%\footnote{\url{https://fr.wikipedia.org/wiki/Construction_du_pentagone_régulier_à_la_règle_et_au_compas}}:
+\begin{enumerate}
+\item    Tracer un cercle $\Gamma$ de centre $O$ et de rayon $R$ (unité quelconque).
+\item    Tracer deux diamètres perpendiculaires, $[AC]$ et $[BD]$.
+\item    Tracer le milieu $I$ de $[OA]$.
+\item    Tracer le cercle $\Gamma'$ de centre $I$ et passant par $O$ de rayon $R/2$. $\Gamma'$ passe donc aussi en $A$.
+\item    Tracer une droite passant par $B$ et $I$ intersectant $\Gamma'$ en $E$ et $F$ ($E$ est plus proche de $B$).
+\item    Tracer deux (arcs de) cercles $\Gamma_1$ et $\Gamma_2$ de centre $B$ et de rayons
+(respectivement) $BE$ et $BF$.  $\Gamma_1$ et $\Gamma_2$ intersectent $\Gamma$
+en quatre points $D_1$, $D_2$, $D_3$, $D_4$.
+\item Construire le polygone qui passe par $D$, $D_1$, $D_2$, $D_3$,
+$D_4$ et afficher ses angles internes.
+\item Nettoyer en cachant les éléments intermédiaires ayant permis la
+construction.
+%\item Faire le test du déplacement.
+\end{enumerate}
 \end{exercice}
 % https://fr.wikipedia.org/wiki/Construction_du_pentagone_r%C3%A9gulier_%C3%A0_la_r%C3%A8gle_et_au_compas#Pentagone_inscrit_dans_un_cercle
 
 \begin{exercice}
-Regarder une vidéo de la chaîne YouTube de GeoGebra
-\footnote{\url{https://www.youtube.com/channel/UC5hJLoPg27unBIMhs5cCgsg}}.
+Vérifier avec GeoGebra l'exercice III.5.20 du Chapitre III Géométrie affine du
+\emph{Cahier d'exercices de géométrie élémentaire} de Pierre Lecompte et Michel
+Rigo.
 \end{exercice}
 
-\begin{exercice}
-Essayer une ? parmi \url{https://app.geogebra.org/#search:}
+% \url{https://en.wikipedia.org/wiki/Desargues's_theorem}
+% \url{http://2000clicks.com/mathhelp/GeometryTheorem-Summary.aspx#tria}
+% \url{http://2000clicks.com/mathhelp/GeometryTriangleCyclicQuadrilateralButterflyTheorem.aspx}
+
+\begin{exercice}[Théorème du papillon]
+%\url{https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_du_papillon}
+Tracer un cercle. Définir le point milieu $M$ d'une corde $[PQ]$. Construire deux
+autres cordes $[AB]$ et $[CD]$ passant par $M$ de sorte que les points $A$ et
+$C$ soient sur le même arc de cercle de $P$ à $Q$. Définir les points
+d'intersection $X$ et $Y$ entre les cordes 
+$[AB]$ et $[CD]$ respectivement et la corde $[PQ]$.
+Définir le point milieu $M'$ du segment $[XY]$.
+Tester que $M=M'$ en déplaçant les points indépendants.
+Utiliser l'outil $a=?b$ pour tester que $M$ est bien égal à $M'$ en les
+sélectionnant dans la fenêtre Algèbre si nécessaire.
 \end{exercice}
 
-\begin{exercice}
-Comprendre comment chacun des carrés a été construit:
-http://tube.geogebra.org/student/m60309
-La figure montre six carrés construits de différentes manières. 
-Examinez chacun des carrés en déplaçant TOUS leurs
-sommets à la souris.
-Découvrez quels quadrilatères sont vraiment des carrés
-et ceux qui en ont seulement l’apparence
-Essayez d'établir une conjecture sur la manière dont
-chacun des carrés a été construit.
-Notez vos conjectures sur votre cahier.
+Pour les deux prochains exercices, on suggère de \emph{cacher} les objets
+intermédiaires ayant permis la construction des objets désirés. Attention, il ne
+s'agit pas de les effacer.
+
+\begin{exercice}%[Cercle d'Euler]
+Dans un triangle quelconque, quelle relation y a-t-il entre les milieux des
+côtés et les pieds des hauteurs?
 \end{exercice}
 
-\url{https://en.wikipedia.org/wiki/Desargues's_theorem}
-
-\url{http://2000clicks.com/mathhelp/GeometryTheorem-Summary.aspx#tria}
-
-\url{http://2000clicks.com/mathhelp/GeometryTriangleCyclicQuadrilateralButterflyTheorem.aspx}
-
-\begin{exercice}
-    Geogebra
-    Tracer un pentagone régulier avec la règle et le compas.
-    \url{https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Gauss-Wantzel}
-    \url{https://fr.wikipedia.org/wiki/Construction_du_pentagone_r%C3%A9gulier_%C3%A0_la_r%C3%A8gle_et_au_compas}
-\end{exercice}
-
-
-\begin{exercice}
-Dessiner la droite d'Euler d'un triangle.
 % https://en.wikipedia.org/wiki/Triangle_center
 % https://fr.wikipedia.org/wiki/Triangle
 % https://fr.wikipedia.org/wiki/Droite_d'Euler
 % https://fr.wikipedia.org/wiki/%C3%89l%C3%A9ments_remarquables_d'un_triangle
+\begin{exercice}%[Droite d'Euler]
+Dans un triangle quelconque, quelle relation y a-t-il entre l'orthocentre
+(intersection des hauteurs), le centre de gravité (intersection des médianes) et
+le centre du cercle circonscrit?
 \end{exercice}
+
+\begin{exercice}
+Utiliser les ressources de GeoGebra sur internet.
+\begin{itemize}
+\item Regarder une vidéo de votre choix de
+\url{https://www.youtube.com/user/GeoGebraChannel}
+\item Tester une feuille de travail de votre choix parmi les plus de 300 000
+disponibles sur \url{http://tube.geogebra.org/}
+\item Tester l'utilisation de GeoGebra sur internet à l'adresse
+\url{https://app.geogebra.org/}
+\end{itemize}
+\end{exercice}
+
