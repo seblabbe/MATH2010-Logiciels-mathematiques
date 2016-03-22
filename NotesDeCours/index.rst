@@ -35,6 +35,10 @@ Notes de cours
 .. include:: 8-algebre-lineaire.rst
 .. include:: 9-mathematica.rst
 .. include:: 10-geogebra.rst
+.. include:: 11-types-donnees.rst
+.. include:: 12-listes.rst
+.. include:: 13-boucles.rst
+.. include:: 14-autres-structures-donnees.rst
 .. .. include:: tout-le-reste.rst
 
 .. Chapitre IPython Jupyter avec In[4], touche TAB, etc.

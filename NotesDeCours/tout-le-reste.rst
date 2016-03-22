@@ -39,9 +39,25 @@ Widgets
 
 Animation série de Taylor de sinus
 
+Introduction à la programmation
+===============================
+
+conditions
+fonctions
+
+itérations
+
+Variables
+
+affectation
+
+
+expressions
+
 Programmation
 -------------
 
 Exercice: Créer une table de multiplication (idea from Doing math with Python book)
 
 Exercie: Calculer les racines d'un polynôme de degré 2.
+
