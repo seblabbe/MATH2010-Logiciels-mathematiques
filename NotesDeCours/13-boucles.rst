@@ -70,7 +70,7 @@ Pour différencier les lignes, il est possible d'afficher plus d'informations::
 En Python, la convention est de toujours utiliser 4 espaces pour indenter et
 identifier les lignes qui appartiennent à la boucle::
 
-    for i in liste::
+    for i in liste:
         <ligne 1 de la boucle>
         <ligne 2 de la boucle>
         <ligne ...>
