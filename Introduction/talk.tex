@@ -1,0 +1,382 @@
+\documentclass[compress,xcolor=dvipsnames]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[usenames]{color}
+\usepackage{graphicx}
+%\usepackage{colortbl}
+\usepackage{xspace,latexsym,tikz,times}
+\usepackage{hyperref}
+\usepackage[frenchb]{babel}
+\usepackage{inconsolata} % plus beau monospace
+
+% french - or - english
+\input{language.tex}
+
+% BEAMER options
+\usetheme{default}
+\useoutertheme{default}
+\useinnertheme{rounded}
+\usecolortheme{rose}
+\usefonttheme{structurebold}
+\setbeamercolor{frametitle}{fg=red!80!black}
+\setbeamercolor{background canvas}{bg=red!2!white}
+\beamertemplatenavigationsymbolsempty
+\setbeamersize{text margin left=.5cm,text margin right=.5cm}
+\setbeamertemplate{footline}[frame number]
+% \colorlet{mygreen}{green!80!black}
+
+% http://texblog.org/2012/05/24/correct-total-number-of-pages-with-backup-slides-in-beamer-presentations/
+\usepackage{appendixnumberbeamer}
+
+\usepackage[skins]{tcolorbox}
+\newtcolorbox{mybox}[2][]{colback=red!5!white,
+colframe=red!75!black,fonttitle=\bfseries,
+colbacktitle=red!85!black,enhanced,
+attach boxed title to top left={yshift=-2mm,xshift=2mm},
+title={#2},{#1}}
+
+%\def\Tiny{\fontsize{5pt}{5pt}\selectfont}
+\newcommand{\todo}[1]{\begin{center}{\color{red}#1}\end{center}}
+%\newcommand{\todo}[1]{}
+
+% entier, réels, etc
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\SWAP}{\textsc{swap}}
+\newcommand{\TRIM}{\textsc{trim}}
+\newcommand{\EXTEND}{\textsc{extend}}
+
+\title{MATH2010 Logiciels mathématiques}
+
+\subtitle{\vspace{4mm}Université de Liège\\
+Hiver 2016\\
+%Postdoctorant à l'Université de Liège\vspace{-10mm}
+}
+
+\date{Sébastien Labbé\\1er février 2016}
+
+\begin{document}
+
+\begin{frame}[t]
+  \titlepage
+\end{frame}
+
+\small
+
+\section{Intro}
+
+% https://fr.wikipedia.org/wiki/Instrument_de_calcul
+
+\begin{frame}
+\frametitle{Boulier}
+\begin{center}
+\includegraphics[width=.3\linewidth]{images/220px-Abacus_6.png}
+%Illustration de l'Encyclopedia Britannica (1875).
+\includegraphics[width=.3\linewidth]{images/boulier-chinois.jpg}
+\end{center}
+\begin{itemize}
+\item un des \alert{plus anciens instruments} d'aide au calcul de l'histoire de
+l'humanité.
+\item calcul des opérations élémentaires: \alert{additions},
+\alert{soustractions}, \alert{multiplications} et \alert{divisions} et même la
+\alert{racine} énième.
+\item Utilisé par les Étrusques, les Grecs, les Égyptiens, les Indiens, les
+Chinois et les Mexicains.
+\end{itemize}
+\url{http://fr.wikipedia.org/wiki/Boulier}
+%\url{http://fr.wikipedia.org/wiki/Soroban}
+\end{frame}
+
+\begin{frame}
+\frametitle{Chiffres arabes}
+\begin{center}
+\includegraphics[width=.3\linewidth]{images/math-crayon-papier.jpg}
+\end{center}
+\begin{itemize}
+\item IIIe siècle av. J.-C.: numération décimale indienne
+\item VIIe siècle: existence est mentionnée en Syrie
+\item IXe siècle: empruntée par la civilisation arabe
+\item 1202: \emph{Liber Abaci} (Le livre du calcul), Leonardo Fibonacci, Pise:
+un traité sur les calculs et la comptabilité fondée sur le calcul décimal.
+\item XVe siècle: les chiffres indo-arabes sont préférés aux chiffres romains en
+Europe.
+\end{itemize}
+\url{http://fr.wikipedia.org/wiki/Chiffres_arabes}
+\end{frame}
+
+\begin{frame}
+\frametitle{Calculatrices mécaniques}
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/330px-Arts_et_Metiers_Pascaline_dsc03869.jpg}
+\end{center}
+\begin{itemize}
+\item 1645: La \alert{Pascaline} de Blaise Pascal
+\item additionner et de soustraire deux nombres d'une façon directe
+\item multiplications et des divisions par répétitions
+\end{itemize}
+\url{https://fr.wikipedia.org/wiki/Pascaline}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Règle à calcul}
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/550px-Sliderule_2005.jpg}
+\end{center}
+\begin{itemize}
+\item depuis le XVIIe siècle
+\item multiplication, division 
+\item racines carrées, cubiques, calculs logarithmiques et trigonométriques
+\item supplantée par les calculatrices au milieu des années 1970
+\end{itemize}
+\url{https://fr.wikipedia.org/wiki/Règle_à_calcul}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Calculateurs prodiges}
+\begin{quote}
+\it
+Avant l'avènement des ordinateurs, les calculateurs prodiges étaient souvent
+employés dans les instituts de recherche nécessitant des calculs complexes et
+longs, comme les calculs d'astrophysique ou de cristallographie.
+\end{quote}
+\url{http://fr.wikipedia.org/wiki/Calculateur_prodige}
+\end{frame}
+
+
+% \begin{frame}
+% \frametitle{Remington Rand Adding machine}
+% \begin{center}
+% \includegraphics[width=.4\linewidth]{images/IMG_20151029_083847582_HDR.jpg}
+% \end{center}
+% \end{frame}
+
+
+\begin{frame}
+\frametitle{Calculatrices électroniques}
+\begin{center}
+\includegraphics[width=.4\linewidth]{images/220px-HP_35.jpg}
+\end{center}
+\begin{itemize}
+\item la HP-35, commercialisée en janvier 1972 par Hewlett-Packard
+\item première calculatrice scientifique 
+\item devient célèbre sous le nom de "règle à calcul électronique"
+\item 395 dollars
+\item accompagnée d'un monumental socle en fonte de 10 kg
+\end{itemize}
+\url{https://fr.wikipedia.org/wiki/HP-35}
+\end{frame}
+
+\begin{frame}
+\frametitle{Calculatrices graphiques}
+\begin{center}
+\includegraphics[width=.3\linewidth]{images/citizen-calculatrice-ultra-compacte-lc110n-noire.jpg}
+\includegraphics[width=.2\linewidth]{images/200px-TI-89.jpg}
+\end{center}
+\begin{itemize}
+\item la TI-89, commercialisée par Texas Instruments en 1998
+\item calcul formel
+\item possibilités de programmation
+\end{itemize}
+\url{http://fr.wikipedia.org/wiki/Calculatrice}
+\end{frame}
+
+
+
+
+\begin{frame}
+    \fr{\frametitle{Ordinateur personnel}}
+\begin{center}
+\includegraphics[width=.5\linewidth]{images/IBM_PC_5150.jpg}
+\end{center}
+\begin{itemize}
+\item IMB PC 5150
+\item \alert{premier ordinateur personnel} produit, à partir de 1981 à plusieurs
+millions d'exemplaires par IBM 
+\end{itemize}
+\url{https://fr.wikipedia.org/wiki/Ordinateur}
+\end{frame}
+
+
+
+
+\begin{frame}
+    \fr{\frametitle{Logiciels de mathématiques}}
+Depuis 1960, au moins 45 logiciels de mathématiques\\
+(32 à licence libre et 13 commerciaux):
+\begin{center}
+\begin{tabular}{lllll}
+Axiom 	   & FORM       & Magnus       & MuPAD     & SyMAT       \\
+Cadabra    & FriCAS     & Maple        & OpenAxiom & SymbolicC++ \\
+Calcinator & FxSolver   & Mathcad      & PARI/GP   & Symbolism   \\
+CoCoA-4    & GAP        & \alert{Mathematica}  & Reduce    & Symengine   \\
+CoCoA-5    & GiNaC      & MathHandbook & Scilab    & \alert{SymPy} \\
+Derive     & KANT/KASH  & Mathics      & \alert{SageMath}  & TI-Nspire   \\
+DataMelt   & Macaulay2  & Mathomatic   & SINGULAR  & Wolfram Alpha \\
+Erable     & Macsyma    & Maxima       & SMath     & Xcas/Giac \\
+Fermat     & Magma      & MuMATH       & Symbolic  & Yacas
+\end{tabular}
+\end{center}
+Source: \url{http://en.wikipedia.org/wiki/List_of_computer_algebra_systems}
+%https://fr.wikipedia.org/wiki/Histoire_de_l'informatique
+\end{frame}
+
+
+\begin{frame}
+    \fr{\frametitle{Logiciels de mathématiques}}
+Quelques logiciels commerciaux:
+\begin{itemize}
+\item \alert{Maple}, Waterloo Maple Inc., Maplesoft, since 1985.
+\item \alert{Mathematica}, Wolfram Research, since 1988.
+\item \alert{Matlab}, MathWorks, since 1989
+\item \alert{Magma}, University of Sydney, since 1990
+\end{itemize}
+\begin{center}
+\includegraphics[height=1cm]{images/Maplesoft_logo2x.png}
+\includegraphics[height=1cm]{images/MathematicaSpikeyVersion9.png}
+\includegraphics[height=1cm]{images/bg_header_mwlogo_notag.jpg}
+\includegraphics[height=1cm]{images/Magma-logo.png}
+\end{center}
+Quelques logiciels libres:
+\begin{itemize}
+\item \alert{Maxima}, W. Schelter et coll., since 1967: \alert{symbolic operations}
+\item \alert{Singular}, U. of Kaiserslautern, since 1984: \alert{polynomial comput.}
+\item \alert{PARI/GP}, U. Bordeaux 1, since 1985: \alert{number theory computations}
+\item \alert{GAP}, GAP Group, since 1986: \alert{computational group theory}
+\item \alert{R}, U. of Auckland, New Zealand, since 1993: \alert{statistiques}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\fr{\frametitle{\alert{Logiciels libres}}}
+\en{\frametitle{\alert{Open source} software}}
+\fr{
+Les licences de logiciels libres, tel que la \alert{licence publique générale}
+de GNU, garantissent quatre types de liberté:
+\begin{itemize}
+\item La liberté d'\alert{utiliser} le programme (gratuitement).
+\item La liberté de \alert{lire le code source}.
+\item La liberté d'\alert{améliorer le logiciel}.
+\item La liberté de \alert{redistribuer le programme à qui on veut}.
+\end{itemize}}
+\en{
+Sage is distributed under the terms of the GNU General Public License version 2 (GPLv2)
+which guarentees four types of freedom:
+\begin{itemize}
+\item The freedom to \alert{use} the software (it is free).
+\item The freedom to \alert{read the source code}.
+\item The freedom to \alert{improve the software}.
+\item The freedom to \alert{redistribute the modified software to anyone}.
+\end{itemize}}
+\begin{center}
+\pause \includegraphics[width=0.24\linewidth]{images/drive3.jpg}
+\pause \includegraphics[width=0.25\linewidth]{images/hood.jpg}
+\pause \includegraphics[width=0.25\linewidth]{images/repairs.jpg}
+\pause \includegraphics[width=0.26\linewidth]{images/selling-a-car.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Python scientifique}
+\begin{center}
+    \begin{minipage}[c]{.8\linewidth}
+    \includegraphics[width=\linewidth]{images/scipy.png}
+    \end{minipage}
+    \begin{minipage}[c]{.19\linewidth}
+    % trim={<left> <lower> <right> <upper>}
+    \includegraphics[width=0.8\linewidth,trim={8cm 0 8cm 0},clip]{images/jupyter.png}\\
+\includegraphics[width=0.8\linewidth]{images/sage_logo_new_l_hc_edgy-nq8.png}
+    \end{minipage}
+\end{center}
+\vspace{-8mm}
+\begin{itemize}
+\item 1991: première version de Python
+\item 2000-2001: Matplotlib, IPython, SciPy
+\item 2006-2008: NumPy, SageMath, \alert{SymPy}, pandas
+\item 2012-2014: Julia, \alert{Jupyter}
+\item 2015: 70 000 librairies Python dans le \emph{Python Package Index (PyPI)}
+\end{itemize}
+    %\href{http://www.buzzfeed.com/heidiblake/the-tennis-racket}{Buzz Feed}
+    En janvier 2016,
+    \href{http://data.blog.lemonde.fr/2016/01/18/comment-buzzfeed-et-la-bbc-ont-analyse-26-000-matchs-de-tennis/}{Buzz
+    Feed a utilisé Jupyter et pandas} pour analyser 26
+    000 matchs de tennis et découvrir des matchs possiblement truqués.\\
+    {\tiny
+    \url{http://data.blog.lemonde.fr/2016/01/18/comment-buzzfeed-et-la-bbc-ont-analyse-26-000-matchs-de-tennis/}}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Plan de cours}
+
+\begin{description}
+\item[Partie 1:] Utiliser un logiciel de math. --
+    \alert{Jupyter, Python, SymPy} (4h, 8h)\\
+    \emph{Calculatrice,
+arithmétique,
+algèbre,
+analyse,
+calcul symbolique,
+résolution d'équations,
+trouver les racines d'une fonction,
+dérivation,
+intégration,
+équations différentielles,
+séries,
+algèbre linéaire,
+tracer des graphiques.}
+\item[Partie 2:] Mathématiques avec d'autres logiciels --
+    \alert{Mathematica, GeoGebra, LibreOffice et/ou Panda} (3h, 6h)\\
+%Calcul numérique (numpy),
+%théorie des groupes (GAP),
+%théorie des nombres (Pari/GP),
+%images et animations (matplotlib, PIL),
+    \emph{Mathématiques avec Mathematica,
+géométrie,
+traitement de données, tableurs.}
+\item[Partie 3:] \alert{Introduction à la programmation -- Python} (3h, 6h)\\
+    \emph{Variables, expressions, affectation,
+fonctions,
+conditions,
+itérations,
+chaînes de caractères, listes, dictionnaires.}
+\end{description}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Évaluation et notes de cours}
+\begin{center}
+\begin{tabular}{lcc}
+    Devoir 1 (mars)             & 10  \%   \\
+    Devoir 2 (mai)              & 10  \%   \\
+    Examen final pratique (3h)  & 50  \%   \\
+    Examen final écrit (1h)     & 30  \%        
+\end{tabular}
+\end{center}
+
+Toutes les informations sur le cours:
+\begin{center}
+    \url{http://www.slabbe.org/Enseignements/MATH2010/}
+\end{center}
+dont les \alert{Notes de cours} rédigées pour l'occasion. \\
+\bigskip
+    \alert{NOTE: Comme elles sont en cours de rédaction, elles seront mises à jour
+régulièrement sur le site web.}
+\bigskip
+\begin{description}
+\item[Chapitre 1] Introduction
+\item[Chapitre 2] Calculatrice et arithmétique avec Python
+\item[Chapitre 3] Calculatrice et arithmétique avec SymPy
+\end{description}
+\end{frame}
+
+\end{document}
