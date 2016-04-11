@@ -1,6 +1,6 @@
 
-Boucle ``for``
-==============
+Boucles ``for`` et ``while``
+============================
 
 Une boucle permet de faire des tâches répétitives sur un ordinateur avec un
 moindre effort.
@@ -22,7 +22,10 @@ moindre effort.
     I will not do anything bad ever again.
     I will not do anything bad ever again.
 
-Une boucle for permet aussi de parcourir les éléments d'une liste, une chaîne
+La boucle ``for``
+-----------------
+
+La boucle for permet aussi de parcourir les éléments d'une liste, une chaîne
 de caractères ou en général de tout objet itérable::
 
     >>> for a in [1,2,3,4]:
@@ -53,23 +56,8 @@ les lignes du bloc d'instructions qui appartient à la boucle::
         <ligne n du bloc d'instruction>
     <ligne exécutée après la boucle>
 
-Calculer la somme des éléments d'une liste
-------------------------------------------
-
-L'exemple suivant illustre comment calculer la somme des éléments d'une liste
-en utilisant une variable ``s`` initialisée à zéro avant la boucle::
-
-    >>> L = [134, 13614, 73467, 1451, 134, 88]
-    >>> s = 0
-    >>> for a in L:
-    ...     s = s + a
-    >>> s
-    88888
-    >>> sum(L)
-    88888
-
-Un exemple avec Sympy
----------------------
+Un exemple de boucle ``for`` avec Sympy
+---------------------------------------
 
 Supposons que l'on désire factoriser le polynôme ``x**k-1`` pour toutes les
 valeurs de ``k=1..9``. En SymPy, il est possible d'écrire onze fois le même
@@ -128,6 +116,73 @@ Pour différencier les lignes, il est possible d'afficher plus d'informations::
     x**8 - 1 == (x - 1)*(x + 1)*(x**2 + 1)*(x**4 + 1)
     x**9 - 1 == (x - 1)*(x**2 + x + 1)*(x**6 + x**3 + 1)
 
+Affectation d'une variable
+--------------------------
+
+Pour affecter une valeur dans une variable, on se rappelle que cela se fait
+en Python comme en C ou C++ ou Java avec la syntaxe::
+
+    >>> a = 5
+
+La syntaxe ``a == 5`` est réservée pour le test d'égalité.
+
+Mise à jour des variables
+-------------------------
+
+Quand une instruction d'affectation est exécutée, l'expression de droite (à
+savoir l'expression qui vient après le signe ``=`` d'affectation) est évaluée en
+premier. Cela produit une valeur. Ensuite, l'assignation est faite, de sorte
+que la variable sur le côté gauche se réfère maintenant à la nouvelle valeur.
+
+L'une des formes les plus courantes de l'affectation est une mise à jour,
+lorsque la nouvelle valeur de la variable dépend de son ancienne valeur::
+
+    >>> n = 5
+    >>> n = 3 * n + 1
+
+Ligne 2 signifie obtenir la valeur courante de ``n``, la multiplier par trois et
+ajouter un, et affecter la réponse à ``n``. Donc, après avoir exécuté les deux
+lignes ci-dessus, ``n`` va pointer / se référer à l'entier ``16``.
+
+Si vous essayez d'obtenir la valeur d'une variable qui n'a jamais été
+attribuée, vous obtenez une erreur::
+
+    >>> W = x + 1
+    Traceback (most recent call last):
+    ...
+    NameError: name 'x' is not defined
+
+Avant de pouvoir mettre à jour une variable, vous devez l'initialiser à une
+valeur de départ, habituellement avec une valeur simple::
+
+    sous_total = 0
+    ...
+    sous_total = sous_total + 1
+
+La mise à jour d'une variable en lui ajoutant 1 à celle-ci est très commune.
+On appelle cela un **incrément** de la variable; soustraire 1 est appelé un
+**décrément**.
+
+Calculer la somme des éléments d'une liste
+------------------------------------------
+
+L'exemple suivant illustre comment calculer la somme des éléments d'une liste
+en utilisant une variable ``s`` initialisée à zéro avant la boucle::
+
+    >>> L = [134, 13614, 73467, 1451, 134, 88]
+    >>> s = 0
+    >>> for a in L:
+    ...     s = s + a
+    >>> s
+    88888
+    >>> sum(L)
+    88888
+
+La boucle ``while``
+-------------------
+
+TODO
+
 Interrompre une boucle avec ``break``
 -------------------------------------
 
@@ -170,4 +225,6 @@ valeur suivante::
     9
 
 On remarque que la valeur 5 n'a pas été imprimée par la fonction ``print``.
+
+http://openbookproject.net/thinkcs/python/english3e/iteration.html
 
