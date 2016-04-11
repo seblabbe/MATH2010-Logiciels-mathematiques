@@ -42,16 +42,17 @@ Animation série de Taylor de sinus
 Introduction à la programmation
 ===============================
 
-conditions
-fonctions
+11 Types de données de Python
+12 Listes
+13 Boucle for
+14 Autres structures de données (n-uplets, dictionaires, ensembles)
+
+15 Conditions
+16 fonctions
 
 itérations
-
 Variables
-
 affectation
-
-
 expressions
 
 Programmation

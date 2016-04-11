@@ -1,6 +1,6 @@
 
-Autres structures de données (n-uplets, dictionaires, ensembles)
-================================================================
+Autres structures de données
+============================
 
 Tuples (type ``tuple``)
 -----------------------
@@ -36,6 +36,28 @@ itérable::
     ('b', 'o', 'n', 'j', 'o', 'u', 'r')
     >>> tuple([1,2,3])
     (1, 2, 3)
+
+Emballage et déballage d'un tuple
+---------------------------------
+
+Les tuples peuvent être créés comme emballage de valeurs::
+
+    >>> b = ('Bob', 23, 'math')      # emballage d'un tuple
+    >>> b
+    (u'Bob', 23, u'math')
+
+Mais, il peuvent aussi être déballés directement en faisant comme suit::
+
+    >>> (nom, age, etude) = b        # déballage d'un tuple
+    >>> nom
+    u'Bob'
+    >>> age
+    23
+    >>> etude
+    u'math'
+
+Pour plus d'informations sur les tuples.
+http://openbookproject.net/thinkcs/python/english3e/tuples.html
 
 Dictionnaires (type ``dict``)
 -----------------------------
@@ -101,6 +123,28 @@ telles que la fonction ``factorint``::
     >>> factorint(240)
     {2: 4, 3: 1, 5: 1}
 
+Les clés d'un dictionnaire doivent être des objets non modifiables
+(techniquement, des objets qui définissent une fonction de hachage ``hash``).
+Comme les listes sont modifiables, une liste ne peut pas jouer le rôle d'une
+clé d'un dictionnaire. Si on le fait, on obtient l'erreur suivante::
+
+    >>> d = dict()
+    >>> cle = [2,3,4]
+    >>> d[cle] = 'valeur'
+    Traceback (most recent call last):
+    ...
+    TypeError: unhashable type: 'list'
+
+Comme les listes sont modifiables, elle ne sont pas hachable d'où l'erreur
+obtenue. Par contre, on peut utiliser un tuple comme clé d'un dictionnaire::
+
+    >>> cle = (2,3,4)
+    >>> d[cle] = 'valeur'
+    >>> d
+    {(2, 3, 4): 'valeur'}
+
+http://openbookproject.net/thinkcs/python/english3e/dictionaries.html
+
 Ensembles (type ``set``)
 ------------------------
 
@@ -127,4 +171,15 @@ La méthode ``.add()`` permet d'ajouter un élément à l'ensemble::
     >>> s
     set([1, 2, 3, 4, 'bonjour'])
 
+Comme pour les clés d'un dictionnaire, les éléments d'un ensemble doivent être
+hachables (non modifiables). Par exemple, on ne peut pas ajouter une liste à un
+ensemble, mais on peut ajouter un tuple::
+
+    >>> s.add([1,2,3])
+    Traceback (most recent call last):
+    ...
+    TypeError: unhashable type: 'list'
+    >>> s.add((1,2,3))
+    >>> s
+    set([1, 2, 3, 4, (1, 2, 3), u'bonjour'])
 
