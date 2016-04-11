@@ -1,3 +1,9 @@
+#
+NotesDeCours/index.pdf
+PlanDeCours/plan.aux
+PlanDeCours/plan.out
+PlanDeCours/plan.pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
