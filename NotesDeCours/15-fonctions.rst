@@ -65,6 +65,4 @@ facilement::
     >>> etat_de_leau(102)
     L'eau est un gaz
 
-Pour plus de détails sur les fonctions, consulter
-http://openbookproject.net/thinkcs/python/english3e/functions.html
 

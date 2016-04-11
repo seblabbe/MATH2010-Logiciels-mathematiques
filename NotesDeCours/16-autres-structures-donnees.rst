@@ -56,9 +56,6 @@ Mais, il peuvent aussi être déballés directement en faisant comme suit::
     >>> etude
     u'math'
 
-Pour plus d'informations sur les tuples.
-http://openbookproject.net/thinkcs/python/english3e/tuples.html
-
 Dictionnaires (type ``dict``)
 -----------------------------
 
@@ -142,8 +139,6 @@ obtenue. Par contre, on peut utiliser un tuple comme clé d'un dictionnaire::
     >>> d[cle] = 'valeur'
     >>> d
     {(2, 3, 4): 'valeur'}
-
-http://openbookproject.net/thinkcs/python/english3e/dictionaries.html
 
 Ensembles (type ``set``)
 ------------------------

@@ -149,7 +149,8 @@ La fonction ``range``
 La fonction ``range(n)`` permet de créer la liste des entiers de ``0`` à
 ``n-1``::
 
-    >>> range(15)
+    >>> range(15)                  # Python 2
+    >>> list(range(15))            # Python 3
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 Avec deux arguments, la fonction ``range(a, b)`` crée la liste des entiers de
@@ -173,10 +174,11 @@ Soit la liste des entiers de zéro à neuf::
     >>> L
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-Les compréhensions de listes permettent de créer des listes facilement en une
-ligne. La syntaxe ressemble à la syntaxe qui permet de décrire un ensemble
-mathématique: ``[expression_de_i for i in liste]``.  Par exemple, l'ensemble des
-cubes des valeurs de la liste ``L`` s'écrit::
+Les *compréhensions de listes* (list comprehensions en anglais, certains
+auteurs écrivent *intentions de listes* en français) permettent de créer des
+listes facilement en une ligne. La syntaxe ressemble à la syntaxe qui permet de
+décrire un ensemble mathématique: ``[expression_de_i for i in liste]``. Par
+exemple, l'ensemble des cubes des valeurs de la liste ``L`` s'écrit::
 
     >>> [i**3 for i in L]
     [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]

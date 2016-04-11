@@ -2,6 +2,21 @@
 Boucles ``for`` et ``while``
 ============================
 
+Dans ce chapitre et les suivants, nous traitons de la programmation en Python.
+Les notes ici présentent les grandes lignes et les éléments principaux de ce
+sujet. Le lecteur désirant en savoir plus sera invité à consulter les chapitres
+1 à 7 du livre en français de G. Swinnen [Apprendre]_
+ou encore les chapitre 1 à 11 du livre en anglais de Wentworth et al. [Think]_
+Scientist - Learning with Python*.
+
+.. [Apprendre] Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
+   http://inforef.be/swi/download/apprendre_python3_5.pdf
+
+.. [Think] Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers,
+   How to Think Like a Computer Scientist - Learning with Python, 3nd
+   Edition, 2012.
+   http://openbookproject.net/thinkcs/python/english3e/
+
 Une boucle permet de faire des tâches répétitives sur un ordinateur avec un
 moindre effort.
 
@@ -35,14 +50,14 @@ de caractères ou en général de tout objet itérable::
     103
     104
     >>> for a in 'bonjour':
-    ...     print('A' + a + 'Z')
-    AbZ
-    AoZ
-    AnZ
-    AjZ
-    AoZ
-    AuZ
-    ArZ
+    ...     print('A ' + a + ' Z')
+    A b Z
+    A o Z
+    A n Z
+    A j Z
+    A o Z
+    A u Z
+    A r Z
 
 En Python, une boucle ``for`` est identifiée par une ligne d'en-tête commançant
 par ``for`` se terminant par un deux-points ``:`` et avec la syntaxe ``for TRUC
@@ -55,6 +70,10 @@ les lignes du bloc d'instructions qui appartient à la boucle::
         ...
         <ligne n du bloc d'instruction>
     <ligne exécutée après la boucle>
+
+Le bloc d'instructions est exécuté autant de fois qu'il y a d'éléments dans la
+liste. Le bloc d'instruction est exécuté une fois pour chaque valeur de la
+variable ``i`` dans la liste.
 
 Un exemple de boucle ``for`` avec Sympy
 ---------------------------------------
@@ -126,8 +145,8 @@ en Python comme en C ou C++ ou Java avec la syntaxe::
 
 La syntaxe ``a == 5`` est réservée pour le test d'égalité.
 
-Mise à jour des variables
--------------------------
+Mise à jour d'une variable
+--------------------------
 
 Quand une instruction d'affectation est exécutée, l'expression de droite (à
 savoir l'expression qui vient après le signe ``=`` d'affectation) est évaluée en
@@ -163,8 +182,8 @@ La mise à jour d'une variable en lui ajoutant 1 à celle-ci est très commune.
 On appelle cela un **incrément** de la variable; soustraire 1 est appelé un
 **décrément**.
 
-Calculer la somme des éléments d'une liste
-------------------------------------------
+Quelques exemples
+-----------------
 
 L'exemple suivant illustre comment calculer la somme des éléments d'une liste
 en utilisant une variable ``s`` initialisée à zéro avant la boucle::
@@ -181,7 +200,34 @@ en utilisant une variable ``s`` initialisée à zéro avant la boucle::
 La boucle ``while``
 -------------------
 
-TODO
+Parfois, on ne sait pas à l'avance combien de fois on voudra exécuter un bloc
+d'instructions. Dans ce cas, il vaut mieux utiliser une boucle ``while`` dont
+la syntaxe est::
+
+    while CONDITION:
+        INSTRUCTION 1
+        INSTRUCTION 2
+        ...
+        INSTRUCTION n
+
+Le bloc d'instruction est exécuté tant que la condition est satisfaite. Par
+exemple, on peut afficher les puissances de 5 inférieures à un million avec une
+boucle ``while``::
+
+    >>> a = 1
+    >>> while a < 1000000:
+    ...     print a
+    ...     a = a * 5
+    ... 
+    1
+    5
+    25
+    125
+    625
+    3125
+    15625
+    78125
+    390625
 
 Interrompre une boucle avec ``break``
 -------------------------------------
@@ -225,6 +271,4 @@ valeur suivante::
     9
 
 On remarque que la valeur 5 n'a pas été imprimée par la fonction ``print``.
-
-http://openbookproject.net/thinkcs/python/english3e/iteration.html
 
