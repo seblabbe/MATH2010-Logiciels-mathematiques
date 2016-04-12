@@ -19,6 +19,10 @@ Bien sûr, on pourrait aussi améliorer la prise de décision en considérant la
 distance de la prochaine station d'essense et comparer avec la distance pouvant
 être parcourue avec ce qui reste d'essence, etc. Mais, pour le moment,
 l'important est de comprendre comment on écrit une condition simple en Python.
+
+La forme ``if - else``
+----------------------
+
 La forme générale est la suivante::
 
     if <condition>:
@@ -34,13 +38,16 @@ ligne ``if`` est exécuté. Sinon, c'est-à-dire si la condition est évaluée �
 ``False``, alors c'est le code indenté de 4 espaces sous la ligne ``else:`` qui
 est exécuté.
 
+La forme ``if - elif - else``
+-----------------------------
+
 Parfois, il y a plusieurs cas à tester. Il est possible d'emboîter les
 conditions::
 
     if reservoir == 0:
         print("Panne d'essence")
     else:
-        if reservoir < 0.15:
+        if 0 < reservoir < 0.15:
             print('Prendre la sortie')
         else:
             print('Rester sur l'autoroute')
@@ -52,10 +59,13 @@ ci-haut de la façon suivante::
 
     if reservoir == 0:
         print("Panne d'essence")
-    elif reservoir < 0.15:
+    elif 0 < reservoir < 0.15:
         print('Prendre la sortie')
     else:
         print('Rester sur l'autoroute')
+
+La forme ``if`` seul
+--------------------
 
 La ligne ``elif`` ou la ligne ``else`` n'est pas obligatoire car parfois on ne
 veut rien faire si la condition n'est pas satisfaite. Dans ce cas, on écrit
@@ -63,6 +73,9 @@ simplement::
 
     if reservoir == 0:
         print("Panne d'essence")
+
+La forme ``if - elif - ... - elif - else``
+------------------------------------------
 
 Il peut y avoir plusieurs lignes de ``elif``::
 

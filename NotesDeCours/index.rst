@@ -37,10 +37,11 @@ Notes de cours
 .. include:: 10-geogebra.rst
 .. include:: 11-types-donnees.rst
 .. include:: 12-listes.rst
-.. include:: 13-boucles.rst
+.. include:: 13-boucle-for.rst
 .. include:: 14-conditions.rst
 .. include:: 15-fonctions.rst
-.. include:: 16-autres-structures-donnees.rst
+.. include:: 16-boucle-while.rst
+.. include:: 17-autres-structures-donnees.rst
 .. .. include:: tout-le-reste.rst
 
 .. Chapitre IPython Jupyter avec In[4], touche TAB, etc.

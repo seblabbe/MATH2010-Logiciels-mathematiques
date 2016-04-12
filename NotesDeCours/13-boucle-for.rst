@@ -1,6 +1,6 @@
 
-Boucles ``for`` et ``while``
-============================
+Boucle ``for``
+==============
 
 Dans ce chapitre et les suivants, nous traitons de la programmation en Python.
 Les notes ici présentent les grandes lignes et les éléments principaux de ce
@@ -175,12 +175,20 @@ Avant de pouvoir mettre à jour une variable, vous devez l'initialiser à une
 valeur de départ, habituellement avec une valeur simple::
 
     sous_total = 0
-    ...
     sous_total = sous_total + 1
 
 La mise à jour d'une variable en lui ajoutant 1 à celle-ci est très commune.
 On appelle cela un **incrément** de la variable; soustraire 1 est appelé un
 **décrément**.
+
+Le code ``sous_total = sous_total + 1`` calcule le résultat de la partie droite
+dans un nouvel espace en mémoire et ensuite cette nouvelle valeur est affectée
+à la variable ``sous_total``. Une façon plus efficace d'incrémenter une
+variable est de la modifier sans avoir à garder en mémoire un résultat partiel.
+En Python (comme en C), on peut incrémenter une variable avec l'opérateur
+``+=``. Donc, il suffit d'écrire::
+
+    sous_total += 1
 
 Quelques exemples
 -----------------
@@ -194,81 +202,49 @@ en utilisant une variable ``s`` initialisée à zéro avant la boucle::
     ...     s = s + a
     >>> s
     88888
+
+On écrit la même chose en utilisant le signe ``+=`` pour incrémenter la
+variable ``s``::
+
+    >>> s = 0
+    >>> for a in L:
+    ...     s += a
+    >>> s
+    88888
+
+On vérifie que le calcul est bon::
+
     >>> sum(L)
     88888
 
-La boucle ``while``
--------------------
+L'exemple suivant double chacune des lettres d'une chaîne de caractères::
 
-Parfois, on ne sait pas à l'avance combien de fois on voudra exécuter un bloc
-d'instructions. Dans ce cas, il vaut mieux utiliser une boucle ``while`` dont
-la syntaxe est::
+    >>> s = 'gaston'
+    >>> t = ''
+    >>> for lettre in s:
+    ...     t += lettre + lettre
+    ...
+    >>> t
+    'ggaassttoonn'
 
-    while CONDITION:
-        INSTRUCTION 1
-        INSTRUCTION 2
-        ...
-        INSTRUCTION n
+Lorsque la variable de la boucle n'est pas utilisée dans le bloc d'instruction
+la convention est d'utiliser la barre de soulignement (``_``) pour l'indiquer.
+Ici, on calcule les puissances du nombre 3. On remarque que l'expression
+d'assignation ``k *= 3`` est équivalente à ``k = k * 3``::
 
-Le bloc d'instruction est exécuté tant que la condition est satisfaite. Par
-exemple, on peut afficher les puissances de 5 inférieures à un million avec une
-boucle ``while``::
-
-    >>> a = 1
-    >>> while a < 1000000:
-    ...     print a
-    ...     a = a * 5
+    >>> k = 1
+    >>> for _ in range(10):
+    ...     k *= 3
+    ...     print k
     ... 
-    1
-    5
-    25
-    125
-    625
-    3125
-    15625
-    78125
-    390625
-
-Interrompre une boucle avec ``break``
--------------------------------------
-
-La commande ``break`` permet d'interrompre une boucle ``for`` ou ``while`` en
-cours::
-
-    >>> for i in range(10):
-    ...     if i == 5:
-    ...         break
-    ...     print(i)
-    ...
-    0
-    1
-    2
     3
-    4
-
-On remarque que les valeurs plus grandes que 4 n'ont pas été imprimées par la
-fonction ``print``.
-
-Continuer une boucle à l'itération suivante avec ``continue``
--------------------------------------------------------------
-
-La commande ``continue`` permet de continuer le parcours d'une boucle à la
-valeur suivante::
-
-    >>> for i in range(10):
-    ...     if i == 5:
-    ...         continue
-    ...     print(i)
-    ...
-    0
-    1
-    2
-    3
-    4
-    6
-    7
-    8
     9
-
-On remarque que la valeur 5 n'a pas été imprimée par la fonction ``print``.
+    27
+    81
+    243
+    729
+    2187
+    6561
+    19683
+    59049
 

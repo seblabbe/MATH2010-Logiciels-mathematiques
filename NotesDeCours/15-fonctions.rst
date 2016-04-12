@@ -36,6 +36,15 @@ s'écrit::
     >>> somme(4,7)
     11
 
+La fonction qui calcule le volume d'un parallépipède rectangle s'écrit::
+
+    >>> def volume(largeur, hauteur, profondeur):
+    ...     return largeur * hauteur * profondeur
+    ...
+    >>> v = volume(2,3,4)
+    >>> v
+    24
+
 On peut rassemble le code sur la température de l'eau que l'on a écrit plus au
 sein d'une fonction ``etat_de_leau`` qui dépend du paramètre ``temperature``::
 
