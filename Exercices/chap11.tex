@@ -1,5 +1,5 @@
 
-\section*{Exercices du Chapitre 10: Types de données de Python}
+\section*{Exercices du Chapitre 11: Types de données de Python}
 
 \begin{exercice}
     Vrai ou faux.
@@ -40,7 +40,41 @@
     Peut-on simplifier cette équation?
 \end{exercice}
 
+\begin{exercice}
+    Soit la chaîne de caractères \texttt{w='logiciels mathematiques'}. 
+Pour quelles valeurs entières positives et négatives de \texttt{a} est-ce que
+\texttt{w[a]=='i'}?
+Pour quelles valeurs entières positives de \texttt{a} et \texttt{b} est-ce que
+\texttt{w[a:b]} vaut \texttt{'ciels math'}?
+\end{exercice}
+
 
 \begin{exercice}
-    TODO: Question chaîne de caractères...
+Soit la chaîne de caractère
+\begin{center}
+\texttt{a = 'lundi mardi mercredi jeudi vendredi samedi dimanche'}.
+\end{center}
+En utilisant les méthodes des objets de type \texttt{str} (écrire \texttt{a.} et
+appuyer sur la touche tabulations pour afficher les méthodes), trouver une
+façon de créer les chaînes de caractères et listes suivantes:
+\begin{center}
+\begin{tabular}{l}
+\texttt{'LUNDI MARDI MERCREDI JEUDI VENDREDI SAMEDI DIMANCHE'}\\
+\texttt{'Lundi mardi mercredi jeudi vendredi samedi dimanche'}\\
+\texttt{'lundx mardx mercredx jeudx vendredx samedx dxmanche'}\\
+\texttt{['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']}
+\end{tabular}
+\end{center}
 \end{exercice}
+
+% sage: a = 'lundi mardi mercredi jeudi vendredi samedi dimanche'
+% sage: a.split()
+% ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
+% sage: a.upper()
+% 'LUNDI MARDI MERCREDI JEUDI VENDREDI SAMEDI DIMANCHE'
+% sage: a.replace(' ', '+')
+% 'lundi+mardi+mercredi+jeudi+vendredi+samedi+dimanche'
+% sage: a.capitalize()
+% 'Lundi mardi mercredi jeudi vendredi samedi dimanche'
+
+

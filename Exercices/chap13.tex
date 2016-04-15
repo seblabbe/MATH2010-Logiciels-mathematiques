@@ -1,0 +1,76 @@
+
+\section*{Exercices du Chapitre 13: Boucle \texttt{for}}
+
+% Les exercices ci-bas sont tirés du livre de Gérard Swinnen 
+% \footnote{Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
+% \url{http://inforef.be/swi/download/apprendre_python3_5.pdf}}
+% que vous êtes invités à consulter pour en apprendre d'avantage.
+
+\begin{exercice}
+Soient les listes suivantes :
+\begin{verbatim}
+    t1 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    t2 = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+    'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
+\end{verbatim}
+En utilisant \texttt{t1} et \texttt{t2}
+créer une nouvelle liste \texttt{t3} qui contient
+tous les éléments des deux listes en les alternant, de telle manière
+que chaque nom de mois soit suivi du nombre de jours correspondant :
+\texttt{['Janvier',31,'Février',28,'Mars',31, etc...]}.
+\end{exercice}
+
+\begin{exercice}
+Dans un conte américain, huit petits canetons s’appellent respectivement :
+Jack, Kack, Lack, Mack, Nack, Oack, Pack et Qack. Écrivez un petit script qui
+génère tous ces noms à partir des deux chaînes suivantes :
+\texttt{prefixes = 'JKLMNOP'} et \texttt{suffixe = 'ack'}
+Si vous utilisez une instruction \texttt{for ... in ...}, votre script ne devrait
+comporter que deux lignes.
+\end{exercice}
+
+\begin{exercice}
+Écrire une boucle qui affiche ceci:
+%{\footnotesize
+\begin{verbatim}
++++++
+++++++++
++++++++++++
+++++++++++++++
++++++++++++++++++
+++++++++++++++++++++
++++++++++++++++++++++++
+\end{verbatim}
+%}
+\end{exercice}
+
+\begin{exercice}
+Écrire une boucle qui recherche le plus grand élément présent dans une liste
+donnée. Par exemple, si on l’appliquait à la liste \texttt{[32, 5, 12, 8, 3, 75,
+2, 15]} ce programme devrait afficher : \texttt{le plus grand élément de cette liste a
+la valeur 75}.
+\end{exercice}
+
+\begin{exercice}
+Écrivez un programme qui analyse un par un tous les éléments d’une liste de
+nombres (par exemple celle de l’exercice précédent) pour générer deux nouvelles
+listes. L’une contiendra seulement les nombres pairs de la liste initiale, et
+l’autre les nombres impairs. Par exemple, si la liste initiale est celle de
+l’exercice précédent, le programme devra construire une liste pairs qui
+contiendra \texttt{[32, 12, 8, 2]}, et une liste impairs qui contiendra
+\texttt{[5, 3, 75, 15]}. Astuce : pensez à utiliser l’opérateur modulo (\%).
+\end{exercice}
+
+\begin{exercice}
+Écrivez un programme qui compte le nombre de consonnes contenus dans une phrase
+donnée.
+\end{exercice}
+
+\begin{exercice}
+Écrivez un programme qui analyse un par un tous les éléments d’une liste
+de mots (par exemple : \texttt{['Jean', 'Maximilien', 'Brigitte', 'Sonia',
+'Jean-Pierre', 'Sandra']}) pour générer deux nouvelles listes. L’une contiendra
+les mots comportant moins de 6 caractères, l’autre les mots comportant 6
+caractères ou davantage.
+\end{exercice}
+
