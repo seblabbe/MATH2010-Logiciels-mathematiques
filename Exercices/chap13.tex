@@ -31,7 +31,7 @@ comporter que deux lignes.
 
 \begin{exercice}
 Écrire une boucle qui affiche ceci:
-%{\footnotesize
+{\footnotesize
 \begin{verbatim}
 +++++
 ++++++++
@@ -41,36 +41,43 @@ comporter que deux lignes.
 ++++++++++++++++++++
 +++++++++++++++++++++++
 \end{verbatim}
-%}
+}
 \end{exercice}
 
 \begin{exercice}
-Écrire une boucle qui recherche le plus grand élément présent dans une liste
-donnée. Par exemple, si on l’appliquait à la liste \texttt{[32, 5, 12, 8, 3, 75,
-2, 15]} ce programme devrait afficher : \texttt{le plus grand élément de cette liste a
-la valeur 75}.
+    Une intégrale peut se calculer comme la limite d'une somme de Riemann:
+    \[
+	\int_0^1 x^2\,dx =
+	\lim_{n\to\infty}\frac{1}{n}\sum_{i=0}^n{\left(\frac{i}{n}\right)^2}
+    \]
+    Écrire une boucle qui calcule la somme de Riemann ci-dessus pour les
+    valeurs de $n=10, 100, 1000, 10000$. Combien de chiffres après la virgule
+    sont corrects? Comment ce nombre de chiffres évolue lorsque $n$ est
+    multiplié par 10?
+\end{exercice}
+
+Pour les prochains exercices, vous pouvez utiliser SymPy.
+
+\begin{exercice}
+    Écrire une boucle qui affiche la factorisation de tous les entiers de 1 à
+    100.
 \end{exercice}
 
 \begin{exercice}
-Écrivez un programme qui analyse un par un tous les éléments d’une liste de
-nombres (par exemple celle de l’exercice précédent) pour générer deux nouvelles
-listes. L’une contiendra seulement les nombres pairs de la liste initiale, et
-l’autre les nombres impairs. Par exemple, si la liste initiale est celle de
-l’exercice précédent, le programme devra construire une liste pairs qui
-contiendra \texttt{[32, 12, 8, 2]}, et une liste impairs qui contiendra
-\texttt{[5, 3, 75, 15]}. Astuce : pensez à utiliser l’opérateur modulo (\%).
+    Écrire une boucle qui affiche la dérivée des fonctions $f_n(x)=x^n$ pour
+    toutes les valeurs de $n$ de 1 à 20.
 \end{exercice}
 
 \begin{exercice}
-Écrivez un programme qui compte le nombre de consonnes contenus dans une phrase
-donnée.
+    Écrire une boucle qui affiche la primitive des fonctions $\sin(x)$,
+    $\cos(x)$, $\tan(x)$, $\log(x)$, $\exp(x)$, $\sinh(x)$ et $\cosh(x)$.
 \end{exercice}
 
 \begin{exercice}
-Écrivez un programme qui analyse un par un tous les éléments d’une liste
-de mots (par exemple : \texttt{['Jean', 'Maximilien', 'Brigitte', 'Sonia',
-'Jean-Pierre', 'Sandra']}) pour générer deux nouvelles listes. L’une contiendra
-les mots comportant moins de 6 caractères, l’autre les mots comportant 6
-caractères ou davantage.
+    Définir une matrice carrée $A$ de votre choix. Écrire une boucle qui
+    affiche les 10 premières puissances de la matrice $A$. Comment se
+    comportent les coefficients?
 \end{exercice}
+
+
 
