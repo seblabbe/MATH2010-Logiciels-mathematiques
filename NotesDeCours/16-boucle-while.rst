@@ -1,9 +1,6 @@
 
-Boucle ``while`` et interruption de boucle
-==========================================
-
-La boucle ``while``
--------------------
+Boucle ``while``
+================
 
 Parfois, on ne sait pas à l'avance combien de fois on voudra exécuter un bloc
 d'instructions. Dans ce cas, il vaut mieux utiliser une boucle ``while`` dont
