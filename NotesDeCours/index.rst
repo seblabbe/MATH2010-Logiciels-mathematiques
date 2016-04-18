@@ -41,7 +41,8 @@ Notes de cours
 .. include:: 14-conditions.rst
 .. include:: 15-fonctions.rst
 .. include:: 16-boucle-while.rst
-.. include:: 17-autres-structures-donnees.rst
+.. include:: 17-exemples.rst
+.. include:: 18-autres-structures-donnees.rst
 .. .. include:: tout-le-reste.rst
 
 .. Chapitre IPython Jupyter avec In[4], touche TAB, etc.

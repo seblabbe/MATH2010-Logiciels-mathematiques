@@ -74,4 +74,3 @@ facilement::
     >>> etat_de_leau(102)
     L'eau est un gaz
 
-

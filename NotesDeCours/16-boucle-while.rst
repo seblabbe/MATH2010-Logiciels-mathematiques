@@ -34,8 +34,33 @@ boucle ``while``::
     78125
     390625
 
-Interrompre une boucle avec ``break``
--------------------------------------
+L'exemple suivant est un autre exemple typique de la boucle tant que. Il
+consiste à rechercher, pour un nombre ``x>=1``, l'unique valeur entière ``n``
+vérifiant ``2**(n−1) < x < 2**n``, c’est-à-dire le plus petit entier vérifiant
+``x < 2**n``.
+
+::
+
+    >>> x = 10**4
+    >>> u = 1
+    >>> n = 0
+    >>> while u <= x:
+    ...     n = n + 1
+    ...     u = 2 * u
+    >>> n
+    14
+
+On vérifie bien que ``2**13 < 10**4 < 2**14``::
+
+    >>> 2 ** 13
+    8192
+    >>> 2 ** 14
+    16384
+    >>> 2**13 < 10**4 < 2**14
+    True
+
+Interruptions de boucles avec ``break`` et ``continue`` 
+-------------------------------------------------------
 
 La commande ``break`` permet d'interrompre une boucle ``for`` ou ``while`` en
 cours::
@@ -53,9 +78,6 @@ cours::
 
 On remarque que les valeurs plus grandes que 4 n'ont pas été imprimées par la
 fonction ``print``.
-
-Continuer une boucle à l'itération suivante avec ``continue``
--------------------------------------------------------------
 
 La commande ``continue`` permet de continuer le parcours d'une boucle à la
 valeur suivante::
@@ -76,4 +98,10 @@ valeur suivante::
     9
 
 On remarque que la valeur 5 n'a pas été imprimée par la fonction ``print``.
+
+.. NOTE::
+
+    Certains auteurs recommandent d'éviter l'utilisation des intructions
+    ``continue`` et des ``break``, car elles sont évitables et leur utilisation
+    produit des programmes moins bien structurés.
 
