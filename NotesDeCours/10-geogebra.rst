@@ -23,8 +23,8 @@ __ http://www.geogebra.org/download
 __ http://app.geogebra.org/
 __ http://tube.geogebra.org/
 
-Crédits: certains passages de ce chapitre proviennent de la page de `wikipédia sur
-GeoGebra`__ et du `wiki de GeoGebra`__ où on trouvera de plus amples
+Crédits: certains passages de ce chapitre proviennent de la page de `wikipédia
+sur GeoGebra`__ et du `wiki de GeoGebra`__ où on trouvera de plus amples
 informations.
 
 __ https://en.wikipedia.org/wiki/GeoGebra
@@ -78,12 +78,11 @@ La plupart du temps, les quelques mots d'aide indiqués dans la Barre d'outils
 (cette option doit être activée dans les préférences) sont suffisants pour
 comprendre comment utiliser l'outil sélectionné. Sinon, on se référera à la
 `page wiki`__ qui décrit comment utiliser chacun des icônes ci-haut ou sinon
-aux chapitres 1 et 2 (pages 1 à 30) du Manuel d'introduction à GeoGebra
-disponible ici:
+aux chapitres 1 et 2 (pages 1 à 30) du Manuel d'introduction à GeoGebra [GeoGebra]_.
 
-  Introduction à GeoGebra, Version 4.4,
-  traduction en français par Noël Lambert, novembre 2013,
-  http://static.geogebra.org/book/intro-fr.pdf
+.. [GeoGebra] Introduction à GeoGebra, Version 4.4,
+   traduction en français par Noël Lambert, novembre 2013,
+   http://static.geogebra.org/book/intro-fr.pdf
 
 __ https://www.geogebra.org/wiki/fr/Graphique
 

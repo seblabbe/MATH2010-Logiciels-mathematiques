@@ -5,17 +5,17 @@ Boucle ``for``
 Dans ce chapitre et les suivants, nous traitons de la programmation en Python.
 Les notes ici présentent les grandes lignes et les éléments principaux de ce
 sujet. Le lecteur désirant en savoir plus sera invité à consulter les chapitres
-1 à 7 du livre en français de G. Swinnen [Apprendre]_ ou encore les chapitre 1
-à 11 du livre en anglais de Wentworth et al. [Think]_ Scientist - Learning with
-Python.
+1 à 7 du livre en français de G. Swinnen *Apprendre à programmer avec Python 3*
+[PythonFR]_ ou encore les chapitre 1 à 11 du livre en anglais de Wentworth et
+al. *How to Think Like a Computer Scientist - Learning with Python*
+[PythonEN]_.
 
-.. [Apprendre] Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
+.. [PythonFR] Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
    http://inforef.be/swi/download/apprendre_python3_5.pdf
 
-.. [Think] Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers,
-   How to Think Like a Computer Scientist - Learning with Python, 3nd
-   Edition, 2012.
-   http://openbookproject.net/thinkcs/python/english3e/
+.. [PythonEN] Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris
+   Meyers, How to Think Like a Computer Scientist - Learning with Python, 3nd
+   Edition, 2012. http://openbookproject.net/thinkcs/python/english3e/
 
 Une boucle permet de faire des tâches répétitives sur un ordinateur avec un
 moindre effort.

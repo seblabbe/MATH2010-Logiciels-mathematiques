@@ -30,13 +30,20 @@ langages populaires en sciences comme Python, R, Julia et Scala. Notons qu'il
 est possible de tester l'utilisation R ou Python à l'adresse try.jupyter.org__.
 Nous nous concentrerons dans la première partie du cours sur la librairie de
 calcul formel SymPy__. Tout ces outils font partie du logiciel de mathématiques
-Sage__. 
+Sage__ et nous couvrirons l'équivalent des quatres premiers chapitres de
+l'excellente référence libre en français *Calcul mathématique avec Sage*
+[Sage]_.
 
 __ http://jupyter.org/
 __ http://ipython.org/
 __ http://try.jupyter.org/
 __ http://www.sympy.org/
 __ http://www.sagemath.org
+
+.. [Sage] Zimmermann, Paul, Laurent Fousse, François Maltey, Matthias
+   Meulien, Marc Mezzarobba, Clément Pernet, Nicolas M. Thiéry, et al. Calcul
+   mathématique avec Sage. S. l.: CreateSpace Independent Publishing Platform,
+   2013. http://sagebook.gforge.inria.fr/
 
 Jupyter et les outils que nous présenterons sont utilisés dans les grandes
 compagnies (Google, Microsoft, IBM, Nasa) et universités (Berkeley,
