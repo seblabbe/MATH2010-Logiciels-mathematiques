@@ -1,8 +1,11 @@
 #
 NotesDeCours/index.pdf
-PlanDeCours/plan.aux
-PlanDeCours/plan.out
 PlanDeCours/plan.pdf
+Exercices/devoir1.pdf
+Exercices/tp*.pdf
+
+*.aux
+*.out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
