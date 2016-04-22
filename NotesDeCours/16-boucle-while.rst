@@ -12,9 +12,11 @@ la syntaxe est::
         ...
         INSTRUCTION n
 
-Le bloc d'instruction est exécuté tant que la condition est satisfaite. Par
-exemple, on peut afficher les puissances de 5 inférieures à un million avec une
-boucle ``while``::
+Le bloc d'instruction est exécuté (au complet) tant que la condition est
+satisfaite. La condition est testée avant l'exécution du bloc, mais pas
+pendant. C'est donc toutes les instructions du bloc qui sont exécutées si la
+condition est vraie.  Par exemple, on peut afficher les puissances de 5
+inférieures à un million avec une boucle ``while``::
 
     >>> a = 1
     >>> while a < 1000000:

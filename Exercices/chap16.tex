@@ -1,0 +1,43 @@
+\section*{Exercices du Chapitre 16: Boucle \texttt{while}}
+
+\begin{question}
+Écire une boucle \texttt{while} qui affiche les nombre de 0 à 20 en ordre
+croissant sans utiliser l'instruction \texttt{if}. Même question mais en ordre
+décroissant.
+\end{question}
+
+\begin{question}
+Que fait le programme suivant?
+\begin{verbatim}
+    a, b, c = 1, 1, 1
+    while c < 11 :
+        print(c, ": ", b)
+        a, b, c = b, a+b, c+1
+\end{verbatim}
+\end{question}
+
+\begin{question}
+En utilisant une boucle \texttt{while},
+écrire une fonction \texttt{orbite\_produit\_des\_chiffres(n)} qui retourne
+la liste des itérations successives de la fonction qui retourne le produit des
+chiffres:
+{\small
+\begin{verbatim}
+[n, produit_des_chiffres(n), produit_des_chiffres(produit_des_chiffres(n)), ..., z]
+\end{verbatim}}
+\noindent
+jusqu'à ce qu'un nombre calculé \texttt{z} s'écrive avec un seul chiffre.
+Pouvez-vous trouver un nombre $n$ dont la longueur de l'orbite est plus grande
+que 5? plus grande que 10?
+%Conjecture: $f^k(n)$ atteint un nombre < 10 en moins de k=11 iterations
+\end{question}
+
+\begin{question}
+La série de Taylor de $\sin(x)$ est
+\[
+    \sin x= \lim_{n\to\infty}\sum^{n}_{k=0} \frac{(-1)^k}{(2k+1)!} x^{2k+1} = x -
+\frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
+\]
+Écrire une fonction \texttt{taylor\_sin(x)} qui évalue la série de Taylor en
+négligeant les termes de la somme qui sont inférieurs à $10^{-5}$ en valeur absolue.
+\end{question}

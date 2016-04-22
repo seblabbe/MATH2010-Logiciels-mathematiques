@@ -1,4 +1,4 @@
-now: tp7
+now: tp8
 
 tp1:
 	pdflatex tp1.tex
@@ -14,9 +14,11 @@ tp6:
 	pdflatex tp6.tex
 tp7:
 	pdflatex tp7.tex
+tp8:
+	pdflatex tp8.tex
 devoir1:
 	pdflatex devoir1.tex
-all: tp1 tp2 tp3 tp4 tp5 tp6 tp7 devoir1
+all: tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 devoir1
 
 .PHONY : clean
 clean :
