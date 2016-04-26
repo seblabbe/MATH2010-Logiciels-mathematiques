@@ -1,0 +1,57 @@
+\input{header.tex}
+
+\begin{document}
+
+\section*{Devoir 2}
+
+Répondre aux questions suivantes. Vos réponses doivent être manuscrites
+(rédigées à la main) et utiliser le langage \texttt{Python 3}.
+%Inclure la démarche, les réponses aux questions et les justifications. 
+À remettre en main propre ou le glisser sous la porte de mon bureau avant le
+\textbf{vendredi 6 mai à 16h59} 
+en indiquant votre numéro de matricule et votre nom. Un travail remis en
+retard perdra la moitié des points.
+
+\begin{question}[5 pts]
+    En Python, on peut représenter une matrice par une liste de listes. Par
+    exemple, voici deux matrices 4 par 4:
+    \begin{verbatim}
+    X = [[56, 39,  3, 41],
+         [23, 78, 11, 62],
+         [61, 26, 65, 51],
+         [80, 98,  9, 68]]
+    Y = [[51, 52, 53, 15],
+         [ 1, 71, 46, 31],
+         [99,  7, 92, 12],
+         [15, 43, 36, 51]]
+    \end{verbatim}
+    \vspace{-1em}
+    Écrire une fonction \texttt{somme(A, B)} qui retourne la somme de deux
+    matrices quelconques \texttt{A} et \texttt{B} de format $4\times 4$.
+\end{question}
+
+\begin{question}[5 pts]
+    Écrire une fonction \texttt{produit(A, B)} qui retourne le produit de deux
+    matrices quelconques \texttt{A} et \texttt{B} de format $4\times 4$.
+\end{question}
+
+\begin{question}[5 pts]
+    Un \emph{triplet de nombres premiers} est un ensemble de trois nombres
+    premiers de la forme $(p, p + 2, p + 6)$ ou $(p, p + 4, p + 6)$.
+    Écrire une fonction \texttt{triplets\_nombres\_premiers(n)} qui retourne
+    la liste des \texttt{n} plus petits triplets de nombres premiers.
+\end{question}
+
+\begin{question}[5 pts]
+    Un triplet de Pythagore est un ensemble de trois nombres strictement
+    positifs $(a,b,c)$ tels que 
+    \[
+	a^2+b^2=c^2.
+    \]
+    Écrire une fonction
+    \texttt{triplets\_pythagore(n)} qui retourne la liste de tous les triplets
+    de Pythagore $(a,b,c)$ tels que $a\leq b\leq c\leq n$.
+\end{question}
+
+\end{document}
+
