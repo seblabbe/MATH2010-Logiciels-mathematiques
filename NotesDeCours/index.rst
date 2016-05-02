@@ -43,6 +43,8 @@ Notes de cours
 .. include:: 16-boucle-while.rst
 .. include:: 17-exemples.rst
 .. include:: 18-autres-structures-donnees.rst
+.. include:: 19-panda.rst
+
 .. .. include:: tout-le-reste.rst
 
 .. Chapitre IPython Jupyter avec In[4], touche TAB, etc.
