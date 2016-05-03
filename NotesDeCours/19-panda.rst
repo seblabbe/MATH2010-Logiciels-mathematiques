@@ -1,20 +1,19 @@
-Tableaux et analyse de données
-==============================
+Tableaux et analyse de données avec Pandas
+==========================================
 
 Les données massives jouent et continueront de jouer un rôle important dans la
 société du 21e siècle. Dans ce chapitre, nous ferons une introduction à une
 librairie de l'environnement Python qui permet de représenter et analyser des
 données. Cette librairie s'appelle pandas__, contraction des termes anglais
-"panel" et "data". La librairie pandas joue le même rôle qu'un tableur comme
-Microsoft Excel ou LibreOffice calc et est utilisé par la librairie Python de statistiques
-StatsModels__.
+"panel" et "data". Dans pandas, un tableau 3-dimensionnel de données est appelé
+un "panel". La librairie pandas joue le même rôle qu'un tableur comme Microsoft
+Excel, LibreOffice calc ou celui qu'on retrouve dans GeoGebra.
 
 .. image:: images/pandas_logo.png
    :target: http://pandas.pydata.org/
    :width: 12cm
 
 __ http://pandas.pydata.org/
-__ http://statsmodels.sourceforge.net/
 
 Les principales structures de données de pandas sont les ``Series`` (pour
 stocker des données selon une dimension) et les ``DataFrame`` (pour stocker des
@@ -22,11 +21,11 @@ données selon 2 dimensions - lignes et colonnes). On peut aussi représenter de
 données selon trois dimensions ou plus avec ``Panel`` et ``Panel4D``.
 
 Dans ce chapitre nous décrivons les tableaux de données à une et deux
-dimensions. Nous verrons comment faire des calculs statistiques et des créer
-des graphiques à partir de celles-ci. Nous verrons commencer importer et
-exporter des données. Finalement, nous ferons un exemple basé sur le site de
-données de la Belgique: http://data.gov.be/. On trouvera plus d'informations
-dans la `documentation en ligne`__ de pandas incluant une `introduction en 10
+dimensions. Nous verrons comment faire des calculs statistiques et créer des
+graphiques à partir de celles-ci. Nous verrons comment importer et exporter des
+données. Finalement, nous ferons un exemple basé sur le site de données de la
+Belgique: http://data.gov.be/. On trouvera plus d'informations dans la
+`documentation en ligne`__ de pandas incluant une `introduction en 10
 minutes`__, les `notions de base`__ et quelques `tutoriels`__.
 
 __ http://pandas.pydata.org/pandas-docs/stable/
@@ -636,7 +635,7 @@ Parfois, un fichier Excel est corrompu et il vaut mieux passer par le format
     4           4   False     2  1.922421  2.885390
 
 Parfois, la ligne de titre n'est pas sur la première ligne. À ce moment là, on
-peut spécifié la valeur de l'argument ``header`` pour dire où commencer la
+peut spécifier la valeur de l'argument ``header`` pour dire où commencer la
 lecture du fichier en entrée::
 
     >>> df = pandas.read_csv('tableau.csv', header=56)
@@ -787,6 +786,29 @@ Finalement, on peut dessiner l'évolution de la pression atmosphérique::
 .. image:: images/pression.png
    :width: 12cm
 
-Le lecteur désirant en savoir plus est invité à lire les tutoriels en ligne sur pandas:
-http://pandas.pydata.org/pandas-docs/stable/tutorials.html
+Conclusion
+----------
+
+Les outils Python dont la librairie pandas est utilisée par les gens qui
+analysent des données comme le média alternatif BuzzFeedNews__ qui a mis au
+jour en janvier 2016 [TennisRacket]_ le fait que des matchs de tennis de l'ATP
+avaient été truqués. Les données ainsi que les notebook Jupyter réalisés par
+BuzzFeedNews sont disponibles sur github à l'adresse
+http://github.com/BuzzFeedNews/everything. On y trouvera d'autres analyses de
+données tels que les tremblements de terre reliés à l'exploitation des gaz de
+schiste aux États-Unis, les mouvements des donateurs de la campagne
+présidentielle américaine lorsqu'un candidat sort de la course, ou une analyse
+du placement des enfants dans les crèches.
+
+Le lecteur désirant en savoir plus sur pandas est invité à lire les `tutoriels
+en ligne`__ sur pandas. La librairie pandas est utilisée par la librairie
+Python de statistiques StatsModels__ qui permet de faire encore plus comme des
+modèles statistiques, des estimations et des tests statistiques.
+
+__ https://www.buzzfeed.com/news
+__ http://pandas.pydata.org/pandas-docs/stable/tutorials.html
+__ http://statsmodels.sourceforge.net/
+
+.. [TennisRacket] Methodology and code supporting the BuzzFeed News/BBC article,   "The Tennis Racket," published Jan. 17, 2016.
+   http://www.buzzfeed.com/heidiblake/the-tennis-racket
 
