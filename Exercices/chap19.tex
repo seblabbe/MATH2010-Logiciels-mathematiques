@@ -1,0 +1,123 @@
+% \section*{Exercices du Chapitre 18: Autres structures de données}
+\section*{Exercices du Chapitre 19: Tableaux et analyse de données avec Pandas}
+
+Pour les exercices suivants, il sera nécessaire d'importer les fonctions
+suivantes:
+\begin{verbatim}
+from math import log, sqrt
+from sympy import Li
+from pandas import Series, DataFrame, read_excel, read_csv
+\end{verbatim}
+
+\begin{exercice}
+(Hypothèse de Riemann
+\footnote{Mazur, Barry, et William Stein. Prime Numbers and the Riemann Hypothesis.
+Cambridge University Press, 2015. \url{http://wstein.org/rh/}}).
+\begin{itemize}
+    \item Constuire un tableau de données de 1000 lignes ($0\leq
+    x< 1000$) contenant les trois colonnes: 
+    $\pi(x)$, le nombre de nombres premiers inférieurs ou égal à $x$;
+    $x/\log x$, l'approximation de $\pi(x)$ faite par Gauss;
+    ${\rm Li}(x)=\int_2^x \frac{dt}{\log t }$, l'approximation de $\pi(x)$
+faite par Dirichlet.
+    \item Ajouter une colonne dans le tableau qui donne la valeur absolue de la
+différence entre $\pi(x)$ et ${\rm Li}(x)$. 
+\end{itemize}
+\begin{itemize}
+\item Trouver (approximativement) une constante $C$ telle que
+    $|\pi(x) - {\rm Li} (x)|$ vaut à peu près $C\cdot\left(\sqrt x \log x\right)$.
+    % Answer: $\frac{1}{8\pi}$
+\end{itemize}
+\noindent\textbf{Remarque:}
+Helge von Koch a montré en
+1901\footnote{
+Von Koch, Helge (1901). "Sur la distribution des nombres premiers". Acta
+Mathematica 24 (1): 159–182.
+\url{https://dx.doi.org/10.1007/BF02403071}} que l'Hypothèse de Riemann 
+est vraie si et seulement si 
+\[
+    \pi(x) = {\rm Li} (x) +  O\left(\sqrt x \log x\right). 
+\]
+\end{exercice}
+
+\begin{exercice}[Les arbres de Namur]
+Télécharger le fichier \texttt{arbresremarquables.xls} au sujet des \emph{Arbres
+remarquables Namur} du site \url{http://data.gov.be}. Créer un tableau de
+données de Pandas à partir de ce fichier. Afficher les premières
+et les dernières lignes du tableau. Quelle est la circonférence moyenne des
+arbres remarquables de Namur? Quelle essence d'arbre est la plus représentée?
+Est-ce que l'arbre le plus grand de Namur est situé dans un domaine privé ou
+public? De quelle essence s'agit-il?
+\end{exercice}
+
+\begin{exercice}[Le capital au $21^e$ siècle, Tomas Pikkety]
+Télécharger le fichier \texttt{capital21c\_tableauSI1.csv} sur la page du cours.
+Créer un tableau de données de Pandas à partir de ce fichier. 
+Utiliser ce tableau pour recréer le
+graphique \emph{La part du décile supérieur dans le revenu total (y compris
+plus-values) aux Etats-Unis, 1910-2010}
+du chapitre d'introduction du livre de Piketty
+\footnote{Thomas Piketty,
+Le capital au 21e siècle,
+Editions du Seuil, Septembre 2013, \url{http://piketty.pse.ens.fr/capital21c}}.
+En observant le graphique, compléter les trous de la citation suivante:
+\begin{quote}
+\it
+Lecture: la part du décile supérieur dans le revenu national américain est
+passée de ..... \% dans les années 1910-1920 à moins de .....\% dans les années 1950
+(il s'agit de la baisse mesurée par Kuznets); puis elle est remontée de moins de
+.....\% dans les années 1970 à .....\% dans les années 2000-2010.
+% Lecture: la part du décile supérieur dans le revenu national américain est
+% passée de 45-50\% dans les années 1910-1920 à moins de 35\% dans les années 1950
+% (il s'agit de la baisse mesurée par Kuznets); puis elle est remontée de moins de
+% 35\% dans les années 1970 à 45-50\% dans les années 2000-2010.
+\end{quote}
+\end{exercice}
+
+
+\begin{exercice}[La lotterie]
+En novembre 2015, le site \emph{BuzzFeedNews} a fait des simulations pour savoir
+quelles sont les chances de perdre de l'argent à la loterie. On peut consulter
+leur jupyter notebook ici:
+\begin{center}
+\url{https://github.com/BuzzFeedNews/2015-11-lottery-simulations}
+\end{center}
+Faire la lecture du texte et du code de ce notebook Jupyter.
+Quelles fonctionalités de la librairie \texttt{pandas} ont-ils utilisées?
+Quelles sont les chances de perdre de l'argent en achetant des billets de
+loterie selon les simulations effectuées par BuzzFeedNews?
+\end{exercice}
+
+\begin{exercice}[BuzzFeedNews]
+Faîtes la lecture d'un autre sujet de votre choix parmi la liste de la page:
+\begin{center}
+\url{https://github.com/BuzzFeedNews/everything}
+\end{center}
+Dans le code associé à l'article, reconnaissez-vous des fonctions ou librairies
+Python que vous connaissez? Trouver 3 choses que vous connaissez et que vous
+avez appris dans ce cours. Trouver 3 choses que vous ne connaissez pas et que
+vous n'avez pas appris dans ce cours.
+\end{exercice}
+
+\begin{exercice}[Nombre de naissances par jour]
+Télécharger le fichier du 
+\emph{Nombre de naissances par jour} pour la période du 1er janvier 2008 au 31
+décembre 2014 à partir du site \url{http://data.gov.be}.
+En moyenne, combien d'enfants naissent chaque jour en Belgique?
+Entre 2008 et 2014, quelle année y a-t-il eu le plus de naissance le jour du 10
+mai? Y a-t-il une grande différence entre le minimum et le maximum pour le jour
+du 10 mai? Plus difficile: quel mois a vu naître le plus d'enfants pendant ces
+sept années?
+\end{exercice}
+
+\begin{exercice}[\texttt{data.gov.be}]
+Télécharger un fichier de données de votre choix parmi les 4800+ jeux de données
+disponibles sur \url{http://data.gov.be}. Tenter de l'ouvrir dans pandas (il y a
+parfois des erreurs d'importation avec le format excel, les données sont
+rarement parfaites dans la vraie vie. Dans ce cas, une option est de sauvegarder
+la feuille excel sous le format csv à partir d'Excel ou Libre Office).
+Réfléchissez à une question de votre choix au sujet de ces données. Répondez à
+votre question.
+\end{exercice}
+
+

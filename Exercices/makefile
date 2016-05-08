@@ -1,4 +1,4 @@
-now: devoir2
+now: tp10
 
 tp1:
 	pdflatex tp1.tex
@@ -16,6 +16,8 @@ tp7:
 	pdflatex tp7.tex
 tp8:
 	pdflatex tp8.tex
+tp10:
+	pdflatex tp10.tex
 devoir1:
 	pdflatex devoir1.tex
 devoir2:
