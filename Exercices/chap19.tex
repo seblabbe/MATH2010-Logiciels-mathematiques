@@ -40,19 +40,27 @@ est vraie si et seulement si
 \]
 \end{exercice}
 
+\noindent\textbf{Remarque:}
+Les fonctions \texttt{read\_csv} et \texttt{read\_excel} peuvent prendre des
+URL en entrée ce qui évite d'avoir à télécharger les fichiers localement. 
+Par exemple:
+\begin{verbatim}
+read_csv("http://www.slabbe.org/Enseignements/MATH2010/capital21c_tableauSI1.csv")
+\end{verbatim}
+
 \begin{exercice}[Les arbres de Namur]
-Télécharger le fichier \texttt{arbresremarquables.xls} au sujet des \emph{Arbres
-remarquables Namur} du site \url{http://data.gov.be}. Créer un tableau de
-données de Pandas à partir de ce fichier. Afficher les premières
-et les dernières lignes du tableau. Quelle est la circonférence moyenne des
-arbres remarquables de Namur? Quelle essence d'arbre est la plus représentée?
-Est-ce que l'arbre le plus grand de Namur est situé dans un domaine privé ou
-public? De quelle essence s'agit-il?
+Créer un tableau de données de Pandas à partir du fichier
+\texttt{arbresremarquables.xls} au sujet des \emph{Arbres remarquables Namur}
+disponible sur le site \url{http://data.gov.be}. 
+Afficher les premières et les dernières lignes du tableau. Quelle est la
+circonférence moyenne des arbres remarquables de Namur? Quelle essence d'arbre
+est la plus représentée? Est-ce que l'arbre le plus grand de Namur est situé
+dans un domaine privé ou public? De quelle essence s'agit-il?
 \end{exercice}
 
 \begin{exercice}[Le capital au $21^e$ siècle, Tomas Pikkety]
-Télécharger le fichier \texttt{capital21c\_tableauSI1.csv} sur la page du cours.
-Créer un tableau de données de Pandas à partir de ce fichier. 
+Créer un tableau de données de Pandas à partir du
+fichier \texttt{capital21c\_tableauSI1.csv} disponible sur la page du cours.
 Utiliser ce tableau pour recréer le
 graphique \emph{La part du décile supérieur dans le revenu total (y compris
 plus-values) aux Etats-Unis, 1910-2010}
@@ -100,9 +108,9 @@ vous n'avez pas appris dans ce cours.
 \end{exercice}
 
 \begin{exercice}[Nombre de naissances par jour]
-Télécharger le fichier du 
+Créer un tableau de données de Pandas à partir du fichier sur le
 \emph{Nombre de naissances par jour} pour la période du 1er janvier 2008 au 31
-décembre 2014 à partir du site \url{http://data.gov.be}.
+décembre 2014 disponible sur le site \url{http://data.gov.be}.
 En moyenne, combien d'enfants naissent chaque jour en Belgique?
 Entre 2008 et 2014, quelle année y a-t-il eu le plus de naissance le jour du 10
 mai? Y a-t-il une grande différence entre le minimum et le maximum pour le jour
@@ -111,7 +119,7 @@ sept années?
 \end{exercice}
 
 \begin{exercice}[\texttt{data.gov.be}]
-Télécharger un fichier de données de votre choix parmi les 4800+ jeux de données
+Choisir un fichier de données de votre choix parmi les 4800+ jeux de données
 disponibles sur \url{http://data.gov.be}. Tenter de l'ouvrir dans pandas (il y a
 parfois des erreurs d'importation avec le format excel, les données sont
 rarement parfaites dans la vraie vie. Dans ce cas, une option est de sauvegarder
