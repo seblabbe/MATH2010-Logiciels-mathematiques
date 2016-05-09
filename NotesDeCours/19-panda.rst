@@ -807,6 +807,95 @@ Pour afficher un histogramme de la pression atmosphérique, il s'agit d'utiliser
 .. image:: images/pression_hist.png
    :width: 12cm
 
+Filtrer les lignes d'un tableau
+-------------------------------
+
+Parfois, il est pertinent de filtrer les lignes d'un tableau ``df``. La façon
+de faire est d'abord de créer une série ``s_vrai_faux`` avec le même nombre de
+lignes contenant des valeurs booléennes en utilisant ``True`` pour les lignes
+que l'on veut garder et ``False`` sinon. La syntaxe est la suivante:
+``df[s_vrai_faux]`` qui retourne un tableau filtré.
+
+Voici un premier exemple facile où on veut afficher que les nombres multiples
+de 3 d'une série::
+
+    In [32]: s = Series(range(10))
+    In [31]: s
+    Out[31]:
+    0    0
+    1    1
+    2    2
+    3    3
+    4    4
+    5    5
+    6    6
+    7    7
+    8    8
+    9    9
+    dtype: int64
+
+On crée une série de la même longueur qui teste si les entrées sont multiples
+de trois ou non::
+
+    In [29]: s % 3 == 0
+    Out[29]:
+    0     True
+    1    False
+    2    False
+    3     True
+    4    False
+    5    False
+    6     True
+    7    False
+    8    False
+    9     True
+    dtype: bool
+
+On utilise la précédent série de booléen pour filtrer les lignes de la première
+série::
+
+    In [30]: s[s % 3 == 0]
+    Out[30]:
+    0    0
+    3    3
+    6    6
+    9    9
+    dtype: int64
+
+Faisons maintenant un exemple au sujet de la météo de Ostende. Supposons qu'on
+s'intéresse à la température moyenne les jours de Noël à Ostende. D'abord, on
+crée une fonction qui teste si une date est bien le jour de Noël:: 
+
+
+    >>> est_noel = lambda date:date.day==25 and date.month==12
+
+On applique cette fonction au tableau. On obtient une série de vrai ou faux::
+
+    >>> s_vrai_faux = df['Date'].apply(est_noel)
+    >>> s_vrai_faux.tail(10)
+    1451    False
+    1452    False
+    1453    False
+    1454     True
+    1455    False
+    1456    False
+    1457    False
+    1458    False
+    1459    False
+    1460    False
+    Name: Date, dtype: bool
+
+Finalement, on filtre le tableau avec cette série. Et on affiche que les deux
+colonnes qui nous intéressent (la date et la température)::
+
+    >>> df_noel = df[s_vrai_faux]
+    >>> df_noel.icol([1,2])
+               Date  Température de l'air - moyenne (°C)
+    358  2010-12-25                                 3.63
+    723  2011-12-25                                10.62
+    1089 2012-12-25                                 9.22
+    1454 2013-12-25                                 7.23
+
 Conclusion
 ----------
 
