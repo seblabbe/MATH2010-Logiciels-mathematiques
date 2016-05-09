@@ -568,8 +568,15 @@ choisissant d'abord un sous-tableau::
 .. image:: images/prime_pix_100.png
    :width: 10cm
 
-On trouvera de multiples autres façons de visualiser des données dans la
-documentation de pandas (histogrammes, tartes, etc.):
+D'autres types de graphiques peuvent être plus adaptées dans d'autres
+situations (histogrammes, tartes, etc.). Voici la liste méthodes disponibles::
+
+    df.plot.area     df.plot.box      df.plot.hist     df.plot.pie
+    df.plot.bar      df.plot.density  df.plot.kde      df.plot.scatter
+    df.plot.barh     df.plot.hexbin   df.plot.line
+
+On trouvera des exemples d'utilisation de ces méthodes de visualisation de
+données dans la documentation de pandas:
     
 http://pandas.pydata.org/pandas-docs/stable/visualization.html#visualization
 
@@ -660,6 +667,14 @@ on peut y télécharger le fichier ``meteoostende.xls`` au format excel. On peut
 l'importer dans pandas facilement::
 
     >>> df = pandas.read_excel('meteoostende.xls')
+
+Il est possible d'écrire l'URL directement ce qui évite d'avoir à télécharger
+le fichier::
+
+    >>> url = ("http://opendata.digitalwallonia.be/dataset/"
+            "4fd7a1cf-f959-46ff-83d0-807778fe3438/resource/"
+            "14306677-fb41-4472-9a23-2923f5e22d69/download/meteoostende.xls")
+    >>> df = pandas.read_excel(url)
 
 Ce tableau de données comporte 1461 lignes::
 
@@ -753,13 +768,9 @@ Pour afficher les moyennes par colonnes, on utilise la méthode ``mean()``::
     Température du sol (°C)                                   11.255428
     dtype: float64
 
-Pour étudier une colonne en particulier, par exemple la pression atmosphérique,
-on peut procéder ainsi::
+Pour étudier une colonne en particulier, par exemple la pression atmosphérique, c'est-à-dire la septième colonne, on peut procéder ainsi::
 
-    >>> pression = df.columns[7]
-    >>> pression
-    u'Pression atmosph\xe9rique (kPa)'
-    >>> s = df[pression]
+    >>> s = df.icol(7)
     >>> s.head()
     0    100.14
     1    101.28
@@ -778,12 +789,22 @@ on peut procéder ainsi::
     max       103.820000
     Name: Pression atmosphérique (kPa), dtype: float64
 
-Finalement, on peut dessiner l'évolution de la pression atmosphérique::
+Finalement, on peut dessiner l'évolution de la pression atmosphérique en
+fonction de la date::
 
     >>> date = df.columns[1]
+    >>> pression = df.columns[7]
     >>> df.plot(x=date, y=pression)
 
 .. image:: images/pression.png
+   :width: 12cm
+
+Pour afficher un histogramme de la pression atmosphérique, il s'agit d'utiliser
+``df.plot.hist`` avec les mêmes arguments::
+
+    >>> df.plot.hist(x=date, y=pression)
+
+.. image:: images/pression_hist.png
    :width: 12cm
 
 Conclusion
