@@ -2,29 +2,12 @@ now: exos
 
 exos:
 	pdflatex exos.tex
-tp1:
-	pdflatex tp1.tex
-tp2:
-	pdflatex tp2.tex
-tp3:
-	pdflatex tp3.tex
-tp4:
-	pdflatex tp4.tex
-tp5:
-	pdflatex tp5.tex
-tp6:
-	pdflatex tp6.tex
-tp7:
-	pdflatex tp7.tex
-tp8:
-	pdflatex tp8.tex
-tp10:
-	pdflatex tp10.tex
 devoir1:
 	pdflatex devoir1.tex
 devoir2:
 	pdflatex devoir2.tex
-all: tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 devoir1 devoir2
+
+all: exos devoir1 devoir2
 
 .PHONY : clean
 clean :
