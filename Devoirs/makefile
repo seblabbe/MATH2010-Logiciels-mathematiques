@@ -1,7 +1,11 @@
-now: exos
+now: devoir2
 
-exos:
-	pdflatex exos.tex
+devoir1:
+	pdflatex devoir1.tex
+devoir2:
+	pdflatex devoir2.tex
+
+all: devoir1 devoir2
 
 .PHONY : clean
 clean :
