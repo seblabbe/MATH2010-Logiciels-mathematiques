@@ -1,5 +1,7 @@
-now: tp10
+now: exos
 
+exos:
+	pdflatex exos.tex
 tp1:
 	pdflatex tp1.tex
 tp2:

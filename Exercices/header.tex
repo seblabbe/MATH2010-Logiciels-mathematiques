@@ -26,11 +26,11 @@
 % Page foot 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{\sffamily\bfseries\small Université de Liège -- \today}
+\lhead{\sffamily\bfseries\small Exercices pour les TP}
 \rhead{\sffamily\bfseries\small MATH2010-1 Logiciels mathématiques}
 %\renewcommand{\headrulewidth}{0.4pt}% remove header line
 \renewcommand{\footrulewidth}{0pt}% default is 0pt
-\cfoot{}
+%\cfoot{}
 
 % ceci immite le format par defaut des titres de section de la classe scrartcl
 \titleformat{\section}
@@ -51,7 +51,7 @@
 
 % Blocks
 \theoremstyle{definition}
-\newtheorem{exercice}{Exercice}
+\newtheorem{exercice}{Exercice}[section]
 \newtheorem{exemple}[exercice]{Exemple}
 \newtheorem{remarque}[exercice]{Remarque}
 \newtheorem{question}[exercice]{Question}
