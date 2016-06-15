@@ -74,15 +74,17 @@ rapide)::
 
     >>> init_printing(use_latex='mathjax')
 
-Vous pouvez le tester sur l'exemple précédent::
+.. image:: images/jupyter_mathjax.png
+   :width: 15cm
+
+Dans ces notes, on utilisera l'option ``init_printing(pretty_print=True,
+use_unicode=False)`` lorsque cela aide la lecture des formules.
+Pour un exemple de la section précédente, on obtient::
 
     >>> from sympy.abc import a, epsilon
     >>> a + a * a + epsilon
      2
     a  + a + ε
-
-Dans ces notes, on utilisera l'option ``init_printing(pretty_print=True,
-use_unicode=False)`` lorsque cela aide la lecture des formules.
 
 Expressions symboliques
 -----------------------
