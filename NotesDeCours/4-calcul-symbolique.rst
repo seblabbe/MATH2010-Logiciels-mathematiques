@@ -68,6 +68,12 @@ d'utiliser la commande suivante une seule fois pour le fichier::
     >>> from sympy import init_printing
     >>> init_printing(pretty_print=True)
 
+Parfois, dans le notebook Jupyter, la commande suivante qui utilise la
+librairie MathJax donne de meilleurs résultats (l'affichage en LaTeX est plus
+rapide)::
+
+    >>> init_printing(use_latex='mathjax')
+
 Vous pouvez le tester sur l'exemple précédent::
 
     >>> from sympy.abc import a, epsilon
