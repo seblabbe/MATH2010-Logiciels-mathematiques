@@ -1,0 +1,155 @@
+
+\input{header.tex}
+
+\begin{document}
+
+{\bfseries\sffamily
+\begin{tabular}{p{5cm}p{6cm}r}
+    Nom: & Prénom: & Matricule:
+\end{tabular}}
+\bigskip
+
+\begin{center}
+  \normalfont\sffamily\large\bfseries\color{black}
+    MATH2010-1 Logiciels mathématiques\\
+    Examen final écrit -- 16 juin 2016
+\end{center}
+\bigskip
+
+Répondre aux questions suivantes. Vos réponses doivent être manuscrites
+(rédigées à la main) et utiliser le langage \texttt{Python 3}.
+Vous avez le droit d'utiliser un crayon et rien d'autre.
+
+%Inclure la démarche, les réponses aux questions et les justifications. 
+
+% Idées:
+% \begin{question}[5 pts]
+%     Une question qui demande de trouver l'erreur ou deviner ce qui sera
+%     imprimé en fonction d'un if, elif, boucles, etc.
+% \end{question}
+% \begin{question}[5 pts]
+%     Une question qui demande de simplifier des if imbriqués.
+% \end{question}
+
+
+% \begin{question}[5 pts]
+% Est-ce que le code suivant fait bien ce qui est désiré? Expliquer pourquoi.
+% Si vous répondez non à la première question, comment le corriger?
+% \begin{verbatim}
+%     from sympy import factor
+%     from sympy.abc import x
+%     k = 5
+%     expr = x**k + 1
+%     factor(expr)
+%     k = 6
+%     factor(expr)
+% \end{verbatim}
+% \end{question}
+
+\begin{question}[5 pts]
+Que sera-t-il imprimé à l'écran par l'exécution du code suivant?
+\begin{verbatim}
+    L = []
+    for i in range(10):
+        if i % 2 == 0:
+            L.append(i)
+        elif i % 3 == 0:
+            L.append(i*10)
+        elif i == 6:
+            L.append(i*100) 
+        if i == 8:
+            L.append(i*1000) 
+    print(L)     
+\end{verbatim}
+\begin{mybox}
+    Réponse:\\[5pt]
+\begin{reponse}
+    [0, 2, 30, 4, 6, 8, 8000, 90]
+\end{reponse}
+\end{mybox}
+\end{question}
+
+\begin{question}[5 pts]
+    En supposant que \verb|isprime(p)| retourne \verb|True| si \verb|p|
+    est premier et \verb|False| sinon,
+    trouver trois façons d'améliorer le code suivant:
+\begin{verbatim}
+def triplets_nombres_premiers(n):
+    L = []
+    p = 3
+    while len(L) < n:
+        if isprime(p) == True and isprime(p+6) == True and isprime(p+2) == True:
+            L.append((p, p+2, p+6))
+        elif isprime(p) == True and isprime(p+6) == True and isprime(p+4) == True:
+            L.append((p, p+4, p+6))
+        p += 1
+    return L
+\end{verbatim}
+\begin{mybox}
+    \vspace{3mm}
+    Façon 1:
+    \begin{reponse}
+	Enlever les \verb|== True|.
+    \end{reponse}\\[4mm]
+    Façon 2:
+    \begin{reponse}
+	Tester une seule fois \verb|isprime(p) and isprime(p+6)|.
+    \end{reponse}\\[4mm]
+    Façon 3:
+    \begin{reponse}
+	Remplacer \verb|p += 1| par \verb|p += 2|.
+    \end{reponse}\\
+\end{mybox}
+\end{question}
+
+\newpage
+\begin{question}[3 pts]
+    Trouver un nom adéquat pour la fonction suivante. Écrire une courte phrase
+    entre la paire de triple-guillemets qui décrit ce que la fonction fait.
+\begin{verbatim}
+
+def _____________________________(n):
+    L = []
+    for i in range(1, n):
+        if n % i == 0:
+            L.append(i)
+    return L
+\end{verbatim}
+\begin{mybox}
+Nom de la fonction:
+\begin{reponse}
+\verb|diviseurs_propres|
+\end{reponse}\\
+Description:
+\begin{reponse}
+Retourne la liste des diviseurs propres de \verb|n|.
+\end{reponse}
+\end{mybox}
+\end{question}
+
+\begin{question}[7 pts]
+Un nombre est dit \emph{parfait} s'il est égal à la somme de ses diviseurs
+propres. Par exemple, le nombre 6 est parfait, car les diviseurs propres de 6
+sont 1, 2 et 3 et $6=1+2+3$. Le nombre 15 n'est pas parfait, car ses diviseurs
+propres sont 1, 3 et 5 et $15\neq 1+3+5$. Écrivez une fonction Python appelée
+\verb|nombres_parfait(n)| qui retourne la liste des nombres parfaits
+strictement inférieurs à \verb|n|. Vous pouvez structurer votre programme en
+définissant d'autres fonctions si nécessaire.
+\begin{mybox}
+    Réponse:
+\begin{reponse}
+\begin{verbatim}
+def nombres_parfaits(n):
+    L = []
+    for i in range(1, n):
+        if sum(diviseurs_propres(i)) == i:
+            L.append(i)
+    return L
+\end{verbatim}
+\end{reponse}
+\vspace{10cm}
+\phantom{x}
+\end{mybox}
+\end{question}
+
+\end{document}

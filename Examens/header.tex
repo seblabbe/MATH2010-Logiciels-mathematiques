@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}     % Hyphénation, copier-coller des mots accentués
+\usepackage{lmodern}         % Polices vectorielles
+\usepackage[french]{babel}   % Vocabulaire en francais
+\usepackage[utf8]{inputenc}  % Codage UNICODE (UTF-8)
+\usepackage{url}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem} %pour commencer les enumerations a des nombres differents
+\usepackage[pdftex,pagebackref]{hyperref}
+\usepackage{cleveref}
+\usepackage{titlesec}  % for using titleformat
+\usepackage{rotating}
+
+%\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+
+% Page foot 
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+%\lhead{\sffamily\bfseries\small Université de Liège \today}
+%\rhead{\sffamily\bfseries\small MATH2010-1 Logiciels mathématiques}
+%\renewcommand{\headrulewidth}{0.4pt}% remove header line
+% \renewcommand{\footrulewidth}{0pt}% default is 0pt
+%\cfoot{}
+
+% ceci immite le format par defaut des titres de section de la classe scrartcl
+\titleformat{\section}
+  {\normalfont\sffamily\large\bfseries\centering\color{black}}
+  {\thesection}{0.5em}{}
+
+% entier, réels, etc
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\sympy}{\texttt{SymPy} }
+\newcommand{\python}{\texttt{Python} }
+
+% others
+\newcommand{\bw}{\mathbf{w}}
+\renewcommand{\a}{{\vec{a}}}
+
+% Blocks
+\theoremstyle{definition}
+\newtheorem{exercice}{Exercice}[section]
+\newtheorem{exemple}[exercice]{Exemple}
+\newtheorem{remarque}[exercice]{Remarque}
+\newtheorem{question}{Question}
+
+
+%\setlength\parindent{0pt}
+
+\usepackage[skins]{tcolorbox}
+\newtcolorbox{mybox}[1][]{
+% colframe=black,
+% fonttitle=\bfseries,
+colback=white,
+colbacktitle=white,
+enhanced,
+%title={#2}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Avec ou pas les reponses setup (START)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifreponse
+\input{reponse.tex} % defines \reponsefalse or \reponsetrue
+\ifreponse
+  \newenvironment{reponse}{\color{blue}}{}
+\else
+  \newenvironment{reponse}{\color{white}}{}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Avec ou pas les reponses setup (END)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
