@@ -899,7 +899,7 @@ colonnes qui nous intéressent (la date et la température)::
 Conclusion
 ----------
 
-Les outils Python dont la librairie pandas est utilisée par les gens qui
+Les outils Python tels que la librairie pandas sont utilisés par les gens qui
 analysent des données comme le média alternatif BuzzFeedNews__ qui a mis au
 jour en janvier 2016 [TennisRacket]_ le fait que des matchs de tennis de l'ATP
 avaient été truqués. Les données ainsi que les notebook Jupyter réalisés par
