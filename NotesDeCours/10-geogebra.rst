@@ -1,6 +1,3 @@
-.. raw:: pdf
-
-   PageBreak oneColumn
 
 GeoGebra
 ========

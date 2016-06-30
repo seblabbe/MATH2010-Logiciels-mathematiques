@@ -19,11 +19,18 @@ Notes de cours
 .. footer::
    ###Title### --- Page ###Page### --- Version du |date|
 
+.. image:: images/jupyter.png
+   :width: 12cm
+
 .. contents:: Table des matières
-   :depth: 1
+   :depth: 2
 
 .. section-numbering::
    :depth: 2
+
+.. raw:: pdf
+
+   PageBreak oneColumn
 
 .. include:: 1-introduction.rst
 .. include:: 2-arithmetique-python.rst
@@ -47,10 +54,7 @@ Notes de cours
 
 .. .. include:: tout-le-reste.rst
 
-.. Chapitre IPython Jupyter avec In[4], touche TAB, etc.
-
-.. .. raw:: pdf
-.. 
-..    PageBreak oneColumn
+.. todo: Chapitre IPython Jupyter avec In[4], touche TAB, etc.
 
 .. http://restructuredtext.readthedocs.org/en/latest/sphinx_tutorial.html
+

@@ -45,9 +45,6 @@ __ http://www.sagemath.org
    mathématique avec Sage. S. l.: CreateSpace Independent Publishing Platform,
    2013. http://sagebook.gforge.inria.fr/
 
-.. image:: images/jupyter.png
-   :width: 10cm
-
 Jupyter et les outils que nous présenterons sont utilisés dans les grandes
 compagnies (Google, Microsoft, IBM, Nasa) et universités (Berkeley,
 Northwestern University, George Washington University). Elles sont aussi
