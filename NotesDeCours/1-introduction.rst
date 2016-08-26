@@ -19,10 +19,12 @@ L'environnement de travail proposé pour le cours de *Logiciel mathématiques*
 est l'environnement scientifique Python permettant d'atteindre les divers
 objectifs du cours. En effet, le langage Python est un langage *utilisé dans
 les entreprises* et sa connaissance est un atout pour les chercheurs d'emploi.
-De plus, les librairies scientifiques de l'environnement Python sont des
-logiciels libres permettant aux futurs enseignants d'utiliser ces outils *pour
-l'enseignement dans les écoles secondaires* sans avoir à payer des licences
-dispendieuses que les écoles n'ont pas les moyens de payer.
+De plus, les `nombreuses librairies scientifiques`__ de l'environnement Python
+sont des logiciels libres permettant aux futurs enseignants d'utiliser ces
+outils *pour l'enseignement dans les écoles secondaires* sans avoir à payer des
+licences dispendieuses que les écoles n'ont pas les moyens de payer.
+
+__ https://www.scipy.org/topical-software.html
 
 Nous utiliserons l'interface Jupyter__ développée par la communauté IPython__.
 L'interface Jupyter supporte plus de 40 langages de programmation, incluant les
