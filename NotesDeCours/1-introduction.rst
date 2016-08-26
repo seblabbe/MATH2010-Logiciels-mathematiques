@@ -59,11 +59,16 @@ __ http://www.buzzfeed.com/
 __ http://data.blog.lemonde.fr/2016/01/18/comment-buzzfeed-et-la-bbc-ont-analyse-26-000-matchs-de-tennis/
 __ http://www.moorepants.info/blog/npendulum.html
 
-
 Dans le cours, nous aborderons aussi d'autres logiciels de mathématiques
 complémentaires tels que Mathematica__ et Geogebra__. Finalement, dans la
 dernière partie, nous ferons une introduction à la programmation en Python.
 
 __ https://www.wolfram.com/mathematica/
 __ http://www.geogebra.org/
+
+D'autre cours du même type sont disponibles en ligne tel que *Scientific
+Computing with Python* [Johansson]_.
+
+.. [Johansson] Robert Johansson, Lectures on Scientific Computing with Python,
+   https://github.com/jrjohansson/scientific-python-lectures
 
