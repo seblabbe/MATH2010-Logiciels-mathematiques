@@ -1,5 +1,3 @@
-now: exos
-
 exos:
 	pdflatex exos.tex
 
