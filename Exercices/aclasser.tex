@@ -6,39 +6,17 @@
 \end{exercice}
 
 \begin{exercice}
+    Calculer la cardinalité de l'union de polytopes (polygones, ou ensembles)
+    avec la formule inclusion-exclusion.
+\end{exercice}
+
+\begin{exercice}
     Vérifier si la droite qui passe par les points $(0,1)$ et $(1,1)$ est
     tangente au cercle de centre $(5,5)$ et de rayon $3$.
 %\verb|Circle(Point(5,5), 3).is_tangent(|\\\verb|Line(Point(0,1), Point(1,1)))|
 \end{exercice}
 
 \section{deja fait}
-
-\begin{exercice}
-% from http://docs.sympy.org/dev/tutorial/gotchas.html
-En exécutant le code ci-dessous en SymPy, qu'est-ce que la ligne
-\texttt{print(expr)} imprime à l'écran ? Expliquer pourquoi.
-\begin{verbatim}
-   from sympy.abc import x
-   expr = x + 1
-   x = 2
-   print(expr)
-\end{verbatim}
-Est-ce que Mathematica se comporte de la même façon?
-\end{exercice}
-
-\begin{exercice}
-Est-ce que le code suivant fait bien ce qui est désiré? Expliquer pourquoi.
-Si vous répondez non à la première question, comment le corriger?
-\begin{verbatim}
->>> from sympy import factor
->>> from sympy.abc import x
->>> k = 5
->>> expr = x**k + 1
->>> factor(expr)
->>> k = 6
->>> factor(expr)
-\end{verbatim}
-\end{exercice}
 
 % \begin{question}
 % Soit un polygone régulier à $n$ côtés.
@@ -47,13 +25,4 @@ Si vous répondez non à la première question, comment le corriger?
 % Tracer la fonction $\Theta(n)$ sur l'intervalle $[1,10]$ des valeurs de $n$.
 % Déduire le comportement de $\Theta(n)$ lorsque $n$ tend vers l'infini.
 % \end{question}
-
-\begin{question}
-    Une question qui demande de trouver l'erreur ou deviner ce qui sera
-    imprimé en fonction d'un if, elif, boucles, etc.
-\end{question}
-
-\begin{question}
-    Une question qui demande de simplifier des if imbriqués.
-\end{question}
 
