@@ -171,7 +171,7 @@ symboliquement. C'est une **constante symbolique**::
     pi
 
 Cela permet de faire des calculs exacts. Par exemple, le sinus d'un angle de
-``pi/3`` est égal à la racine de trois sur deux::
+`\pi/3` est égal à la racine de trois sur deux::
 
     >>> from sympy import sin, pi
     >>> sin(pi/3)
@@ -182,7 +182,7 @@ Cela permet de faire des calculs exacts. Par exemple, le sinus d'un angle de
 
 La fonction inverse du sinus aussi appelée arc sinus et représentée par la
 fonction ``asin`` dans SymPy peut retourner des expressions symboliques
-impliquant des constantes symboliques telles que le nombre pi::
+impliquant des constantes symboliques telles que le nombre `\pi`::
 
     >>> from sympy import asin, Rational
     >>> asin(1)
@@ -200,18 +200,18 @@ SymPy sait que les fonctions sinus et arc sinus sont inverses une de l'autre::
     >>> sin(asin(x))
     x
 
-.. ATTENTION::
+**ATTENTION**
 
-    La fonction ``sin`` du module ``math`` de Python ne peut
-    pas être appelée sur des expressions symboliques, car elle
-    assume que l'argument est un nombre réel (type float)::
+La fonction ``sin`` du module ``math`` de Python ne peut pas être appelée sur
+des expressions symboliques, car elle assume que l'argument est un nombre réel
+(type float)::
 
-        >>> from sympy.abc import 
-        >>> from math import sin
-        >>> sin(x)
-        Traceback (most recent call last):
-        ...
-        TypeError: can't convert expression to float
+    >>> from sympy.abc import 
+    >>> from math import sin
+    >>> sin(x)
+    Traceback (most recent call last):
+    ...
+    TypeError: can't convert expression to float
 
 Simplifier une expression
 -------------------------
@@ -270,15 +270,12 @@ Cela peut mener à des simplifications::
     >>> expand(_)
     4*a*b
 
-.. Note::
-
-    En IPython et Jupyter, la barre de soulignement (``_``) est une variable
-    qui contient le dernier résultat calculé.
-    Aussi, la double barre de soulignement (``__``) est une variable
-    qui contient l'avant-dernier résultat calculé.
-    Finalement, la triple barre de soulignement (``___``) est une variable
-    qui contient l'avant-avant-dernier résultat calculé.
-    La quadruple barre de soulignement ne contient rien.
+**Note**: En IPython et Jupyter, la barre de soulignement (``_``) est une
+variable qui contient le dernier résultat calculé.  Aussi, la double barre de
+soulignement (``__``) est une variable qui contient l'avant-dernier résultat
+calculé.  Finalement, la triple barre de soulignement (``___``) est une
+variable qui contient l'avant-avant-dernier résultat calculé.  La quadruple
+barre de soulignement ne contient rien.
 
 Annuler les facteurs communs d'une fraction
 -------------------------------------------

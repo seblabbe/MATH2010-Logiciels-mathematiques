@@ -82,9 +82,9 @@ variable ``i`` dans la liste.
 Un exemple de boucle ``for`` avec Sympy
 ---------------------------------------
 
-Supposons que l'on désire factoriser le polynôme ``x**k-1`` pour toutes les
-valeurs de ``k=1..9``. En SymPy, il est possible d'écrire onze fois le même
-calcul où on change la valeur de l'exposant ``k`` à chaque fois::
+Supposons que l'on désire factoriser le polynôme `x^k-1` pour toutes les
+valeurs de `k=1,...,9`. En SymPy, il est possible d'écrire onze fois le même
+calcul où on change la valeur de l'exposant `k` à chaque fois::
 
     >>> from sympy import factor
     >>> from sympy.abc import x

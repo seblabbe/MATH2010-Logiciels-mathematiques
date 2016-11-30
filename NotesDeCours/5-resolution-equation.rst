@@ -49,17 +49,15 @@ et leur différence vaut 33::
     >>> solve([eq1, eq2])
     {x: 40, y: 7}
 
-.. Attention::
+**Attention**: Pour résoudre un système d'équations, il faut absoluement mettre
+les équations dans une liste ``[eq1, eq2]`` entre crochets ``[]``. Autrement,
+on obtient une erreur::
 
-    Pour résoudre un système d'équations, il faut absoluement mettre les
-    équations dans une liste ``[eq1, eq2]`` entre crochets ``[]``. Autrement, on
-    obtient une erreur::
-
-        In [279]: solve(eq1, eq2)
-        Traceback (most recent call last):
-        ...
-        TypeError: cannot determine truth value of
-        x - y == 33
+    In [279]: solve(eq1, eq2)
+    Traceback (most recent call last):
+    ...
+    TypeError: cannot determine truth value of
+    x - y == 33
 
 Cela fonctionne aussi pour des systèmes d'équations non linéaires. Par exemple
 pour trouver deux nombres dont la somme est 47 et dont le produit est 510::

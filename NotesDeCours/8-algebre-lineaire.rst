@@ -111,9 +111,7 @@ On accède à l'élément en position ``(i,j)`` en écrivant ``M[i,j]``::
     >>> M[1,1]
     4
 
-.. Attention::
-
-    Les indices des positions commencent à zéro!!
+**Attention**: Les indices des positions commencent à zéro!!
 
 On accède aux lignes et au colonnes d'une matrices avec les méthodes ``row`` et
 ``col``::
@@ -300,9 +298,9 @@ Le résultat précédent est égal à 5 fois le vecteur ``v``::
     [ ]
     [0]
 
-Un vecteur ``v`` qui satisfait l'équation ``M * v = lamda * v`` pour un certain
-nombre réel (ou complexe) ``lamda`` est appelé *vecteur propre*. Le nombre
-``lamda`` qui satisfait l'équation est appelé *valeur propre*. Il se trouve que
+Un vecteur `v` qui satisfait l'équation `Mv = \lambda v` pour un certain
+nombre réel (ou complexe) `\lambda` est appelé *vecteur propre*. Le nombre
+`\lambda` qui satisfait l'équation est appelé *valeur propre*. Il se trouve que
 les valeurs propres d'une matrice sont les racines de son polynôme
 caractéristique. Le calcul des valeurs et vecteurs propres d'une matrice est
 utile dans presque tous les domaines des mathématiques.

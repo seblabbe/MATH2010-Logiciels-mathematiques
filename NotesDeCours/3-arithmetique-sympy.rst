@@ -87,16 +87,14 @@ nombres entiers et les nombres décimaux::
     >>> (13 + 34*I) + (3 + 4*I)
     16 + 38*I
 
-.. NOTE::
+**NOTE**: Le résultat n'est pas toujours simplifié. Pour ce faire, on peut
+utiliser la fonction ``simplify`` de SymPy::
 
-    Le résultat n'est pas toujours simplifié. Pour ce faire, on peut utiliser
-    la fonction ``simplify`` de SymPy::
-
-        >>> (13 + 34*I) / (3 + 4*I)
-        (13 + 34*I)/(3 + 4*I)
-        >>> from sympy import simplify
-        >>> simplify( (13 + 34*I) / (3 + 4*I) )
-        7 + 2*I
+    >>> (13 + 34*I) / (3 + 4*I)
+    (13 + 34*I)/(3 + 4*I)
+    >>> from sympy import simplify
+    >>> simplify( (13 + 34*I) / (3 + 4*I) )
+    7 + 2*I
 
 La division de nombre complexes entiers de partie imaginaire nulle retourne
 bien un nombre rationnel::

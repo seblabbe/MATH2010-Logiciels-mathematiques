@@ -240,7 +240,7 @@ par défaut) pour obtenir ce que l'on veut::
 
 Pour donner des titres plus parlant aux colonnes, il s'agit de spécifier une
 liste de titres via l'argument ``keys``. Comme le nombre de nombres entiers
-inférieur à ``x`` est souvent dénoté ``pi(x)``, on utilise ``'pi_x'`` pour le
+inférieur à ``x`` est souvent dénoté `\pi(x)`, on utilise ``'pi_x'`` pour le
 nom de la deuxième colonne::
 
     >>> keys = ['isprime', 'pi_x']
@@ -494,8 +494,8 @@ Ajouter une colonne dans un tableau
 Supposons que l'on veuille ajouter une colonne à un tableau. Cela se fait avec
 la méthode ``insert()``.
 
-Johann Carl Friedrich Gauss avait deviné au 19e siècle que ``pi(x)``, le nombre
-de nombres premiers inférieurs à ``x``, était approximativement ``x/log(x)``.
+Johann Carl Friedrich Gauss avait deviné au 19e siècle que `\pi(x)`, le nombre
+de nombres premiers inférieurs à `x`, était approximativement `x/\log(x)`.
 Construisons une série qui calcule cette fonction pour les 1000 premiers
 nombres entiers::
 
@@ -514,11 +514,11 @@ position où on veut l'insérer, le titre de la colonne et les données::
     >>> df['x_logx'] = t        # equivalent, notation comme les dictionnaires Python
 
 En 1838, Dirichlet a contacté Gauss pour lui dire qu'il avait trouvé une
-meilleure approximation de la fontion ``pi(x)`` en utilisant l'intégrale de
-l'inverse de la fonction ``log(x)``, c'est-à-dire par la fonction
-``Li(x)=integrate(1/log(t), (t,2,x))``.
+meilleure approximation de la fontion `\pi(x)` en utilisant l'intégrale de
+l'inverse de la fonction `\log(x)`, c'est-à-dire par la fonction
+`Li(x)=\int_2^x {1\over\log(t)} dt`.
 
-En utilisant sympy, calculons les 1000 premières valeurs de ``Li(x)`` et
+En utilisant sympy, calculons les 1000 premières valeurs de `Li(x)` et
 ajoutons cette colonne dans le tableau::
 
     >>> from sympy import Li                         
@@ -556,8 +556,8 @@ Pour visualiser les données, il suffit d'utiliser la commande ``plot``::
 .. image:: images/prime_pix_1000.png
    :width: 10cm
 
-On voit bien que ``pi(x)``, le nombre de nombres premiers inférieurs à ``x``,
-se trouve bien entre les fonctions ``pi(x)`` et ``Li(x)`` sur l'intervalle
+On voit bien que `\pi(x)`, le nombre de nombres premiers inférieurs à `x`,
+se trouve bien entre les fonctions `\pi(x)` et `Li(x)` sur l'intervalle
 ``[0,1000]``.
 
 On peut visualiser qu'une partie par exemple l'intervalle ``[0,100]``  en
@@ -608,11 +608,9 @@ Pour exporter vers le format ``.csv`` on fait::
 
     >>> df.to_csv('tableau.csv')
 
-.. NOTE::
-
-    L'importation et l'exportation vers le format excel .xls exige que les
-    librairies Python ``xlrd`` et ``openpyxl`` soit installées. On peut les
-    installer avec pip grâce à la commande ``pip install xlrd openpyxl``.
+**NOTE**: L'importation et l'exportation vers le format excel .xls exige que
+les librairies Python ``xlrd`` et ``openpyxl`` soit installées. On peut les
+installer avec pip grâce à la commande ``pip install xlrd openpyxl``.
 
 Importer des données
 --------------------
@@ -865,7 +863,6 @@ série::
 Faisons maintenant un exemple au sujet de la météo de Ostende. Supposons qu'on
 s'intéresse à la température moyenne les jours de Noël à Ostende. D'abord, on
 crée une fonction qui teste si une date est bien le jour de Noël:: 
-
 
     >>> est_noel = lambda date:date.day==25 and date.month==12
 

@@ -16,12 +16,12 @@ une ``valeur``, on utilise la fonction ``limit`` de sympy avec la syntaxe
     >>> from sympy.abc import x
 
 Par exemple, pour évaluer la limite lorsque ``x`` tend vers ``0`` de
-l'expression ``(sin(x)-x)/x**3``, on écrit::
+l'expression `(\sin(x)-x)/x^3`, on écrit::
 
     >>> limit((sin(x)-x)/x**3, x, 0)
     -1/6
 
-La limite de ``f(x)=2*x+1`` lorsque ``x -> 5/2``::
+La limite de `f(x)=2x+1` lorsque `x \to 5/2`::
 
     >>> limit(2*x+1, x, S(5)/2)   # la fonction S permet de créer un nombre rationel
     6
@@ -44,11 +44,11 @@ Lorsque la direction n'est pas spécifiée, c'est la limite à droite
     >>> limit(1/x, x, 0)
     oo
 
-En sympy, tout comme dans SageMath, le symbole ``oo`` représente l'infini. Les
-deux ``o`` collés resemblent au symbole de l'infini ``8`` à l'horizontal. Les
-opérations d'addition, de soustraction, de multiplication, etc. sont possibles
-avec l'infini ``oo`` tant qu'elle soient bien définies. On doit l'importer pour
-l'utiliser::
+En sympy, tout comme dans SageMath, le symbole ``oo`` représente l'infini
+`\infty`. Les deux ``o`` collés resemblent au symbole de l'infini ``8`` à
+l'horizontal. Les opérations d'addition, de soustraction, de multiplication,
+etc. sont possibles avec l'infini ``oo`` tant qu'elle soient bien définies. On
+doit l'importer pour l'utiliser::
 
     >>> from sympy import oo
     >>> oo
@@ -132,7 +132,8 @@ on utilise le symbole ``oo``::
     ---
      6
 
-Si la série est divergente, elle sera évaluée à ``oo`` ou encore elle restera non évaluée::
+Si la série est divergente, elle sera évaluée à ``oo`` ou encore elle restera
+non évaluée::
 
     >>> summation(n, (n,1,oo))
     oo
@@ -194,7 +195,7 @@ Faisons quelques importations de fonctions et variables pour la suite::
     >>> from sympy import sin,cos,tan,atan,pi
     >>> from sympy.abc import x,y
 
-On calcule la dérivée de ``sin(x)``::
+On calcule la dérivée de `\sin(x)`::
 
     >>> diff(sin(x), x)
     cos(x)
@@ -286,14 +287,14 @@ Deux intégrales non élémentaires::
     --------------
           4
 
-Calculer l'intégrale de ``x^2 \cos x`` par rapport à ``x``::
+Calculer l'intégrale de `x^2 \cos(x)` par rapport à `x`::
 
     >>> integrate(x**2 * cos(x), x)
      2
     x *sin(x) + 2*x*cos(x) - 2*sin(x)
 
-Calculer l'intégrale définie de ``x^2 \cos x`` par rapport à ``x`` sur
-l'intervalle de ``0`` à ``pi/2``::
+Calculer l'intégrale définie de `x^2 \cos(x)` par rapport à `x` sur
+l'intervalle de `0` à `\pi/2`::
 
     >>> integrate(x**2 * cos(x), (x, 0, pi/2))
            2
@@ -435,7 +436,7 @@ Développement en séries
 On calcule la série de Taylor d'une ``expression`` qui dépend de ``x`` au point
 ``x0`` d'ordre ``n`` avec la syntaxe ``series(expression, x, x0, n)``. Par
 exemple, la série de Maclaurin (une série de Maclaurin est une série de Taylor
-au point ``x0=0``) de ``cos(x)`` d'ordre 14 est::
+au point `x_0=0`) de `\cos(x)` d'ordre 14 est::
 
     >>> from sympy import series, cos
     >>> from sympy.abc import x
@@ -462,7 +463,7 @@ x0, n)``::
     1 + -- + ---- + ------ + O\x  /
         2     24     720
 
-Le développement de Taylor de ``log`` se fait en ``x0=1``::
+Le développement de Taylor de `\log` se fait en `x_0=1`::
 
     >>> from sympy import log
     >>> series(log(x), x, 0)
@@ -535,7 +536,7 @@ d'ordre 2::
     >>> dsolve(Eq(f(x), -Derivative(f(x),x,x)), f(x))
     f(x) = C1*sin(x) + C2*cos(x)
 
-Résoudre une équation différentielle ordinaire comme ``f''(x) + 9 f(x) = 1`` ::
+Résoudre une équation différentielle ordinaire comme `f''(x) + 9 f(x) = 1` ::
 
     >>> dsolve(Eq(Derivative(f(x),x,x) + 9*f(x), 1), f(x))
     f(x) = C1*sin(3*x) + C2*cos(3*x) + 1/9

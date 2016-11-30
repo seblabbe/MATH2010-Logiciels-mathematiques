@@ -34,14 +34,14 @@ Le calcul d'une puissance se fait avec la double astérisque ``**``::
     >>> 2 ** 8
     256
 
-.. ATTENTION:: 
+**ATTENTION**
 
-    En Python, l'opérateur ``^`` ne calcule pas l'exposant, mais fait plutôt
-    une opération sur la représentation binaire des nombres entiers (ou
-    exclusif bit à bit)::
+En Python, l'opérateur ``^`` ne calcule pas l'exposant, mais fait plutôt
+une opération sur la représentation binaire des nombres entiers (ou
+exclusif bit à bit)::
 
-        >>> 5 ^ 3
-        6
+    >>> 5 ^ 3
+    6
 
 Racine n-ième
 -------------
@@ -62,8 +62,8 @@ symbole ``%``. Par exemple, on calcule le reste de la division du nombre 94 par
     >>> 94 % 10
     4
 
-L'opération ``a//b`` lorsque ``a`` et ``b`` sont des nombres entiers retourne
-le *quotient* de la divsion ``a`` par ``b``::
+L'opération ``a // b`` lorsque ``a`` et ``b`` sont des nombres entiers retourne
+le *quotient* de la division ``a`` par ``b``::
 
     >>> 94 // 10
     9
@@ -141,7 +141,7 @@ Extraction de la racine carrée avec la fonction ``sqrt``::
     >>> sqrt(100)
     10.0
 
-Calcul des racines du polynôme ``3x**2 + 7x + 2``::
+Calcul des racines du polynôme `3x^2 + 7x + 2`::
 
     >>> from math import sqrt
     >>> (- 7 + sqrt(7**2 - 4 * 3 * 2) ) / (2 * 3)
@@ -223,13 +223,14 @@ Variables et affectation
 ------------------------
 
 Supposons que l'on veut évaluer le polynôme
-``3*x**4 + 7*x**3 - 3*x**2 + x - 5`` lorsque ``x=1234567``. On peut
+`3x^4 + 7x^3 - 3x^2 + x - 5` lorsque `x=1234567`. On peut
 procéder de la façon suivante::
 
     >>> 3 * 1234567**4 + 7 * 1234567**3 - 3 * 123467**2 + 1234567 - 5
     6969164759371928046905499
 
-Cela nous oblige à écrire quatre fois le nombre ``1234567`` et on peut éviter cela au moyen d'une variable.
+Cela nous oblige à écrire quatre fois le nombre ``1234567`` et on peut éviter
+cela au moyen d'une variable.
 
 Une variable permet de mémoriser un nombre pour le réutiliser
 plus tard. Par exemple, on peut mémoriser le nombre ``1234567``

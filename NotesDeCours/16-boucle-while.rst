@@ -34,9 +34,9 @@ inférieures à un million avec une boucle ``while``::
     390625
 
 L'exemple suivant est un autre exemple typique de la boucle tant que. Il
-consiste à rechercher, pour un nombre ``x>=1``, l'unique valeur entière ``n``
-vérifiant ``2**(n−1) < x < 2**n``, c’est-à-dire le plus petit entier vérifiant
-``x < 2**n``.
+consiste à rechercher, pour un nombre `x\geq1`, l'unique valeur entière `n`
+vérifiant `2^{n−1}< x < 2^n`, c’est-à-dire le plus petit entier vérifiant
+`x < 2^n`.
 
 ::
 
@@ -49,7 +49,7 @@ vérifiant ``2**(n−1) < x < 2**n``, c’est-à-dire le plus petit entier véri
     >>> n
     14
 
-On vérifie bien que ``2**13 < 10**4 < 2**14``::
+On vérifie bien que `2^13 < 10^4 < 2^14`::
 
     >>> 2 ** 13
     8192
@@ -98,9 +98,7 @@ valeur suivante::
 
 On remarque que la valeur 5 n'a pas été imprimée par la fonction ``print``.
 
-.. NOTE::
-
-    Certains auteurs recommandent d'éviter l'utilisation des intructions
-    ``continue`` et des ``break``, car elles sont évitables et leur utilisation
-    produit des programmes moins bien structurés.
+**NOTE**: Certains auteurs recommandent d'éviter l'utilisation des intructions
+``continue`` et des ``break``, car elles sont évitables et leur utilisation
+produit des programmes moins bien structurés.
 
