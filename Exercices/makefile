@@ -1,5 +1,13 @@
-exos:
-	pdflatex exos.tex
+FILE = exos
+
+now:
+	pdflatex $(FILE).tex
+
+bib:
+	pdflatex $(FILE).tex
+	bibtex $(FILE)
+	pdflatex $(FILE).tex
+	pdflatex $(FILE).tex
 
 .PHONY : clean
 clean :
