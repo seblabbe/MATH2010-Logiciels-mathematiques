@@ -2,7 +2,9 @@
 Calculatrice et arithmétique avec Python
 ========================================
 
-Dans cette section, nous assumons que la version de Python est la version 3.
+Dans cette section, nous assumons que la version de Python est la version 3::
+
+    >>> from __future__ import division, print_function
 
 Opérations de base en Python
 ----------------------------

@@ -1,6 +1,10 @@
 Conditions ``if``
 =================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 Les conditions sont, avec les boucles, les éléments les plus importants de la
 programmation. Elles permettent de formaliser la prise de décisions selon
 l'information disposée. Faisons un exemple, supposons que nous sommes sur

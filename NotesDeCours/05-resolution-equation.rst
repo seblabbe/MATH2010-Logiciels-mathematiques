@@ -2,6 +2,12 @@
 Résolution d'équations
 ======================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 Définir une équation
 --------------------
 
@@ -22,7 +28,7 @@ La fonction ``solve`` permet de résoudre une équation::
     >>> from sympy import solve
     >>> solve(Eq(x, 3), x)
     [3]
-    >>>  solve(Eq(x + y, 3), x)
+    >>> solve(Eq(x + y, 3), x)
     [-y + 3]
 
 Dans le premier cas, indiquer la variable ``x`` n'est pas nécessaire::

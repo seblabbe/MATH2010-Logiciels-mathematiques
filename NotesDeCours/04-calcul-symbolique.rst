@@ -2,6 +2,10 @@
 Calcul symbolique
 =================
 
+::
+
+    >>> from __future__ import division, print_function  # Python 3
+
 En Python, la fonction ``sqrt`` retourne un résultat approximé sur les nombres
 flottants::
 
@@ -66,18 +70,14 @@ Pour que les résultats soient affichés en LaTeX automatiquement, il suffit
 d'utiliser la commande suivante une seule fois pour le fichier::
 
     >>> from sympy import init_printing
-    >>> init_printing(pretty_print=True)
-
-Parfois, dans le notebook Jupyter, la commande suivante qui utilise la
-librairie MathJax donne de meilleurs résultats (l'affichage en LaTeX est plus
-rapide)::
-
     >>> init_printing(use_latex='mathjax')
+
+Dans le notebook Jupyter, cette commande utilise la librairie MathJax.
 
 .. image:: images/jupyter_mathjax.png
    :width: 15cm
 
-Dans ces notes, on utilisera l'option ``init_printing(pretty_print=True,
+Dans ces notes, on utilisera l'option ``init_printing(use_latex='mathjax',
 use_unicode=False)`` lorsque cela aide la lecture des formules.
 Pour un exemple de la section précédente, on obtient::
 

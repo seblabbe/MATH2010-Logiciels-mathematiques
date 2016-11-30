@@ -2,6 +2,12 @@
 Tracer une fonction
 ===================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 La librairie Sympy utilise matplotlib__, une autre librairie de Python, pour
 faire des dessins. Pour activer l'affichage des graphiques dans Jupyter, on
 écrit d'abord ceci dans une cellule::
@@ -89,6 +95,7 @@ On importe la fonction ``plot3d`` du sous-module ``sympy.plotting``::
 
 Un premier exemple::
 
+    >>> from sympy.abc import x,y
     >>> plot3d(x**2+y**2)
 
 .. image:: images/x2_y2.png

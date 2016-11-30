@@ -2,6 +2,12 @@
 Boucle ``for``
 ==============
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 Dans ce chapitre et les suivants, nous traitons de la programmation en Python.
 Les notes ici présentent les grandes lignes et les éléments principaux de ce
 sujet. Le lecteur désirant en savoir plus sera invité à consulter les chapitres

@@ -1,6 +1,12 @@
 Tableaux et analyse de données avec Pandas
 ==========================================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 Les données massives jouent et continueront de jouer un rôle important dans la
 société du 21e siècle. Dans ce chapitre, nous ferons une introduction à une
 librairie de l'environnement Python qui permet de représenter et analyser des

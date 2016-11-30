@@ -2,6 +2,10 @@
 Types de données de Python
 ==========================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 Nous avons vu dans les chapitres précédents quelques types de données comme les
 entiers et les nombres flottants de Python ainsi que quelques structures de
 données (listes, tuples, dictionnaires) utilisées comme argument ou comme

@@ -2,6 +2,10 @@
 Boucle ``while``
 ================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 Parfois, on ne sait pas à l'avance combien de fois on voudra exécuter un bloc
 d'instructions. Dans ce cas, il vaut mieux utiliser une boucle ``while`` dont
 la syntaxe est::
@@ -20,7 +24,7 @@ inférieures à un million avec une boucle ``while``::
 
     >>> a = 1
     >>> while a < 1000000:
-    ...     print a
+    ...     print(a)
     ...     a = a * 5
     ... 
     1

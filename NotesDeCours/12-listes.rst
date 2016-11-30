@@ -1,6 +1,10 @@
 Listes
 ======
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 En Python, les listes sont beaucoup utilisées. Il est donc important de
 connaîtres les différentes façons de créer, modifier et utiliser les listes.
 Dans ce chapitre, nous allons voir les différentes opérations sur les listes.

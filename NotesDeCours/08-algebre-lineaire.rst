@@ -1,6 +1,12 @@
 Algèbre linéaire
 ================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 Cette section concerne l'algèbre linéaire et les matrices.
 On trouvera d'autres exemples dans le tutoriel de Sympy sur le même sujet:
 http://docs.sympy.org/latest/tutorial/matrices.html

@@ -1,4 +1,3 @@
-
 Calculatrice et arithmétique avec SymPy
 =======================================
 
@@ -35,6 +34,10 @@ Pour plus d'informations sur SymPy:
 
 Les exemples dans les sections qui suivent sont parfois nouveaux sinon inspirés
 de la documentation en ligne de SymPy.
+
+::
+
+    >>> from __future__ import division, print_function  # Python 3
 
 Nombres rationels
 -----------------

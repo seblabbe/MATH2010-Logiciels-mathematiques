@@ -2,6 +2,10 @@
 Autres structures de données
 ============================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 Tuples (type ``tuple``)
 -----------------------
 

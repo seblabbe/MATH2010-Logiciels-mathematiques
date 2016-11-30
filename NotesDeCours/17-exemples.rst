@@ -2,6 +2,10 @@
 Exemples (``def`` + ``while`` + ``for`` + ``if``)
 =================================================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 On a vu dans les chapitres précédents comment définir des fonctions avec
 ``def``, des boucles avec ``while`` et ``for`` et des tests avec ``if`` ainsi
 que quelques exemples sur chaque notion mais indépendants des autres. Très

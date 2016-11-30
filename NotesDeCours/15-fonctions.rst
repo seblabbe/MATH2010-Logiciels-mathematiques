@@ -2,6 +2,10 @@
 Fonctions ``def``
 =================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+
 Une fonction rassemble un ensemble d'instructions qui permettent d'atteindre un
 certain objectif commun. Les fonctions permettent de séparer un programme en
 morceaux qui correspondent à la façon dont on pense à la résolution d'un

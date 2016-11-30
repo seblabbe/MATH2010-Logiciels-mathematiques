@@ -1,6 +1,12 @@
 Calcul différentiel et intégral
 ===============================
 
+::
+
+    >>> from __future__ import division, print_function   # Python 3
+    >>> from sympy import init_printing
+    >>> init_printing(use_latex='mathjax',use_unicode=False)  # Affichage des résultats
+
 Cette section concerne le calcul différentiel et intégral. 
 On trouvera d'autres exemples dans le tutoriel de Sympy sur le même sujet:
 http://docs.sympy.org/latest/tutorial/calculus.html
