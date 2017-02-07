@@ -1,6 +1,9 @@
 Mathematica
 ===========
 
+.. contents:: **Contenu**
+   :local:
+
 Les thèmes des chapitres 1 à 8 représentent la base des fonctionalités offertes
 par les logiciels de calcul formel dont SymPy, Sage, Mathematica, Maple, Magma
 et d'autres font partie. Dans ces notes de cours, nous avons utilisé SymPy dans

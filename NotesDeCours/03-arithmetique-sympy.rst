@@ -1,6 +1,9 @@
 Calculatrice et arithmétique avec SymPy
 =======================================
 
+.. contents:: **Contenu**
+   :local:
+
 SymPy__ est une librairie Python de mathématiques symboliques et un outil de
 calcul formel. SymPy offre un ensemble riche de fonctions documentées qui
 facilite la modélisation de problèmes mathématiques (arithmétique, calcul

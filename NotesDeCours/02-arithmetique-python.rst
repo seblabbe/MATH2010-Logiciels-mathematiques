@@ -2,6 +2,9 @@
 Calculatrice et arithmétique avec Python
 ========================================
 
+.. contents:: **Contenu**
+   :local:
+
 Dans cette section, nous assumons que la version de Python est la version 3::
 
     >>> from __future__ import division, print_function

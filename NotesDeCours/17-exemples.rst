@@ -2,6 +2,9 @@
 Exemples (``def`` + ``while`` + ``for`` + ``if``)
 =================================================
 
+.. contents:: **Contenu**
+   :local:
+
 ::
 
     >>> from __future__ import division, print_function   # Python 3

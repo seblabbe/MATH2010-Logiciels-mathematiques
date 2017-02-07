@@ -2,6 +2,9 @@
 GeoGebra
 ========
 
+.. contents:: **Contenu**
+   :local:
+
 .. image:: images/GeoGebra-logo.png
    :width: 6cm
    :target: http://www.geogebra.org/
