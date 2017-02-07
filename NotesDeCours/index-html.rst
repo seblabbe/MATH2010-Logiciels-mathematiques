@@ -22,10 +22,11 @@ Notes de cours
 .. image:: images/jupyter.png
    :width: 12cm
 
-.. contents:: Table des matières
-   :depth: 2
+.. contents:: **Table des matières**
+   :class: main-content
+   :depth: 1
 
-.. section-numbering::
+.. .. section-numbering::
    :depth: 2
 
 .. raw:: pdf
