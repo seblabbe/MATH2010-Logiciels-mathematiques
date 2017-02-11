@@ -1,11 +1,9 @@
 FILE = index
+OUTPUT = notedecours
 
 pdf:
-	rst2pdf $(FILE)-pdf.rst $(FILE).pdf
-	#rst2pdf --inline-links $(FILE)-pdf.rst $(FILE).pdf
-
-html:
-	rst2html.py $(FILE).rst $(FILE).html
+	rst2pdf $(FILE)-pdf.rst $(OUTPUT).pdf
+	#rst2pdf --inline-links $(FILE)-pdf.rst $(OUTPUT).pdf
 
 rst2ipynb:
 	for file in ??-*.rst; do \
@@ -18,7 +16,10 @@ rst2ipynb:
 	rm tmp.rst
 	#TODO les tables sont ignorées dans les chap 2 et 9
 
-html-rougier:
+html:
 	rst2html.py --link-stylesheet --cloak-email-addresses \
                 --toc-top-backlinks --stylesheet=book.css,pygments_manni.css \
-                --stylesheet-dirs=. $(FILE)-html.rst $(FILE).html
+                --stylesheet-dirs=. --syntax-highlight=short $(FILE)-html.rst $(OUTPUT).html
+
+# To use pygments correctly, see:
+# http://www.futurile.net/2015/08/07/writing-highlighting-code-restructured-text/
