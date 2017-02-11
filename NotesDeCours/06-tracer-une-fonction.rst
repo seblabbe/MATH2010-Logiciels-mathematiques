@@ -5,7 +5,7 @@ Tracer une fonction
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
     >>> from sympy import init_printing
@@ -13,7 +13,9 @@ Tracer une fonction
 
 La librairie Sympy utilise matplotlib__, une autre librairie de Python, pour
 faire des dessins. Pour activer l'affichage des graphiques dans Jupyter, on
-écrit d'abord ceci dans une cellule::
+écrit d'abord ceci dans une cellule:
+
+.. code:: pycon
 
     >>> %matplotlib inline
 
@@ -22,11 +24,15 @@ __ http://matplotlib.org/
 Tracer une fonction `\RR\to\RR`
 -------------------------------
 
-On importe la fonction ``plot`` qui permet de dessiner des fonctions::
+On importe la fonction ``plot`` qui permet de dessiner des fonctions:
+
+.. code:: pycon
 
     >>> from sympy import plot  
 
-Un premier exemple. Par défaut, l'intervalle pour les `x` est `[-10,10]`::
+Un premier exemple. Par défaut, l'intervalle pour les `x` est `[-10,10]`:
+
+.. code:: pycon
 
     >>> from sympy import sin
     >>> from sympy.abc import x
@@ -35,14 +41,18 @@ Un premier exemple. Par défaut, l'intervalle pour les `x` est `[-10,10]`::
 .. image:: images/sin_x.png
    :width: 7cm
 
-Un deuxième exemple sur l'intervalle `[-100, 100]`::
+Un deuxième exemple sur l'intervalle `[-100, 100]`:
+
+.. code:: pycon
 
     >>> plot(sin(x)/x, (x,-100,100))
 
 .. image:: images/sinx_x.png
    :width: 7cm
 
-On trace une parabole de couleur rouge dans l'intervale `[-5, 5]` avec un titre::
+On trace une parabole de couleur rouge dans l'intervale `[-5, 5]` avec un titre:
+
+.. code:: pycon
 
     >>> plot(x**2+x-6, (x,-5,5), line_color='red', title='Youpi')
 
@@ -54,7 +64,9 @@ Tracer plusieurs fonctions `\RR\to\RR`
 
 On trace plusieurs fonctions sur le même intervalle de la façon suivante.  Dans
 cet exemple, on a aussi spécifier une limite inférieure et supérieure pour
-l'axe des `y`::
+l'axe des `y`:
+
+.. code:: pycon
 
     >>> plot(x, x**2, x**3, (x, -2, 2), ylim=(-2,2))
 
@@ -63,18 +75,24 @@ l'axe des `y`::
 
 Pour dessiner les trois fonctions avec des couleurs différentes, il faut créer
 un dessin à la fois et ensuite les combiner. L'option ``show=False`` permet
-d'éviter d'afficher les dessins intermédiaires::
+d'éviter d'afficher les dessins intermédiaires:
+
+.. code:: pycon
 
     >>> p1 = plot(x,    (x, -1, 1), show=False, line_color='b')
     >>> p2 = plot(x**2, (x, -1, 1), show=False, line_color='r')
     >>> p3 = plot(x**3, (x, -1, 1), show=False, line_color='g')
 
-On ajoute à ``p1`` les graphes ``p2`` et ``p3``::
+On ajoute à ``p1`` les graphes ``p2`` et ``p3``:
+
+.. code:: pycon
 
     >>> p1.extend(p2)
     >>> p1.extend(p3)
 
-Maintenant ``p1`` contient les trois graphes::
+Maintenant ``p1`` contient les trois graphes:
+
+.. code:: pycon
 
     >>> print(p1)
     Plot object containing:
@@ -82,7 +100,9 @@ Maintenant ``p1`` contient les trois graphes::
     [1]: cartesian line: x**2 for x over (-1.0, 1.0)
     [2]: cartesian line: x**3 for x over (-1.0, 1.0)
 
-On affiche le graphe des trois fonctions::
+On affiche le graphe des trois fonctions:
+
+.. code:: pycon
 
     >>> p1.show()
 
@@ -92,11 +112,15 @@ On affiche le graphe des trois fonctions::
 Tracer une fonction `\RR^2\to\RR`
 ---------------------------------
 
-On importe la fonction ``plot3d`` du sous-module ``sympy.plotting``::
+On importe la fonction ``plot3d`` du sous-module ``sympy.plotting``:
+
+.. code:: pycon
 
     >>> from sympy.plotting import plot3d
 
-Un premier exemple::
+Un premier exemple:
+
+.. code:: pycon
 
     >>> from sympy.abc import x,y
     >>> plot3d(x**2+y**2)
@@ -104,7 +128,9 @@ Un premier exemple::
 .. image:: images/x2_y2.png
    :width: 7cm
 
-Un deuxième exemple::
+Un deuxième exemple:
+
+.. code:: pycon
 
     >>> plot3d(sin(x*10)*cos(y*4), (x, -1, 1), (y, -1, 1))
 
@@ -119,14 +145,18 @@ Dessiner une fonction `\RR\to\RR^2`
 -----------------------------------
 
 Dans cette section et les suivantes, on aura utilisera les fonctions et
-variables symboliques suivantes::
+variables symboliques suivantes:
+
+.. code:: pycon
 
     >>> from sympy import sin, cos
     >>> from sympy.abc import u, v
 
 La fonction ``plot_parametric`` permet de tracer des fonctions paramétrés
 `\RR\to\RR^2`. Par exemple, on trace la `courbe de Lissajous`__ lorsque
-`a=3` et `b=2`::
+`a=3` et `b=2`:
+
+.. code:: pycon
 
     >>> from sympy.plotting import plot_parametric
     >>> plot_parametric(cos(3*u), sin(2*u), (u, -5, 5))
@@ -141,7 +171,9 @@ Dessiner une fonction `\RR\to\RR^3`
 -----------------------------------
 
 La fonction ``plot3d_parametric_line`` permet de tracer des courbes dans
-l'espace 3d. Par exemple, on trace une hélice::
+l'espace 3d. Par exemple, on trace une hélice:
+
+.. code:: pycon
 
     >>> from sympy.plotting import plot3d_parametric_line
     >>> plot3d_parametric_line(cos(u), sin(u), u, (u, -15, 15))
@@ -153,7 +185,9 @@ Dessiner une fonction `\RR^2\to\RR^3`
 -------------------------------------
 
 La fonction ``plot3d_parametric_surface`` permet de tracer des surfaces
-dans `\RR^3`. Par exemple, on trace un tore::
+dans `\RR^3`. Par exemple, on trace un tore:
+
+.. code:: pycon
 
     >>> from sympy.plotting import plot3d_parametric_surface
     >>> X = cos(u)*(5+2*cos(v))
@@ -167,13 +201,15 @@ dans `\RR^3`. Par exemple, on trace un tore::
 Dessiner les solutions d'une équation implicite
 -----------------------------------------------
 
-::
+.. code:: pycon
 
     >>> from sympy import plot_implicit, Eq
     >>> from sympy.abc import x, y
 
 La fonction ``plot_implicit`` permet de tracer les solutions d'une équation
-implicite::
+implicite:
+
+.. code:: pycon
 
     >>> eq = Eq(x**2+y**2+x*y-2*x, 5)
     >>> eq
@@ -184,7 +220,9 @@ implicite::
    :width: 12cm
 
 On peut modifier les étendues des variables ``x`` et ``y`` de la façon suivante
-(le dessin n'est pas affiché dans ces notes)::
+(le dessin n'est pas affiché dans ces notes):
+
+.. code:: pycon
 
     >>> plot_implicit(eq, (x,-2,5), (y,-5,3))
 
@@ -192,7 +230,9 @@ Tracer une région de `\RR^2`
 ----------------------------
 
 La fonction ``plot_implicit`` peut aussi servir à dessiner une région de points
-qui satisfont une inégalité::
+qui satisfont une inégalité:
+
+.. code:: pycon
 
     >>> plot_implicit(y > 2*x+1)
 
@@ -200,7 +240,9 @@ qui satisfont une inégalité::
    :width: 8cm
 
 Pour tracer la région définie par plusieurs inégalités, on utilise la fonction
-``And`` de sympy::
+``And`` de sympy:
+
+.. code:: pycon
 
     >>> from sympy import And
     >>> plot_implicit(And(y>2*x+1, y<5*x, x+y<5))
@@ -219,12 +261,16 @@ __ http://mpmath.org/
 __ http://mpmath.googlecode.com/svn/gallery/gallery.html
 
 La façon d'importer la librairie mpmath n'est pas exactement la même selon
-qu'on utilise une installation normale de SymPy ou qu'on utilise SageMath::
+qu'on utilise une installation normale de SymPy ou qu'on utilise SageMath:
+
+.. code:: pycon
 
     >>> from sympy import mpmath    # Sympy (installation normale)
     >>> import mpmath               # SageMath
 
-Rappelons que sans la ligne suivante, les dessins ne s'afficheront pas::
+Rappelons que sans la ligne suivante, les dessins ne s'afficheront pas:
+
+.. code:: pycon
 
     >>> %matplotlib inline
 
@@ -234,7 +280,9 @@ ou encore sur une ligne avec ``lambda``. Par exemple, la fonction identité peut
 s'écrire ``lambda z:z`` en Python.
 
 On trace la fonction identité pour comprendre la signification de l'image
-obtenue::
+obtenue:
+
+.. code:: pycon
 
     >>> mpmath.cplot(lambda z: z, [-10, 10], [-10, 10])
 
@@ -249,7 +297,9 @@ blanc transparent).
 De la même façon, on ne peut pas utiliser le ``I`` de sympy avec mpmath, il
 faut utiliser les nombres complexes de Python. Le dessin suivant illustre la
 multiplication par le nombre complexe `i`, c'est-à-dire une rotation de 90
-degrés::
+degrés:
+
+.. code:: pycon
 
     >>> I = complex(0,1)         # le nombre complexe I de Python
     >>> mpmath.cplot(lambda z: I*z, [-10, 10], [-10, 10])
@@ -260,14 +310,18 @@ Les pixels en rouges sont envoyés sur la droite réelle positive par la fonctio
 .. image:: images/Iz.png
    :width: 7cm
 
-Le dessin suivant permet de voir les cinq racines cinquième de l'unité::
+Le dessin suivant permet de voir les cinq racines cinquième de l'unité:
+
+.. code:: pycon
 
     >>> mpmath.cplot(lambda z: z**5-1, [-2, 2], [-2, 2])
 
 .. image:: images/z5_1.png
    :width: 7cm
 
-Cela permet aussi d'étudier les zéros de la fonction zeta de Riemann::
+Cela permet aussi d'étudier les zéros de la fonction zeta de Riemann:
+
+.. code:: pycon
 
     >>> from mpmath import zeta
     >>> mpmath.cplot(zeta, [-10, 10], [-50, 50])

@@ -4,7 +4,7 @@ Tableaux et analyse de données avec Pandas
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
     >>> from sympy import init_printing
@@ -46,7 +46,9 @@ Tableau unidimensionnel de données
 ----------------------------------
 
 En utilisant sympy, construisons une liste de 0 et de 1 telle qu'un 1 est à la
-position ``i`` si et seulement si ``i`` est un nombre premier::
+position ``i`` si et seulement si ``i`` est un nombre premier:
+
+.. code:: pycon
 
     >>> from sympy import isprime
     >>> L = [isprime(i) for i in range(15)]
@@ -56,7 +58,9 @@ position ``i`` si et seulement si ``i`` est un nombre premier::
 
 La librairie pandas permet de représenter les tableaux unidimensionnels de
 données appelés *séries*. Faisons un premier exemple. La liste Python ci-haut
-peut être transformée en une série de pandas en faisant comme suit::
+peut être transformée en une série de pandas en faisant comme suit:
+
+.. code:: pycon
 
     >>> from pandas import Series
     >>> s = Series(L)
@@ -80,7 +84,9 @@ peut être transformée en une série de pandas en faisant comme suit::
 
 Par défaut, les indices sont les nombres de ``0`` à ``n-1`` où ``n`` est la
 taille de la liste. On peut accéder aux éléments de la série de la même façon
-qu'on le fait pour les éléments d'une liste::
+qu'on le fait pour les éléments d'une liste:
+
+.. code:: pycon
 
     >>> s[0]
     False
@@ -94,7 +100,9 @@ L'intérêt des séries de pandas par rapport aux listes Python de base est qu'u
 grand nombres de fonctions utiles sont disponibles sur les séries de pandas et
 qui retournent souvent d'autres séries. Par exemple, on peut obtenir une
 brève description statistique des éléments d'une série avec la méthode
-``describe()``::
+``describe()``:
+
+.. code:: pycon
 
     >>> s.describe()
     count        15
@@ -108,7 +116,9 @@ que ``False`` est la plus fréquence avec 9 apparitions sur 15. En effet, il y 6
 nombres premiers inférieurs à 15.
 
 On peut obtenir la séries des sommes cumulées d'une série avec la méthode
-``cumsum()``. Ici ``False`` vaut zéro et ``True`` vaut ``1``::
+``cumsum()``. Ici ``False`` vaut zéro et ``True`` vaut ``1``:
+
+.. code:: pycon
 
     >>> s.cumsum()
     0     0
@@ -135,7 +145,9 @@ Opérations sur une série
 ------------------------
 
 Les opérations arithmétiques sont définies sur les séries. Elle sont appliquées
-sur chaque terme::
+sur chaque terme:
+
+.. code:: pycon
 
     >>> t = s.cumsum()
     >>> t * 1000 + 43
@@ -157,7 +169,9 @@ sur chaque terme::
     dtype: int64
 
 On peut aussi appliquer une fonction aux éléments d'une série avec la méthode
-``apply``::
+``apply``:
+
+.. code:: pycon
 
     >>> def carre_plus_trois(x):
     ...     return x**2 + 3
@@ -185,7 +199,9 @@ Concaténation de deux séries
 Avec pandas, il est possible de construire un tableau comportant plus d'une
 colonne. Par exemple, les nombres premiers dans la première colonne et la somme
 cumulée dans la deuxième. Une première façon est avec la fonction ``concat``
-qui concatène deux séries::
+qui concatène deux séries:
+
+.. code:: pycon
 
     >>> from pandas import concat
     >>> concat([s, s.cumsum()])
@@ -227,7 +243,9 @@ d'une même colonne doivent avoir le même type. Ce n'est pas exactement ce qu'o
 voulait. Pour spécifier que la concaténation doit être faite en colonnes, il
 faut spécifier dans quelle direction (axe) ou veut concaténer les données. On
 donne alors une valeur ``1`` à l'argument ``axis`` plutôt que ``0`` (la valeur
-par défaut) pour obtenir ce que l'on veut::
+par défaut) pour obtenir ce que l'on veut:
+
+.. code:: pycon
 
     >>> concat([s, s.cumsum()], axis=1)
             0  1
@@ -250,7 +268,9 @@ par défaut) pour obtenir ce que l'on veut::
 Pour donner des titres plus parlant aux colonnes, il s'agit de spécifier une
 liste de titres via l'argument ``keys``. Comme le nombre de nombres entiers
 inférieur à ``x`` est souvent dénoté `\pi(x)`, on utilise ``'pi_x'`` pour le
-nom de la deuxième colonne::
+nom de la deuxième colonne:
+
+.. code:: pycon
 
     >>> keys = ['isprime', 'pi_x']
     >>> df = concat([s, s.cumsum()], axis=1, keys=keys)
@@ -272,7 +292,9 @@ nom de la deuxième colonne::
     13    True     6
     14   False     6
 
-Le type du tableau ci-haut est ``DataFrame`` pour tableau de données::
+Le type du tableau ci-haut est ``DataFrame`` pour tableau de données:
+
+.. code:: pycon
 
     >>> type(df)
     <class 'pandas.core.frame.DataFrame'>
@@ -281,18 +303,24 @@ Tableau 2-dimensionnel de données
 ---------------------------------
 
 Une autre façon de créer le même tableau est en utilisant la fonction
-``DataFrame`` directement::
+``DataFrame`` directement:
+
+.. code:: pycon
 
     >>> from pandas import DataFrame
 
-D'abord, on calcule en Python la liste des sommes cumulées de la liste ``L``::
+D'abord, on calcule en Python la liste des sommes cumulées de la liste ``L``:
+
+.. code:: pycon
 
     >>> L = [isprime(i) for i in range(15)]
     >>> L_cumsum = [sum(L[:i]) for i in range(1,len(L)+1)]
     >>> L_cumsum
     [0, 0, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6]
 
-On crée un dictionnaire qui associe des noms de colonnes à des valeurs::
+On crée un dictionnaire qui associe des noms de colonnes à des valeurs:
+
+.. code:: pycon
 
     >>> d = {'isprime':L, 'pi_x':L_cumsum}
     >>> d
@@ -300,7 +328,9 @@ On crée un dictionnaire qui associe des noms de colonnes à des valeurs::
                  False, False, False, True, False, True, False],
      'pi_x': [0, 0, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6]}
 
-On crée un objet de type ``DataFrame`` à partir de ce dictionnaire::
+On crée un objet de type ``DataFrame`` à partir de ce dictionnaire:
+
+.. code:: pycon
 
     >>> df = DataFrame(d)
     >>> df
@@ -323,7 +353,9 @@ On crée un objet de type ``DataFrame`` à partir de ce dictionnaire::
 
 Comme pour les séries, on peut obtenir les statistiques simples pour les
 données de chaque colonne d'un tableau de données avec la méthode
-``describe()``::
+``describe()``:
+
+.. code:: pycon
 
     >>> df.describe()
                 pi_x
@@ -337,7 +369,9 @@ données de chaque colonne d'un tableau de données avec la méthode
     max     6.000000
 
 Il est aussi possible de créer des tableaux de données en dimensions
-supérieures, mais cela dépasse le cadre de ce cours::
+supérieures, mais cela dépasse le cadre de ce cours:
+
+.. code:: pycon
 
     >>> from pandas import Panel,Panel4D
 
@@ -345,7 +379,9 @@ Accéder à une colonne d'un tableau
 ----------------------------------
 
 Le nom des colonnes peut être utilisé pour accéder aux colonnes d'un tableau de
-la façon suivante sans parenthèse::
+la façon suivante sans parenthèse:
+
+.. code:: pycon
 
     >>> df.pi_x
     0     0
@@ -366,7 +402,9 @@ la façon suivante sans parenthèse::
     Name: pi_x, dtype: int64
 
 Comme pour un dictionnaire, on peut aussi accéder à une colonne avec les
-crochets. Il faut alors spécifier le nom de la colonne entre guillemets::
+crochets. Il faut alors spécifier le nom de la colonne entre guillemets:
+
+.. code:: pycon
 
     >>> df['pi_x']
     0     0
@@ -387,7 +425,9 @@ crochets. Il faut alors spécifier le nom de la colonne entre guillemets::
     Name: pi_x, dtype: int64
 
 Cela peut se combiner avec d'autres méthodes comme l'affichage de
-statistiques ``df.pi_x.describe()`` ou encore des calculs::
+statistiques ``df.pi_x.describe()`` ou encore des calculs:
+
+.. code:: pycon
 
     >>> df.pi_x * 100
     0       0
@@ -412,7 +452,9 @@ Afficher les premières/dernières lignes
 
 Parfois, on travaille avec des tableaux de très grande taille et il n'est pas
 pratique d'afficher toutes les données à l'écran. On construit d'abord un
-tableau de 1000 lignes avec les mêmes colonnes que le précédent::
+tableau de 1000 lignes avec les mêmes colonnes que le précédent:
+
+.. code:: pycon
 
     >>> L = [isprime(i) for i in range(1000)]
     >>> s = Series(L)
@@ -420,7 +462,9 @@ tableau de 1000 lignes avec les mêmes colonnes que le précédent::
     >>> df = DataFrame(d)
 
 Pour afficher les cinq premières lignes d'un tableau de données, on utilise la
-méthode ``head()``::
+méthode ``head()``:
+
+.. code:: pycon
 
     >>> df.head()
       isprime  pi_x
@@ -443,7 +487,9 @@ méthode ``tail()``::
 
 Les deux méthodes ``head`` et ``tail`` peuvent prendre un nombre entier en
 argument pour indiquer le nombre de lignes à afficher si on veut en voir plus
-ou moins::
+ou moins:
+
+.. code:: pycon
 
     >>> df.tail(10)
         isprime  pi_x
@@ -463,7 +509,9 @@ Sous-tableau
 
 Pour accéder à un sous-tableau de lignes consécutives, on utilise les crochets
 comme pour les listes Python. Ici, on affiche le sous-tableau des lignes 500 à
-519. En fait, cela crée un nouveau tableau de 20 lignes::
+519. En fait, cela crée un nouveau tableau de 20 lignes:
+
+.. code:: pycon
 
     >>> df[500:520]
         isprime  pi_x   x_logx
@@ -490,7 +538,9 @@ comme pour les listes Python. Ici, on affiche le sous-tableau des lignes 500 à
 
 Pour accéder à une donnée particulière dans le tableau, on utilise la méthode
 ``at`` en spécifiant l'indice de la ligne puis le nom de la colonne entre
-crochets::
+crochets:
+
+.. code:: pycon
 
     >>> df.at[510, 'x_logx']
     81.804042504952918
@@ -506,7 +556,9 @@ la méthode ``insert()``.
 Johann Carl Friedrich Gauss avait deviné au 19e siècle que `\pi(x)`, le nombre
 de nombres premiers inférieurs à `x`, était approximativement `x/\log(x)`.
 Construisons une série qui calcule cette fonction pour les 1000 premiers
-nombres entiers::
+nombres entiers:
+
+.. code:: pycon
 
     >>> from math import log
     >>> def x_sur_log_x(x): 
@@ -517,7 +569,9 @@ nombres entiers::
     >>> t = Series(range(1000)).apply(x_sur_log_x)
 
 On ajoute la nouvelle colonne avec la méthode ``insert`` en spécifiant la
-position où on veut l'insérer, le titre de la colonne et les données::
+position où on veut l'insérer, le titre de la colonne et les données:
+
+.. code:: pycon
 
     >>> df.insert(2, 'x_logx', t)
     >>> df['x_logx'] = t        # equivalent, notation comme les dictionnaires Python
@@ -528,13 +582,17 @@ l'inverse de la fonction `\log(x)`, c'est-à-dire par la fonction
 `Li(x)=\int_2^x {1\over\log(t)} dt`.
 
 En utilisant sympy, calculons les 1000 premières valeurs de `Li(x)` et
-ajoutons cette colonne dans le tableau::
+ajoutons cette colonne dans le tableau:
+
+.. code:: pycon
 
     >>> from sympy import Li                         
     >>> K = [Li(x).n() for x in range(1000)]
     >>> df['Li_x'] = Series(K, dtype='float64')
 
-On peut afficher les premières et dernières lignes du tableau à quatre colonnes::
+On peut afficher les premières et dernières lignes du tableau à quatre colonnes:
+
+.. code:: pycon
 
     >>> df.head()
       isprime  pi_x   x_logx               Li_x
@@ -554,11 +612,15 @@ On peut afficher les premières et dernières lignes du tableau à quatre colonn
 Visualiser les données
 ----------------------
 
-On active d'abord les dessins de matplotlib dans le notebook Jupyter::
+On active d'abord les dessins de matplotlib dans le notebook Jupyter:
+
+.. code:: python
 
     %matplotlib inline
 
-Pour visualiser les données, il suffit d'utiliser la commande ``plot``::
+Pour visualiser les données, il suffit d'utiliser la commande ``plot``:
+
+.. code:: pycon
     
     >>> df.plot()
 
@@ -570,7 +632,9 @@ se trouve bien entre les fonctions `\pi(x)` et `Li(x)` sur l'intervalle
 ``[0,1000]``.
 
 On peut visualiser qu'une partie par exemple l'intervalle ``[0,100]``  en
-choisissant d'abord un sous-tableau::
+choisissant d'abord un sous-tableau:
+
+.. code:: pycon
 
     >>> df[:100].plot()
 
@@ -578,7 +642,9 @@ choisissant d'abord un sous-tableau::
    :width: 10cm
 
 D'autres types de graphiques peuvent être plus adaptées dans d'autres
-situations (histogrammes, tartes, etc.). Voici la liste méthodes disponibles::
+situations (histogrammes, tartes, etc.). Voici la liste méthodes disponibles:
+
+.. code:: python
 
     df.plot.area     df.plot.box      df.plot.hist     df.plot.pie
     df.plot.bar      df.plot.density  df.plot.kde      df.plot.scatter
@@ -592,7 +658,9 @@ http://pandas.pydata.org/pandas-docs/stable/visualization.html#visualization
 Exporter des données
 --------------------
 
-Il est possible d'exporter un tableau de données de pandas vers plusieurs formats::
+Il est possible d'exporter un tableau de données de pandas vers plusieurs formats:
+
+.. code:: pycon
 
     >>> df.to_[TOUCHE_TABULATION]
     df.to_clipboard  df.to_excel      df.to_json       df.to_period     df.to_sql       
@@ -601,7 +669,9 @@ Il est possible d'exporter un tableau de données de pandas vers plusieurs forma
     df.to_dict       df.to_html       df.to_panel      df.to_sparse     df.to_timestamp
     df.to_wide       df.to_xarray
 
-Pour exporter vers le format ``.xlsx`` on fait::
+Pour exporter vers le format ``.xlsx`` on fait:
+
+.. code:: pycon
 
     >>> from pandas import ExcelWriter
     >>> writer = ExcelWriter('tableau.xlsx')
@@ -613,7 +683,9 @@ répertoire que le notebook Jupyter (utiliser la commande ``pwd``, abbréviation
 de "present working directory" en anglais, pour connaître ce répertoire en cas
 de doute).
 
-Pour exporter vers le format ``.csv`` on fait::
+Pour exporter vers le format ``.csv`` on fait:
+
+.. code:: pycon
 
     >>> df.to_csv('tableau.csv')
 
@@ -624,7 +696,9 @@ installer avec pip grâce à la commande ``pip install xlrd openpyxl``.
 Importer des données
 --------------------
 
-Pour importer un fichier Excel dans pandas, on fait::
+Pour importer un fichier Excel dans pandas, on fait:
+
+.. code:: pycon
 
     >>> import pandas as pd
     >>> df = pd.read_excel('tableau.xlsx')
@@ -637,7 +711,9 @@ Pour importer un fichier Excel dans pandas, on fait::
     4   False     2  1.922421  2.885390
 
 Parfois, un fichier Excel est corrompu et il vaut mieux passer par le format
-``.csv``. On procède alors ainsi::
+``.csv``. On procède alors ainsi:
+
+.. code:: pycon
 
     >>> df = pandas.read_csv('tableau.csv')
     >>> df.head()
@@ -650,7 +726,9 @@ Parfois, un fichier Excel est corrompu et il vaut mieux passer par le format
 
 Parfois, la ligne de titre n'est pas sur la première ligne. À ce moment là, on
 peut spécifier la valeur de l'argument ``header`` pour dire où commencer la
-lecture du fichier en entrée::
+lecture du fichier en entrée:
+
+.. code:: pycon
 
     >>> df = pandas.read_csv('tableau.csv', header=56)
     >>> df.head()
@@ -671,24 +749,32 @@ sortes de sujet sur la Belgique. Par exemple, à la page
 
 on retrouve des données météorologiques de Ostende depuis 2010. Sur cette page,
 on peut y télécharger le fichier ``meteoostende.xls`` au format excel. On peut
-l'importer dans pandas facilement::
+l'importer dans pandas facilement:
+
+.. code:: pycon
 
     >>> df = pandas.read_excel('meteoostende.xls')
 
 Il est possible d'écrire l'URL directement ce qui évite d'avoir à télécharger
-le fichier::
+le fichier:
+
+.. code:: pycon
 
     >>> url = ("http://opendata.digitalwallonia.be/dataset/"
             "4fd7a1cf-f959-46ff-83d0-807778fe3438/resource/"
             "14306677-fb41-4472-9a23-2923f5e22d69/download/meteoostende.xls")
     >>> df = pandas.read_excel(url)
 
-Ce tableau de données comporte 1461 lignes::
+Ce tableau de données comporte 1461 lignes:
+
+.. code:: pycon
 
     >>> len(df)
     1461
 
-et 10 colonnes dont les titres sont::
+et 10 colonnes dont les titres sont:
+
+.. code:: pycon
 
     >>> df.columns
     Index([u'Période', u'Date', u'Température de l'air - moyenne (°C)',
@@ -700,7 +786,9 @@ et 10 colonnes dont les titres sont::
           dtype='object')
 
 Les premières lignes permettent de se donner une idées des données. On peut
-aussi utiliser ``df.describe()``::
+aussi utiliser ``df.describe()``:
+
+.. code:: pycon
 
     >>> df.head()
        Période       Date  Température de l'air - moyenne (°C)  \
@@ -746,7 +834,9 @@ aussi utiliser ``df.describe()``::
     4                     5.42
 
 Pour voir ce qu'il y a à la 100e ligne du tableau, on utilise la méthode
-``iloc``. Ce sont les données météo du 11 avril 2010::
+``iloc``. Ce sont les données météo du 11 avril 2010:
+
+.. code:: pycon
 
     >>> df.iloc[100]
     Période                                                                  101
@@ -761,7 +851,9 @@ Pour voir ce qu'il y a à la 100e ligne du tableau, on utilise la méthode
     Température du sol (°C)                                                 7.28
     Name: 100, dtype: object
 
-Pour afficher les moyennes par colonnes, on utilise la méthode ``mean()``::
+Pour afficher les moyennes par colonnes, on utilise la méthode ``mean()``:
+
+.. code:: pycon
 
     >>> df.mean()
     Période                                                  731.000000
@@ -775,7 +867,9 @@ Pour afficher les moyennes par colonnes, on utilise la méthode ``mean()``::
     Température du sol (°C)                                   11.255428
     dtype: float64
 
-Pour étudier une colonne en particulier, par exemple la pression atmosphérique, c'est-à-dire la septième colonne, on peut procéder ainsi::
+Pour étudier une colonne en particulier, par exemple la pression atmosphérique, c'est-à-dire la septième colonne, on peut procéder ainsi:
+
+.. code:: pycon
 
     >>> s = df.icol(7)
     >>> s.head()
@@ -797,7 +891,9 @@ Pour étudier une colonne en particulier, par exemple la pression atmosphérique
     Name: Pression atmosphérique (kPa), dtype: float64
 
 Finalement, on peut dessiner l'évolution de la pression atmosphérique en
-fonction de la date::
+fonction de la date:
+
+.. code:: pycon
 
     >>> date = df.columns[1]
     >>> pression = df.columns[7]
@@ -807,7 +903,9 @@ fonction de la date::
    :width: 12cm
 
 Pour afficher un histogramme de la pression atmosphérique, il s'agit d'utiliser
-``df.plot.hist`` avec les mêmes arguments::
+``df.plot.hist`` avec les mêmes arguments:
+
+.. code:: pycon
 
     >>> df.plot.hist(x=date, y=pression)
 
@@ -824,11 +922,12 @@ que l'on veut garder et ``False`` sinon. La syntaxe est la suivante:
 ``df[s_vrai_faux]`` qui retourne un tableau filtré.
 
 Voici un premier exemple facile où on veut afficher que les nombres multiples
-de 3 d'une série::
+de 3 d'une série:
 
-    In [32]: s = Series(range(10))
-    In [31]: s
-    Out[31]:
+.. code:: pycon
+
+    >>> s = Series(range(10))
+    >>> s
     0    0
     1    1
     2    2
@@ -842,10 +941,11 @@ de 3 d'une série::
     dtype: int64
 
 On crée une série de la même longueur qui teste si les entrées sont multiples
-de trois ou non::
+de trois ou non:
 
-    In [29]: s % 3 == 0
-    Out[29]:
+.. code:: pycon
+
+    >>> s % 3 == 0
     0     True
     1    False
     2    False
@@ -859,10 +959,11 @@ de trois ou non::
     dtype: bool
 
 On utilise la précédent série de booléen pour filtrer les lignes de la première
-série::
+série:
 
-    In [30]: s[s % 3 == 0]
-    Out[30]:
+.. code:: pycon
+
+    >>> s[s % 3 == 0]
     0    0
     3    3
     6    6
@@ -875,7 +976,9 @@ crée une fonction qui teste si une date est bien le jour de Noël::
 
     >>> est_noel = lambda date:date.day==25 and date.month==12
 
-On applique cette fonction au tableau. On obtient une série de vrai ou faux::
+On applique cette fonction au tableau. On obtient une série de vrai ou faux:
+
+.. code:: pycon
 
     >>> s_vrai_faux = df['Date'].apply(est_noel)
     >>> s_vrai_faux.tail(10)
@@ -892,7 +995,9 @@ On applique cette fonction au tableau. On obtient une série de vrai ou faux::
     Name: Date, dtype: bool
 
 Finalement, on filtre le tableau avec cette série. Et on affiche que les deux
-colonnes qui nous intéressent (la date et la température)::
+colonnes qui nous intéressent (la date et la température):
+
+.. code:: pycon
 
     >>> df_noel = df[s_vrai_faux]
     >>> df_noel.icol([1,2])

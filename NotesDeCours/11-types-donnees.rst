@@ -5,7 +5,7 @@ Types de données de Python
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
 
@@ -20,13 +20,17 @@ Le type d'un objet
 ------------------
 
 Construisons le nombre entier 4 de deux façons différentes, avec Python puis
-avec SymPy::
+avec SymPy:
+
+.. code:: pycon
 
     >>> a = 4
     >>> from sympy import S
     >>> b = S(4)
 
-Le nombre 4 est stocké dans la variable ``a`` et dans la variable ``b``::
+Le nombre 4 est stocké dans la variable ``a`` et dans la variable ``b``:
+
+.. code:: pycon
 
     >>> a
     4
@@ -34,7 +38,9 @@ Le nombre 4 est stocké dans la variable ``a`` et dans la variable ``b``::
     4
 
 Bien qu'ils représentent tous deux le nombre 4 et qu'ils s'affichent de la même
-façon à l'écran, ils ne se comportent pas de la même façon::
+façon à l'écran, ils ne se comportent pas de la même façon:
+
+.. code:: pycon
 
     >>> a/5
     0.8
@@ -43,7 +49,9 @@ façon à l'écran, ils ne se comportent pas de la même façon::
 
 C'est que les *objets* stockés dans les variables ``a`` et ``b`` ne sont pas du
 même *type*. La fonction ``type`` permet de connaître le type d'un ``objet``
-avec la syntaxe ``type(objet)``::
+avec la syntaxe ``type(objet)``:
+
+.. code:: pycon
 
     >>> type(a)
     <type 'int'>
@@ -51,7 +59,9 @@ avec la syntaxe ``type(objet)``::
     <class 'sympy.core.numbers.Integer'>
 
 Cela explique le comportement différent de ``a/5`` qui retourne un nombre
-décimal et ``b/5`` qui retourne un nombre rationel de SymPy::
+décimal et ``b/5`` qui retourne un nombre rationel de SymPy:
+
+.. code:: pycon
 
     >>> type(a/5)
     <type 'float'>
@@ -60,7 +70,9 @@ décimal et ``b/5`` qui retourne un nombre rationel de SymPy::
 
 Comme le comportement d'un objet dépend de son type, il est souvent pertinent
 de vérifier le type d'un objet avant de l'utiliser. Les autres types très
-communs que nous allons voir dans les sections suivantes sont ci-dessous::
+communs que nous allons voir dans les sections suivantes sont ci-dessous:
+
+.. code:: pycon
 
     >>> type(4)
     <type 'int'>
@@ -80,14 +92,18 @@ communs que nous allons voir dans les sections suivantes sont ci-dessous::
 Nombres entiers (type ``int``)
 ------------------------------
 
-Les nombres entiers sont créés simplement en Python::
+Les nombres entiers sont créés simplement en Python:
+
+.. code:: pycon
 
     >>> 4
     4
 
 Ils sont aussi obtenus par le résultat d'opérations sur les nombres entiers
 comme l'addition, la multiplication, la soustraction, le modulo et le
-quotient::
+quotient:
+
+.. code:: pycon
 
     >>> 4 + 6
     10
@@ -101,12 +117,16 @@ quotient::
     2
 
 On peut vérifier que le résultat des opérations ci-haut est bel et bien un
-entier Python de type ``int``::
+entier Python de type ``int``:
+
+.. code:: pycon
 
     >>> type(27 // 10)
     <type 'int'>
 
-En Python, la fonction ``int`` permet de créer un entier de type ``int``::
+En Python, la fonction ``int`` permet de créer un entier de type ``int``:
+
+.. code:: pycon
 
     >>> int()
     0
@@ -114,7 +134,9 @@ En Python, la fonction ``int`` permet de créer un entier de type ``int``::
     4
 
 Cette fonction permet aussi de traduire un objet d'un autre type en un nombre
-entier de Python de type ``int``::
+entier de Python de type ``int``:
+
+.. code:: pycon
 
     >>> int(4.02)
     4
@@ -123,7 +145,9 @@ entier de Python de type ``int``::
 
 Pour stocker des nombres entiers un peu plus grand, Python utilise une autre
 structure de données appelé entier ``long``. On peut tester à partir d'où cela
-se produit::
+se produit:
+
+.. code:: pycon
 
     >>> type(2 ** 61)
     <type 'int'>
@@ -138,27 +162,35 @@ Nombres flottants (type ``float``)
 ----------------------------------
 
 Les nombres décimaux aussi appelé nombre flottants ou nombre à virgule
-flottante sont créés simplement en Python::
+flottante sont créés simplement en Python:
+
+.. code:: pycon
 
     >>> 4.
     4.0
 
 Ils sont aussi obtenus par le résultat d'opérations sur les nombres flottants
 comme l'addition, la multiplication, la soustraction, le modulo et le
-quotient::
+quotient:
+
+.. code:: pycon
 
     >>> 4. * 3.41
     13.64
 
 On vérifie que le type du résultat précédent est bel et bien un nombre flottant
-de type ``float``::
+de type ``float``:
+
+.. code:: pycon
 
     >>> type(_)
     <type 'float'>
 
 Les nombres flottants peuvent aussi être obtenus comme résultats d'opérations
 impliquant des nombres d'autres types comme la multiplication par un nombre
-entier ou la division de deux nombres entiers::
+entier ou la division de deux nombres entiers:
+
+.. code:: pycon
 
     >>> 4. * 3
     12.0
@@ -166,7 +198,9 @@ entier ou la division de deux nombres entiers::
     0.8
 
 Finalement, les nombres flottants peuvent être créés avec la fonction ``float``
-qui permet aussi de transformer un objet d'un autre type en nombre flottant::
+qui permet aussi de transformer un objet d'un autre type en nombre flottant:
+
+.. code:: pycon
 
     >>> float()
     0.0
@@ -181,21 +215,27 @@ Booléens (type ``bool``)
 ------------------------
 
 Les booléens permettent de représenter les valeurs *vrai* et *faux*. On les
-écrit en anglais avec un majuscule::
+écrit en anglais avec un majuscule:
+
+.. code:: pycon
 
     >>> True
     True
     >>> False
     False
 
-Les valeurs ``True`` et ``False`` sont des objets de type ``bool``::
+Les valeurs ``True`` et ``False`` sont des objets de type ``bool``:
+
+.. code:: pycon
 
     >>> type(False)
     <type 'bool'>
     >>> type(True)
     <type 'bool'>
 
-Les opérations de base sur les booléens retournent aussi des booléens::
+Les opérations de base sur les booléens retournent aussi des booléens:
+
+.. code:: pycon
 
     >>> True or False
     True
@@ -204,7 +244,9 @@ Les opérations de base sur les booléens retournent aussi des booléens::
 
 Si cela est nécessaire, voici toutes les possibilités de valeurs d'entrées pour
 le ET logique ``and`` qui retourne *vrai* lorsque les deux valeurs d'entrées
-sont vraies::
+sont vraies:
+
+.. code:: pycon
 
     >>> True and True
     True
@@ -215,7 +257,9 @@ sont vraies::
     >>> False and False
     False
 
-Pareillement le OU logique (``or``) retourne ``True`` dès qu'une des deux valeurs est vraie::
+Pareillement le OU logique (``or``) retourne ``True`` dès qu'une des deux valeurs est vraie:
+
+.. code:: pycon
 
     >>> True or True
     True
@@ -226,14 +270,18 @@ Pareillement le OU logique (``or``) retourne ``True`` dès qu'une des deux valeu
     >>> False or False
     False
 
-La négation (``not``) retourne l'opposé d'une valeur booléenne::
+La négation (``not``) retourne l'opposé d'une valeur booléenne:
+
+.. code:: pycon
 
     >>> not True
     False
     >>> not False
     True
 
-Un booléen peut être retourné par des fonctions ou des tests de comparaison::
+Un booléen peut être retourné par des fonctions ou des tests de comparaison:
+
+.. code:: pycon
 
     >>> 13 == 5 + 8
     True
@@ -242,7 +290,9 @@ Un booléen peut être retourné par des fonctions ou des tests de comparaison::
 
 La fonction ``bool`` permet de transformer un objet en un booléen. En général,
 les valeurs zéro ou les listes vides sont transformées en ``False`` et les
-valeurs non nulles ou les listes non vides sont transformées en ``True``::
+valeurs non nulles ou les listes non vides sont transformées en ``True``:
+
+.. code:: pycon
 
     >>> bool(113)
     True
@@ -255,7 +305,9 @@ Chaînes de caractères (type ``str``)
 ------------------------------------
 
 En Python, les chaînes de caractères sont définies par l'utilisation des simple
-guillemets (``'``) ou des doubles guillemets (``"``)::
+guillemets (``'``) ou des doubles guillemets (``"``):
+
+.. code:: pycon
 
     >>> 'bonjour'
     'bonjour'
@@ -263,7 +315,9 @@ guillemets (``'``) ou des doubles guillemets (``"``)::
     'bonjour'
 
 Si on veut utiliser les simples guillemets à l'intérieur de la chaînes de
-caractères, on doit utiliser les doubles pour l'entourer et vice versa::
+caractères, on doit utiliser les doubles pour l'entourer et vice versa:
+
+.. code:: pycon
 
     >>> "aujourd'hui"
     "aujourd'hui"
@@ -272,13 +326,17 @@ caractères, on doit utiliser les doubles pour l'entourer et vice versa::
 
 Pour utiliser à la fois des simples et des doubles guillemets dans la chaîne de
 caractères, on utilise des triple double guillemets pour entourer la chaîne de
-caractères::
+caractères:
+
+.. code:: pycon
 
     >>> """Je suis "ici" aujourd'hui"""
     'Je suis "ici" aujourd\'hui'
 
 On peut créer des chaînes de caractères à partir d'autres objets en utilisant
-la fonction ``str``::
+la fonction ``str``:
+
+.. code:: pycon
 
     >>> str(12345)
     '12345'
@@ -286,7 +344,9 @@ la fonction ``str``::
     '12345.789'
 
 Pour accéder aux lettres d'une chaîne de caractères, on utilise les crochets
-après la variable de la façon suivante::
+après la variable de la façon suivante:
+
+.. code:: pycon
 
     >>> w = 'bonjour'
     >>> w[0]
@@ -296,25 +356,33 @@ après la variable de la façon suivante::
 
 Comme vous remarquez, l'indexation commence à zéro et non pas à un. C'est comme
 ça en Python. Ainsi la septième et dernière lettre du mot bonjour est à la
-position 6::
+position 6:
+
+.. code:: pycon
 
     >>> w[6]
     'r'
 
 On peut aussi compter à partir de la fin avec des indices négatifs. La position
-``-1`` retourne la dernière lettre::
+``-1`` retourne la dernière lettre:
+
+.. code:: pycon
 
     >>> w[-1]
     'r'
 
 On peut accéder aux sous-chaînes de la position ``i`` à la position ``j-1``
-avec la syntaxe ``w[i:j]`` de la façon suivante::
+avec la syntaxe ``w[i:j]`` de la façon suivante:
+
+.. code:: pycon
 
     >>> w[2:5]
     'njo'
 
 Si on ne spécifie pas le début ou la fin, alors le comportement par défaut est
-d'aller jusqu'au bout::
+d'aller jusqu'au bout:
+
+.. code:: pycon
 
     >>> w[:4]
     'bonj'

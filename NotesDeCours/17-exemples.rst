@@ -5,7 +5,7 @@ Exemples (``def`` + ``while`` + ``for`` + ``if``)
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
 
@@ -42,7 +42,7 @@ les mathématiciens. Paul Erdos a dit à propos de la conjecture de Syracuse :
 
 __ https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse
 
-::
+.. code:: python
 
     def syracuse(n):
         while n != 1:
@@ -52,7 +52,7 @@ __ https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse
             else:
                 n = 3*n+1
 
-::
+.. code:: pycon
 
     >>> syracuse(23)
     23 70 35 106 53 160 80 40 20 10 5 16 8 4 2
@@ -74,7 +74,9 @@ le cycle 4-2-1?
 -----------------------------------------
 
 Une fonction qui retourne la liste des diviseurs d'un nombre entiers peut
-s'écrire comme ceci en utilisant une boucle ``for`` et un test ``if``::
+s'écrire comme ceci en utilisant une boucle ``for`` et un test ``if``:
+
+.. code:: python
 
     def diviseurs(n):
         L = []
@@ -83,7 +85,9 @@ s'écrire comme ceci en utilisant une boucle ``for`` et un test ``if``::
                 L.append(i)
         return L
 
-On vérifie que la fonction marche bien::
+On vérifie que la fonction marche bien:
+
+.. code:: pycon
 
     >>> diviseurs(12)
     [1, 2, 3, 4, 6, 12]
@@ -99,13 +103,15 @@ Tester si un nombre est premier
 
 Une fonction peut en utiliser une autre. Par exemple, en utilisant la fonction
 ``diviseur`` que l'on a définit plus haut, on peut tester si un nombre est
-premier::
+premier:
+
+.. code:: python
 
     def est_premier_1(n):
         L = diviseurs(n)
         return len(L) == 2
 
-::
+.. code:: pycon
 
     >>> est_premier_1(12)
     False
@@ -117,7 +123,7 @@ premier::
 On pourrait faire plus efficace, car il suffit de vérifier la non-existence de
 diviseurs inférieurs à la racine carrée de ``n``.
 
-::
+.. code:: python
 
     from math import sqrt
     def est_premier(n):
@@ -127,7 +133,9 @@ diviseurs inférieurs à la racine carrée de ``n``.
                 return False
         return True
 
-En utilisant cette fonciton, on trouve que la liste des premiers nombres premiers inférieurs à 20 est::
+En utilisant cette fonciton, on trouve que la liste des premiers nombres premiers inférieurs à 20 est:
+
+.. code:: pycon
 
     >>> [n for n in range(20) if est_premier(n)]
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 17, 19]
@@ -138,7 +146,9 @@ La fonction ``est_premier(8)`` retourne ``True`` en ce moment, car la racine
 carrée de 8 vaut ``2.828`` et donc ``sq=int(2.828)`` est égal à ``2`` et la
 boucle ne teste pas la valeur ``i=2``, car ``range(2,2)`` retourne une liste
 vide. On peut corriger de la façon suivante en ajoutant un ``+1`` au bon
-endroit::
+endroit:
+
+.. code:: python
 
     from math import sqrt
     def est_premier(n):
@@ -149,13 +159,17 @@ endroit::
         return True
 
 On vérifie que la fonction retourne bien que 4 et 8 ne sont pas des nombres
-premiers::
+premiers:
+
+.. code:: pycon
 
     >>> [n for n in range(20) if est_premier(n)]
     [0, 1, 2, 3, 5, 7, 11, 13, 17, 19]
 
 Mais il y a encore une erreur, car 0 et 1 ne devraient pas faire partie de la
-liste. Une solution est de traiter ces deux cas de base à part::
+liste. Une solution est de traiter ces deux cas de base à part:
+
+.. code:: python
 
     from math import sqrt
     def est_premier(n):
@@ -167,7 +181,9 @@ liste. Une solution est de traiter ces deux cas de base à part::
                 return False
         return True
 
-On vérifie que tout marche bien maintenant::
+On vérifie que tout marche bien maintenant:
+
+.. code:: pycon
 
     >>> [n for n in range(50) if est_premier(n)]
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]

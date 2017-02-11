@@ -5,7 +5,7 @@ Fonctions ``def``
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
 
@@ -14,7 +14,9 @@ certain objectif commun. Les fonctions permettent de séparer un programme en
 morceaux qui correspondent à la façon dont on pense à la résolution d'un
 problème.
 
-La syntaxe pour la définition d'une fonction est::
+La syntaxe pour la définition d'une fonction est:
+
+.. code:: python
 
     def FONCTION( PARAMETRES ):
         INSTRUCTIONS
@@ -35,15 +37,21 @@ fonction.
 
 La ou les valeurs de retour d'une fonction sont retournées avec la commande
 ``return``. Par exemple, la fonction qui retourne la somme de deux valeurs
-s'écrit::
+s'écrit:
+
+.. code:: python
 
     def somme(a, b):
         return a + b
+
+.. code:: pycon
     
     >>> somme(4,7)
     11
 
-La fonction qui calcule le volume d'un parallépipède rectangle s'écrit::
+La fonction qui calcule le volume d'un parallépipède rectangle s'écrit:
+
+.. code:: pycon
 
     >>> def volume(largeur, hauteur, profondeur):
     ...     return largeur * hauteur * profondeur
@@ -53,7 +61,9 @@ La fonction qui calcule le volume d'un parallépipède rectangle s'écrit::
     24
 
 On peut rassemble le code sur la température de l'eau que l'on a écrit plus au
-sein d'une fonction ``etat_de_leau`` qui dépend du paramètre ``temperature``::
+sein d'une fonction ``etat_de_leau`` qui dépend du paramètre ``temperature``:
+
+.. code:: python
 
     def etat_de_leau(temperature):
         if temperature < 0:
@@ -68,7 +78,9 @@ sein d'une fonction ``etat_de_leau`` qui dépend du paramètre ``temperature``::
             print("L'eau est un gaz")
 
 Cette fonction permet de tester le code sur la température de l'eau plus
-facilement::
+facilement:
+
+.. code:: pycon
 
     >>> etat_de_leau(23)
     L'eau est liquide

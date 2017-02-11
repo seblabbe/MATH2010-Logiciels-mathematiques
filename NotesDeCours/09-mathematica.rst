@@ -66,7 +66,9 @@ Python et SymPy sont souvent utilisés comme arguments de fonctions. De la même
 façon en Mathematica, les listes sont beaucoup utilisées. Toutefois, en
 Mathematica, on utilise les **accolades** ``{`` **et** ``}`` **pour définir une
 liste**. On écrit alors ``{x, 0, 2*Pi}``. Par exemple, l'intégrale de sin(x)
-s'écrit en SymPy::
+s'écrit en SymPy:
+
+.. code:: pycon
 
    >>> integrate(sin(x), (x, 0, 2*Pi))
 
@@ -82,7 +84,9 @@ variable non définie est par défaut un symbole** et prend la couleur bleue
 En Mathematica, contrairement à SymPy, il n'y a pas de distinction entre la
 variable ``x`` et le symbole ``x``. On peut remarquer cette différence en
 testant le code suivant qui ne retourne pas la même chose en Mathematica et en
-SymPy::
+SymPy:
+
+.. code:: pycon
 
    >>> Clear[x]                         # Mathematica
    >>> from sympy.abc import x          # SymPy
@@ -114,7 +118,9 @@ s'écrivent toujours avant les objets** comme ``N[Pi]`` et ``Det[M]``.
 
 La plupart du temps, la **syntaxe** est exactement la même en SymPy et en
 Mathematica, mais il y a quelques exceptions. Par exemple, le calcul d'une
-limite en SymPy s'écrit::
+limite en SymPy s'écrit:
+
+.. code:: pycon
 
    >>> limit(sin(x)/x, x, 0)
 

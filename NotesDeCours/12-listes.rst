@@ -4,7 +4,7 @@ Listes
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
 
@@ -13,14 +13,18 @@ connaîtres les différentes façons de créer, modifier et utiliser les listes.
 Dans ce chapitre, nous allons voir les différentes opérations sur les listes.
 
 Les listes sont créées avec l'utilisation des crochets et on peut mettre
-n'importe quel objet dans une liste::
+n'importe quel objet dans une liste:
+
+.. code:: pycon
 
     >>> [2, 3, 4, 'bateau', 3.24]
     [2, 3, 4, 'bateau', 3.24]
 
 On accède aux éléments de la liste de la même façon qu'avec les chaînes de
 caractères, c'est-à-dire en utilisant les crochets et le premier élément est à
-la position zéro::
+la position zéro:
+
+.. code:: pycon
 
     >>> L = [2, 3, 4, 'bateau', 3.24]
     >>> L[0]
@@ -29,26 +33,34 @@ la position zéro::
     'bateau'
 
 On peut modifier la liste en lui ajoutant des objets avec la méthode ``append``
-de la façon suivante::
+de la façon suivante:
+
+.. code:: pycon
 
     >>> L.append(789)
     >>> L
     [2, 3, 4, 'bateau', 3.24, 789]
 
 On vérifie que le dernier élément de la liste est bien le nombre entier
-``789``::
+``789``:
+
+.. code:: pycon
 
     >>> L[-1]
     789
 
 La fonction ``list`` permet de transformer un objet en liste pourvu qu'il soit
-itérable::
+itérable:
+
+.. code:: pycon
 
     >>> list(w)
     ['b', 'o', 'n', 'j', 'o', 'u', 'r']
 
 Plusieurs autres opérations sont possibles sur les listes. On peut consulter
-l'aide ou la documentation pour en savoir plus::
+l'aide ou la documentation pour en savoir plus:
+
+.. code:: pycon
 
     >>> L.<TAB>
     >>> help(list)
@@ -56,31 +68,41 @@ l'aide ou la documentation pour en savoir plus::
 Opérations sur les listes
 -------------------------
 
-D'abord, créons une liste::
+D'abord, créons une liste:
+
+.. code:: pycon
 
     >>> L = [1, 8, -4, 38, 8, 8, 4, 18]
 
-Pour créer une sous-liste commençant à l'indice 2 jusqu'à l'indice 5-1=4::
+Pour créer une sous-liste commençant à l'indice 2 jusqu'à l'indice 5-1=4:
+
+.. code:: pycon
 
     >>> L[2:5]
     [-4, 38, 8]
 
 On peut créer une nouvelle liste avec
 l'opération d'addition (``+``) qui concatène deux listes. Ceci ne change pas
-les listes utilisées. Par exemple::
+les listes utilisées. Par exemple:
+
+.. code:: pycon
 
     >>> L + [1,2,3]
     [1, 8, -4, 38, 8, 8, 4, 18, 1, 2, 3]
     >>> L
     [1, 8, -4, 38, 8, 8, 4, 18]
 
-La fonction ``len`` retourne la longueur d'une liste::
+La fonction ``len`` retourne la longueur d'une liste:
+
+.. code:: pycon
 
     >>> len(L)
     9
 
 Les fonctions ``min`` et ``max`` retournent la valeur minimum et maximum d'une
-liste::
+liste:
+
+.. code:: pycon
 
     >>> min(L)
     -4
@@ -88,7 +110,9 @@ liste::
     38
 
 Pour savoir si une ``valeur`` est dans une ``liste``, on utilise ``valeur in
-liste``. Cela retourne un booléen. Par exemple::
+liste``. Cela retourne un booléen. Par exemple:
+
+.. code:: pycon
 
     >>> 77 in L
     False
@@ -96,7 +120,9 @@ liste``. Cela retourne un booléen. Par exemple::
     True
 
 La méthode ``.count()`` permet de compter le nombre d'objets de la liste ayant
-une certaine valeur::
+une certaine valeur:
+
+.. code:: pycon
 
     >>> L.count(38)
     1
@@ -106,7 +132,9 @@ une certaine valeur::
     0
 
 La méthode ``.index()`` retourne la position (ou indice) où un élément se
-retrouve dans la liste::
+retrouve dans la liste:
+
+.. code:: pycon
 
     >>> L
     [1, 8, -4, 38, 8, 8, 4, 18]
@@ -117,7 +145,9 @@ Modification de listes
 ----------------------
 
 Pour ajouter un élément à la liste, on utilise la méthode ``.append()`` qui
-ajoute un élément à la fin de la liste::
+ajoute un élément à la fin de la liste:
+
+.. code:: pycon
 
     >>> L
     [1, 8, -4, 38, 8, 8, 4, 18]
@@ -125,26 +155,34 @@ ajoute un élément à la fin de la liste::
     >>> L
     [1, 8, -4, 38, 8, 8, 4, 18, 15]
 
-La méthode ``.remove()`` permet d'enlever un élément de la liste::
+La méthode ``.remove()`` permet d'enlever un élément de la liste:
+
+.. code:: pycon
 
     >>> L.remove(4)
     >>> L
     [1, 8, -4, 38, 8, 8, 18, 15]
 
 Si l'élément est là plus d'une fois, seule la première occurence de celle-ci
-est retirée::
+est retirée:
+
+.. code:: pycon
 
     >>> L.remove(8)
     >>> L
     [1, -4, 38, 8, 8, 18, 15]
 
-La méthode ``.reverse()`` permet d'inverser l'ordre d'une liste::
+La méthode ``.reverse()`` permet d'inverser l'ordre d'une liste:
+
+.. code:: pycon
 
     >>> L.reverse()
     >>> L
     [15, 18, 8, 8, 38, -4, 1]
 
-La méthode ``.sort()`` permet de trier les éléments d'une liste en ordre croissant::
+La méthode ``.sort()`` permet de trier les éléments d'une liste en ordre croissant:
+
+.. code:: pycon
 
     >>> L.sort()
     >>> L
@@ -154,20 +192,26 @@ La fonction ``range``
 ---------------------
 
 La fonction ``range(n)`` permet de créer la liste des entiers de ``0`` à
-``n-1``::
+``n-1``:
+
+.. code:: pycon
 
     >>> range(15)                  # Python 2
     >>> list(range(15))            # Python 3
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 Avec deux arguments, la fonction ``range(a, b)`` crée la liste des entiers de
-``a`` à ``b-1``::
+``a`` à ``b-1``:
+
+.. code:: pycon
 
     >>> range(3, 15)
     [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 Avec trois arguments, la fonction ``range(a, b, saut)`` crée la liste des
-entiers de ``a`` à ``b-1`` par saut de ``saut``::
+entiers de ``a`` à ``b-1`` par saut de ``saut``:
+
+.. code:: pycon
 
     >>> range(3,40,4)
     [3, 7, 11, 15, 19, 23, 27, 31, 35, 39]
@@ -175,7 +219,9 @@ entiers de ``a`` à ``b-1`` par saut de ``saut``::
 Compréhension de listes
 -----------------------
 
-Soit la liste des entiers de zéro à neuf::
+Soit la liste des entiers de zéro à neuf:
+
+.. code:: pycon
 
     >>> L = range(10)
     >>> L
@@ -185,13 +231,17 @@ Les *compréhensions de listes* (list comprehensions en anglais, certains
 auteurs écrivent *intentions de listes* en français) permettent de créer des
 listes facilement en une ligne. La syntaxe ressemble à la syntaxe qui permet de
 décrire un ensemble mathématique: ``[expression_de_i for i in liste]``. Par
-exemple, l'ensemble des cubes des valeurs de la liste ``L`` s'écrit::
+exemple, l'ensemble des cubes des valeurs de la liste ``L`` s'écrit:
+
+.. code:: pycon
 
     >>> [i**3 for i in L]
     [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
 L'ensemble des cubes des valeurs impaires de la liste ``L`` se fait en ajoutant
-une condition à la fin de l'expression::
+une condition à la fin de l'expression:
+
+.. code:: pycon
 
     >>> [i**3 for i in L if i%2 == 1]
     [1, 27, 125, 343, 729]

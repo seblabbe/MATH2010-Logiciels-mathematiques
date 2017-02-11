@@ -5,7 +5,7 @@ Résolution d'équations
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
     >>> from sympy import init_printing
@@ -14,7 +14,9 @@ Résolution d'équations
 Définir une équation
 --------------------
 
-La fonction ``Eq`` permet de définir une équation::
+La fonction ``Eq`` permet de définir une équation:
+
+.. code:: pycon
 
     >>> from sympy import Eq
     >>> from sympy.abc import x,y
@@ -26,7 +28,9 @@ La fonction ``Eq`` permet de définir une équation::
 Résoudre une équation
 ---------------------
 
-La fonction ``solve`` permet de résoudre une équation::
+La fonction ``solve`` permet de résoudre une équation:
+
+.. code:: pycon
 
     >>> from sympy import solve
     >>> solve(Eq(x, 3), x)
@@ -34,12 +38,16 @@ La fonction ``solve`` permet de résoudre une équation::
     >>> solve(Eq(x + y, 3), x)
     [-y + 3]
 
-Dans le premier cas, indiquer la variable ``x`` n'est pas nécessaire::
+Dans le premier cas, indiquer la variable ``x`` n'est pas nécessaire:
+
+.. code:: pycon
 
     >>> solve(Eq(x, 3))
     [3]
 
-Cela fonctionne aussi s'il y a plus d'une solution::
+Cela fonctionne aussi s'il y a plus d'une solution:
+
+.. code:: pycon
 
     >>> solve(Eq(x**2, 3))
     [-sqrt(3), sqrt(3)]
@@ -49,7 +57,9 @@ Résoudre un système d'équations
 
 La fonction ``solve`` permet aussi de résoudre un système d'équations. Par
 exemple pour trouver deux variables ``x`` et ``y`` telle que leur somme vaut 47
-et leur différence vaut 33::
+et leur différence vaut 33:
+
+.. code:: pycon
 
     >>> eq1 = Eq(x + y, 47)
     >>> eq2 = Eq(x - y, 33)
@@ -60,7 +70,9 @@ et leur différence vaut 33::
 
 **Attention**: Pour résoudre un système d'équations, il faut absoluement mettre
 les équations dans une liste ``[eq1, eq2]`` entre crochets ``[]``. Autrement,
-on obtient une erreur::
+on obtient une erreur:
+
+.. code:: pycon
 
     In [279]: solve(eq1, eq2)
     Traceback (most recent call last):
@@ -69,7 +81,9 @@ on obtient une erreur::
     x - y == 33
 
 Cela fonctionne aussi pour des systèmes d'équations non linéaires. Par exemple
-pour trouver deux nombres dont la somme est 47 et dont le produit est 510::
+pour trouver deux nombres dont la somme est 47 et dont le produit est 510:
+
+.. code:: pycon
 
     >>> eq1 = Eq(x + y, 47)
     >>> eq2 = Eq(x * y, 510)
@@ -85,7 +99,9 @@ Souvent on désire résoudre des équations dont l'un des termes est zéro:
 ``solve(Eq(expression,0))``. Pour ce cas, il est équivalent d'écrire
 ``solve(expression)`` et la fonction ``solve`` trouvera les valeurs des
 variables avec lesquelles expression est évaluée à zéro. Les exemples ci-haut
-s'écrivent de la façon suivante avec cette syntaxe abrégée::
+s'écrivent de la façon suivante avec cette syntaxe abrégée:
+
+.. code:: pycon
 
     >>> solve(x - 3)
     [3]
@@ -96,7 +112,9 @@ s'écrivent de la façon suivante avec cette syntaxe abrégée::
     >>> solve([x + y - 47, x * y - 510])
     [{x: 17, y: 30}, {x: 30, y: 17}]
 
-Un exemple sur un polynôme de degré 3::
+Un exemple sur un polynôme de degré 3:
+
+.. code:: pycon
 
     >>> solve(x**3 + 2*x**2 - 1, x)
                  ___      ___     
@@ -106,10 +124,11 @@ Un exemple sur un polynôme de degré 3::
 
 La syntaxe abrégée peut aussi être utilisée pour résoudre un système
 d'équations. Dans l'exemple qui suit, on calcule les points d'intersection
-d'une ellipse et d'une droite::
+d'une ellipse et d'une droite:
+
+::
 
     >>> solve( [x**2 + 4*y**2 -2, -10*x + 2*y -15], [x, y])
-
                 ____              ____                ____              ____
         150   \/ 23 *I   15   5*\/ 23 *I      150   \/ 23 *I   15   5*\/ 23 *I
     [(- --- - --------, --- - ----------), (- --- + --------, --- + ----------)]
@@ -119,7 +138,9 @@ Trouver les racines d'une fonction
 ----------------------------------
 
 La fonction ``roots`` permet de calculer les racines d'une fonction polynomiale
-univariée ::
+univariée:
+
+.. code:: pycon
 
     >>> from sympy import roots
     >>> roots(x - 7)
@@ -128,19 +149,25 @@ univariée ::
     {0: 6}
 
 Le résultat est un dictionnaire (``{}``) qui associe à chaque racine sa
-multiplicité. La fonction ``roots`` trouve aussi les racines complexes::
+multiplicité. La fonction ``roots`` trouve aussi les racines complexes:
+
+.. code:: pycon
 
     >>> roots(x**5 - 7*x**4 + 2*x**3 - 14*x**2 + x - 7, x)
     {7: 1, -I: 2, I: 2}
 
-Les coefficients des polynômes peuvent être des variables symboliques::
+Les coefficients des polynômes peuvent être des variables symboliques:
+
+.. code:: pycon
 
     >>> from sympy.abc import a,b,c
     >>> roots(a*x + b, x)
     {-b/a: 1}
 
 Mais à ce moment-là, il faut absoluement spécifier par rapport à quelle
-variable on cherche les racines. Autrement, on obtient une erreur::
+variable on cherche les racines. Autrement, on obtient une erreur:
+
+.. code:: pycon
 
     >>> roots(a*x + b)
     Traceback (most recent call last)
@@ -148,7 +175,9 @@ variable on cherche les racines. Autrement, on obtient une erreur::
     PolynomialError: multivariate polynomials are not supported
 
 La fonction ``roots`` trouve les formules qui expriment les racines d'un
-polynôme quadratique::
+polynôme quadratique:
+
+.. code:: pycon
 
     >>> roots(a*x**2 + b*x + c, x)
                 _____________                _____________

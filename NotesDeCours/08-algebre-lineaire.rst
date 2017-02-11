@@ -4,7 +4,7 @@ Algèbre linéaire
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
     >>> from sympy import init_printing
@@ -17,11 +17,15 @@ http://docs.sympy.org/latest/tutorial/matrices.html
 Définir une matrice
 -------------------
 
-En SymPy, on peut créer une matrice avec la fonction ``Matrix``::
+En SymPy, on peut créer une matrice avec la fonction ``Matrix``:
+
+.. code:: pycon
 
     >>> from sympy import Matrix
 
-Il suffit d'écrire les entrées lignes par lignes avec la syntaxe suivante::
+Il suffit d'écrire les entrées lignes par lignes avec la syntaxe suivante:
+
+.. code:: pycon
 
     >>> Matrix([[2, 5, 6], [4, 7, 10], [1, 0, 3]])
     [2  5  6 ]
@@ -31,7 +35,9 @@ Il suffit d'écrire les entrées lignes par lignes avec la syntaxe suivante::
     [1  0  3 ]
 
 Une autre façon équivalente est de spécifier le nombre de lignes, le nombre de
-colonnes et puis la liste des entrées::
+colonnes et puis la liste des entrées:
+
+.. code:: pycon
 
     >>> Matrix(2, 3, [1, 2, 3, 4, 5, 6])
     [1  2  3]
@@ -39,7 +45,9 @@ colonnes et puis la liste des entrées::
     [4  5  6]
 
 Par défaut, si on ne spécifie pas les dimensions de la matrice, un vecteur
-colonne est retourné::
+colonne est retourné:
+
+.. code:: pycon
 
     >>> Matrix([1,2,3,4])
     [1]
@@ -54,7 +62,9 @@ Opérations de base
 ------------------
 
 Les opérations de l'algèbre des matrices (addition, multiplication,
-multiplication par un scalaire) sont définies naturellement::
+multiplication par un scalaire) sont définies naturellement:
+
+.. code:: pycon
 
     >>> M = Matrix([[5, 2], [-1, 7]])
     >>> N = Matrix([[0, 4], [0, 5]])
@@ -75,7 +85,9 @@ multiplication par un scalaire) sont définies naturellement::
     [            ]
     [-6121  11767]
 
-De même, on peut calculer l'inverse d'une matrice si elle est inversible::
+De même, on peut calculer l'inverse d'une matrice si elle est inversible:
+
+.. code:: pycon
 
     >>> M**-1
     [7/37  -2/37]
@@ -86,7 +98,9 @@ De même, on peut calculer l'inverse d'une matrice si elle est inversible::
     ...
     ValueError: Matrix det == 0; not invertible.
 
-La transposition d'une matrice se fait avec ``.transpose()``::
+La transposition d'une matrice se fait avec ``.transpose()``:
+
+.. code:: pycon
 
     >>> from sympy import I
     >>> M = Matrix(( (1,2+I,5), (3,4,0) ))
@@ -104,7 +118,7 @@ La transposition d'une matrice se fait avec ``.transpose()``::
 Accéder aux coefficients
 ------------------------
 
-::
+.. code:: pycon
 
     >>> from sympy import I
     >>> M = Matrix(( (1,2+I,5), (3,4,0) ))
@@ -113,7 +127,9 @@ Accéder aux coefficients
     [           ]
     [3    4    0]
 
-On accède à l'élément en position ``(i,j)`` en écrivant ``M[i,j]``::
+On accède à l'élément en position ``(i,j)`` en écrivant ``M[i,j]``:
+
+.. code:: pycon
 
     >>> M[0,1]
     2 + I
@@ -123,7 +139,9 @@ On accède à l'élément en position ``(i,j)`` en écrivant ``M[i,j]``::
 **Attention**: Les indices des positions commencent à zéro!!
 
 On accède aux lignes et au colonnes d'une matrices avec les méthodes ``row`` et
-``col``::
+``col``:
+
+.. code:: pycon
 
     >>> M.row(1)
     [3  4  0]
@@ -137,7 +155,9 @@ Construction de matrices particulières
 --------------------------------------
 
 Les fonctions ``zeros`` et ``ones`` permettent de créer des matrices de zéros
-et de uns::
+et de uns:
+
+.. code:: pycon
 
     >>> from sympy import ones,zeros
     >>> ones(2)
@@ -147,7 +167,9 @@ et de uns::
     [0, 0, 0, 0]
     [0, 0, 0, 0]
 
-La fonction ``eye`` de sympy permet de créer une matrice identité::
+La fonction ``eye`` de sympy permet de créer une matrice identité:
+
+.. code:: pycon
 
     >>> from sympy import eye
     >>> eye(3)
@@ -155,7 +177,9 @@ La fonction ``eye`` de sympy permet de créer une matrice identité::
     [0, 1, 0]
     [0, 0, 1]
 
-La fonction ``diag`` permet de créer une matrice diagonale::
+La fonction ``diag`` permet de créer une matrice diagonale:
+
+.. code:: pycon
 
     >>> from sympy import diag
     >>> diag(1,2,3)
@@ -165,7 +189,9 @@ La fonction ``diag`` permet de créer une matrice diagonale::
     [       ]
     [0  0  3]
 
-Les éléments de la diagonales peuvent être eux-mêmes des matrices::
+Les éléments de la diagonales peuvent être eux-mêmes des matrices:
+
+.. code:: pycon
 
     >>> diag(1, 2, Matrix([[7,8],[2,3]]))
     [1  0  0  0]
@@ -180,7 +206,9 @@ Matrice échelonnée réduite
 --------------------------
 
 On calcule la forme échelonnée réduite d'une matrice avec la méthode ``rref``
-(abbréviation de *reduced row echelon form* en anglais)::
+(abbréviation de *reduced row echelon form* en anglais):
+
+.. code:: pycon
 
     >>> M = Matrix([[1, 2, 0, 3], [2, 6, 5, 1], [-1, -4, -5, 2]])
     >>> M.rref()
@@ -193,7 +221,9 @@ On calcule la forme échelonnée réduite d'une matrice avec la méthode ``rref`
 Noyau
 -----
 
-On calcule le noyau d'une matrice avec ``nullspace``::
+On calcule le noyau d'une matrice avec ``nullspace``:
+
+.. code:: pycon
 
     >>> M = Matrix([[1, 2, 0, 3], [2, 6, 5, 1], [-1, -4, -5, 2]])
     >>> M.nullspace()
@@ -208,7 +238,9 @@ On calcule le noyau d'une matrice avec ``nullspace``::
 Déterminant
 -----------
 
-On calcule le déterminant avec la méthode ``det``::
+On calcule le déterminant avec la méthode ``det``:
+
+.. code:: pycon
 
     >>> M = Matrix([[2, 5, 6], [4, 7, 10], [1, 0, 3]])
     >>> M.det()
@@ -218,7 +250,9 @@ Polynôme caractéristique
 ------------------------
 
 La méthode ``charpoly`` permet de calculer le polynôme caractéristique d'une
-matrice carrée::
+matrice carrée:
+
+.. code:: pycon
 
     >>> M = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])
     >>> from sympy.abc import x
@@ -226,7 +260,9 @@ matrice carrée::
     PurePoly(x**4 - 11*x**3 + 29*x**2 + 35*x - 150, x, domain='ZZ')
 
 On ajoute ``.as_expr()`` pour obtenir l'expression symbolique du polynôme
-caractéristique::
+caractéristique:
+
+.. code:: pycon
 
     >>> M.charpoly(x).as_expr()
      4       3       2
@@ -239,7 +275,9 @@ caractéristique::
 Valeurs propres et vecteurs propres
 -----------------------------------
 
-Continuons avec la même matrice ``M`` définie précédemment::
+Continuons avec la même matrice ``M`` définie précédemment:
+
+.. code:: pycon
 
     >>>  M
     [3  -2  4   -2]
@@ -250,7 +288,9 @@ Continuons avec la même matrice ``M`` définie précédemment::
     [             ]
     [5  -2  -3  3 ]
 
-Soient les vecteurs colonnes ``w`` et ``v`` suivants::
+Soient les vecteurs colonnes ``w`` et ``v`` suivants:
+
+.. code:: pycon
 
     >>> w = Matrix((1,2,3,4))
     >>> v = Matrix((1,1,1,0))
@@ -272,7 +312,9 @@ Soient les vecteurs colonnes ``w`` et ``v`` suivants::
     [0]
 
 En général, l'image par ``M`` d'un vecteur n'a rien à voir avec ce vecteur.
-Par exemple, l'image par ``M`` de ``w`` n'a rien à voir avec ``w``::
+Par exemple, l'image par ``M`` de ``w`` n'a rien à voir avec ``w``:
+
+.. code:: pycon
 
     >>> M * w
     [3 ]
@@ -285,7 +327,9 @@ Par exemple, l'image par ``M`` de ``w`` n'a rien à voir avec ``w``::
 
 Dans certains cas particuliers, l'image par ``M`` d'un vecteur retourne un
 multiple scalaire de ce vecteur. C'est ce qui se produit pour le vecteur
-``v``::
+``v``:
+
+.. code:: pycon
 
     >>> M * v
     [5]
@@ -296,7 +340,9 @@ multiple scalaire de ce vecteur. C'est ce qui se produit pour le vecteur
     [ ]
     [0]
 
-Le résultat précédent est égal à 5 fois le vecteur ``v``::
+Le résultat précédent est égal à 5 fois le vecteur ``v``:
+
+.. code:: pycon
 
     >>> 5 * v
     [5]
@@ -316,13 +362,17 @@ utile dans presque tous les domaines des mathématiques.
 
 En sympy, on calcule les valeurs propres d'une matrice avec la méthode
 ``eigenvals``. Le résultat est un dictionnaire qui associe à chaque valeur
-propre sa multiplicité algébrique (comme pour le calcul des racines)::
+propre sa multiplicité algébrique (comme pour le calcul des racines):
+
+.. code:: pycon
 
     >>> M.eigenvals()
     {-2: 1, 3: 1, 5: 2}
 
 Et on calcule les vecteurs propres d'une matrice avec la méthode
-``eigenvects``::
+``eigenvects``:
+
+.. code:: pycon
 
     >>> M.eigenvects()
     [(-2, 1, [[0]]), (3, 1, [[1]]), (5, 2, [[1], [0 ]])]

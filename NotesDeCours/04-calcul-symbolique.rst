@@ -5,12 +5,14 @@ Calcul symbolique
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function  # Python 3
 
 En Python, la fonction ``sqrt`` retourne un résultat approximé sur les nombres
-flottants::
+flottants:
+
+.. code:: pycon
 
     >>> from math import sqrt
     >>> sqrt(3)
@@ -19,13 +21,17 @@ flottants::
 La racine de 3 ne peut pas être écrite exactement avec un nombre fini de
 décimales, car c'est un nombre irrationel. La façon la plus exacte d'exprimer
 la racine (positive) du nombre trois est de l'écrire tel quel. En SymPy, la
-racine carrée de 3 est exprimée *symboliquement*::
+racine carrée de 3 est exprimée *symboliquement*:
+
+.. code:: pycon
 
     >>> from sympy import sqrt
     >>> sqrt(3)
     sqrt(3)
 
-Quand c'est possible, SymPy procède à des simplifications::
+Quand c'est possible, SymPy procède à des simplifications:
+
+.. code:: pycon
 
     >>> sqrt(4)
     2
@@ -35,20 +41,26 @@ Quand c'est possible, SymPy procède à des simplifications::
 Variable symbolique 
 -------------------
 
-La fonction ``Symbol`` de SymPy permet de créer une variable symbolique::
+La fonction ``Symbol`` de SymPy permet de créer une variable symbolique:
+
+.. code:: pycon
 
     >>> from sympy import Symbol
     >>> a = Symbol("a")     # le symbole a est stocké dans la variable a
     >>> a
     a
 
-Cette variable peut être additionnée, soustraite, multipliée et divisée::
+Cette variable peut être additionnée, soustraite, multipliée et divisée:
+
+.. code:: pycon
 
     >>> a + a + a + a * a + 1/a - a
     a**2 + 2*a + 1/a
 
 Pour plus de commodité, on peut importer les variables les plus souvent
-utilisées du sous-module ``abc``::
+utilisées du sous-module ``abc``:
+
+.. code:: pycon
 
     >>> from sympy.abc import a, epsilon
     >>> a + a * a + epsilon
@@ -59,7 +71,9 @@ Définir les variables symboliques x_1, x_2, ..., x_n
 
 En SymPy, on peut créer plusieurs variables `x_i` indicées pour `i=a,...,b-1` à
 l'aide de la fonction ``symbols("xa:b")`` où ``a`` et ``b`` sont remplacés par
-des nombres entiers::
+des nombres entiers:
+
+.. code:: pycon
 
     >>> from sympy import symbols
     >>> x4,x5,x6,x7,x8 = symbols("x4:9")
@@ -70,7 +84,9 @@ Affichage automatique des résultats en LaTeX
 --------------------------------------------
 
 Pour que les résultats soient affichés en LaTeX automatiquement, il suffit
-d'utiliser la commande suivante une seule fois pour le fichier::
+d'utiliser la commande suivante une seule fois pour le fichier:
+
+.. code:: pycon
 
     >>> from sympy import init_printing
     >>> init_printing(use_latex='mathjax')
@@ -82,7 +98,9 @@ Dans le notebook Jupyter, cette commande utilise la librairie MathJax.
 
 Dans ces notes, on utilisera l'option ``init_printing(use_latex='mathjax',
 use_unicode=False)`` lorsque cela aide la lecture des formules.
-Pour un exemple de la section précédente, on obtient::
+Pour un exemple de la section précédente, on obtient:
+
+.. code:: pycon
 
     >>> from sympy.abc import a, epsilon
     >>> a + a * a + epsilon
@@ -92,20 +110,26 @@ Pour un exemple de la section précédente, on obtient::
 Expressions symboliques
 -----------------------
 
-On peut faire des calculs impliquant plus d'une variable::
+On peut faire des calculs impliquant plus d'une variable:
+
+.. code:: pycon
 
     >>> from sympy.abc import a,b
     >>> (a + b)**2
     (a + b)**2
 
-ou impliquant les fonctions de SymPy::
+ou impliquant les fonctions de SymPy:
+
+.. code:: pycon
 
     >>> from sympy import sin,cos
     >>> sin(a)**2 + cos(a)**2 + b
     b + sin(a)**2 + cos(a)**2
 
 Les expressions symboliques peuvent combiner des rationels, des fonctions et
-des constantes de toutes sortes::
+des constantes de toutes sortes:
+
+.. code:: pycon
 
     >>> from sympy import Rational,pi,exp,I
     >>> from sympy.abc import x,y
@@ -116,7 +140,9 @@ Représentation interne
 ----------------------
 
 Pour voir comment une expression symbolique est représentée dans la machine, on
-peut utiliser la fonction ``srepr``::
+peut utiliser la fonction ``srepr``:
+
+.. code:: pycon
 
     >>> from sympy import srepr
     >>> expr = x - y
@@ -129,7 +155,9 @@ L'expression symbolique est représentée par un arbre d'opérations.
    :width: 8cm
 
 Pour information, l'image a été créée avec Graphviz avec le resultat de la
-fonction ``dotprint``::
+fonction ``dotprint``:
+
+.. code:: pycon
 
     >>> from sympy.printing.dot import dotprint
     >>> s = dotprint(expr)
@@ -139,7 +167,9 @@ Substitutions
 
 Pour substituer certaines variables dans une ``expression``, on utilise la
 méthode ``subs`` qui s'écrit **après** l'expressions sous la forme
-``expressions.subs(<INPUT>)``. Par exemple::
+``expressions.subs(<INPUT>)``. Par exemple:
+
+.. code:: pycon
 
     >>> from sympy.abc import a,b,c
     >>> expression = a + 2*b + 3*c
@@ -147,7 +177,9 @@ méthode ``subs`` qui s'écrit **après** l'expressions sous la forme
     2*b + 3*c + 9
 
 Pour faire plus d'une substitutions, on peut les indiquer dans un dictionaire
-(``{}``) comme ci-bas::
+(``{}``) comme ci-bas:
+
+.. code:: pycon
 
     >>> expression.subs({a:9, b:4})
     3*c + 17
@@ -155,7 +187,9 @@ Pour faire plus d'une substitutions, on peut les indiquer dans un dictionaire
     317
 
 On peut aussi substituer une variable symbolique par une expression
-symbolique::
+symbolique:
+
+.. code:: pycon
 
     >>> from sympy import log
     >>> from sympy.abc import x,y,z
@@ -167,14 +201,18 @@ Constantes symboliques
 
 Contrairement au module ``math`` de Python où le nombre pi est représenté par
 une approximation décimale, dans SymPy, le nombre pi est représenté
-symboliquement. C'est une **constante symbolique**::
+symboliquement. C'est une **constante symbolique**:
+
+.. code:: pycon
 
     >>> from sympy import pi
     >>> pi
     pi
 
 Cela permet de faire des calculs exacts. Par exemple, le sinus d'un angle de
-`\pi/3` est égal à la racine de trois sur deux::
+:
+
+.. code:: pycon
 
     >>> from sympy import sin, pi
     >>> sin(pi/3)
@@ -185,7 +223,9 @@ Cela permet de faire des calculs exacts. Par exemple, le sinus d'un angle de
 
 La fonction inverse du sinus aussi appelée arc sinus et représentée par la
 fonction ``asin`` dans SymPy peut retourner des expressions symboliques
-impliquant des constantes symboliques telles que le nombre `\pi`::
+impliquant des constantes symboliques telles que le nombre `\pi`:
+
+.. code:: pycon
 
     >>> from sympy import asin, Rational
     >>> asin(1)
@@ -197,7 +237,9 @@ impliquant des constantes symboliques telles que le nombre `\pi`::
     --
     6
 
-SymPy sait que les fonctions sinus et arc sinus sont inverses une de l'autre::
+SymPy sait que les fonctions sinus et arc sinus sont inverses une de l'autre:
+
+.. code:: pycon
 
     >>> from sympy.abc import x
     >>> sin(asin(x))
@@ -207,7 +249,9 @@ SymPy sait que les fonctions sinus et arc sinus sont inverses une de l'autre::
 
 La fonction ``sin`` du module ``math`` de Python ne peut pas être appelée sur
 des expressions symboliques, car elle assume que l'argument est un nombre réel
-(type float)::
+(type float):
+
+.. code:: pycon
 
     >>> from sympy.abc import 
     >>> from math import sin
@@ -219,7 +263,9 @@ des expressions symboliques, car elle assume que l'argument est un nombre réel
 Simplifier une expression
 -------------------------
 
-Les expressions ne sont pas toujours simplifiées::
+Les expressions ne sont pas toujours simplifiées:
+
+.. code:: pycon
 
     >>> from sympy import sin,cos
     >>> from sympy.abc import a
@@ -228,13 +274,17 @@ Les expressions ne sont pas toujours simplifiées::
     sin(a)**2 + cos(a)**2
 
 Pour simplifier une expression, on utilise la commande
-``simplify``::
+``simplify``:
+
+.. code:: pycon
 
     >>> from sympy import simplify
     >>> simplify(r)
     1
 
-Voici un autre exemple::
+Voici un autre exemple:
+
+.. code:: pycon
 
     >>> simplify((x**3 + x**2 - x - 1)/(x**2 + 2*x + 1))
     x - 1
@@ -257,7 +307,9 @@ http://docs.sympy.org/latest/tutorial/simplification.html
 Développer une expression
 -------------------------
 
-Pour développer une expression, on utilise la fonction ``expand``::
+Pour développer une expression, on utilise la fonction ``expand``:
+
+.. code:: pycon
 
     >>> from sympy import expand
     >>> from sympy.abc import a,b
@@ -266,7 +318,9 @@ Pour développer une expression, on utilise la fonction ``expand``::
     >>> expand((a + b)**2)
     a**2 + 2*a*b + b**2
 
-Cela peut mener à des simplifications::
+Cela peut mener à des simplifications:
+
+.. code:: pycon
 
     >>> (a + b)**2 - (a - b)**2
     -(a - b)**2 + (a + b)**2
@@ -284,7 +338,9 @@ Annuler les facteurs communs d'une fraction
 -------------------------------------------
 
 Pour annuler les facteurs communs dans une fonction rationnelle, on utilise
-``cancel``::
+``cancel``:
+
+.. code:: pycon
 
     >>> expr = (x**2 + x*y) / x
     >>> expr
@@ -297,21 +353,27 @@ Factoriser un polynôme
 ----------------------
 
 La fonction ``factor`` de SymPy permet de factoriser un polynôme en un produit
-de facteurs irréductibles sur l'anneau des nombres rationnels::
+de facteurs irréductibles sur l'anneau des nombres rationnels:
+
+.. code:: pycon
 
     >>> from sympy import factor
     >>> factor(x**3 - x**2 + x - 1)
     (x - 1)*(x**2 + 1)
 
 Pour factoriser le polynôme sur les nombres de Gauss (nombres complexes à
-parties imaginaire et réelle entières), on ajoute l'option ``gaussian=True``::
+parties imaginaire et réelle entières), on ajoute l'option ``gaussian=True``:
+
+.. code:: pycon
 
     >>> factor(x**3 - x**2 + x - 1, gaussian=True)
     (x - 1)*(x - I)*(x + I)
 
 Pour faire la factorisation sur une extension algébrique des nombres
 rationnels, il suffit de spéficifier un ou des nombres algébriques qui
-engendrent l'extension::
+engendrent l'extension:
+
+.. code:: pycon
 
     >>> factor(x**2 - 5)
     x**2 - 5
@@ -326,13 +388,17 @@ Rassembler les termes d'une expression
 --------------------------------------
 
 La fonction ``collect`` rassemble les puissances communes d'un terme dans une
-expression. Par exemple::
+expression. Par exemple:
+
+.. code:: pycon
 
     >>> expr = x*z + x**2 + x + x*y + x**2 * w + 5 - x**3
     >>> expr
     w*x**2 - x**3 + x**2 + x*y + x*z + x + 5
 
-On rassemble les termes selon les puissances de ``x``::
+On rassemble les termes selon les puissances de ``x``:
+
+.. code:: pycon
 
     >>> from sympy import collect
     >>> collect(expr, x)
@@ -341,12 +407,16 @@ On rassemble les termes selon les puissances de ``x``::
 Réduire au même dénominateur
 ----------------------------
 
-.. Pour cette section, on active l'affichage joli::
+.. Pour cette section, on active l'affichage joli:
+
+.. .. code:: pycon
 
 ..  >>> from sympy import init_printing
     >>> init_printing(pretty_print=True, use_unicode=False)
 
-Une somme de fonctions rationnelles reste sous forme de somme::
+Une somme de fonctions rationnelles reste sous forme de somme:
+
+.. code:: pycon
 
     >>> from sympy.abc import x,y,z
     >>> 1/(x+1) + 1/y + 1/z
@@ -354,7 +424,9 @@ Une somme de fonctions rationnelles reste sous forme de somme::
     ----- + - + -
     x + 1   z   y
 
-Pour la mettre au même dénominateur, on utilise ``ratsimp``::
+Pour la mettre au même dénominateur, on utilise ``ratsimp``:
+
+.. code:: pycon
 
     >>> from sympy import ratsimp
     >>> ratsimp(1/(x+1) + 1/y + 1/z)
@@ -364,7 +436,9 @@ Pour la mettre au même dénominateur, on utilise ``ratsimp``::
 
 Alternativement, on peut aussi utiliser la fonction ``together``. À la
 différence de ``ratsimp`` la fonction ``together`` préserve le plus possible
-les termes sous la forme initiale::
+les termes sous la forme initiale:
+
+.. code:: pycon
 
     >>> from sympy import together
     >>> together(1/(x+1) + 1/y + 1/z)
@@ -375,7 +449,9 @@ les termes sous la forme initiale::
 Décomposition en fractions partielles
 -------------------------------------
 
-Soit un fraction rationnelle::
+Soit un fraction rationnelle:
+
+.. code:: pycon
 
     >>> expr = (3*x**2  + 52*x - 265) / ((x - 7)*(x - 1)*(x + 34))
     >>> expr
@@ -385,7 +461,9 @@ Soit un fraction rationnelle::
     (x - 7)*(x - 1)*(x + 34)
 
 On peut la décomposer en somme de fractions rationnelles à l'aide de la
-fonction ``apart`` de SymPy::
+fonction ``apart`` de SymPy:
+
+.. code:: pycon
 
     >>> from sympy import apart
     >>> apart(expr)
@@ -397,7 +475,9 @@ Rationalisation du dénominateur d'une expression
 ------------------------------------------------
 
 Pour rationaliser le dénominateur d'un expression, on utilise la fonction
-``radsimp`` de SymPy::
+``radsimp`` de SymPy:
+
+.. code:: pycon
 
     >>> A = 1 / (1+sqrt(5))
     >>> A

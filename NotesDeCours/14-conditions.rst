@@ -4,7 +4,7 @@ Conditions ``if``
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
 
@@ -15,7 +15,9 @@ l'autoroute en voiture et que l'on peut faire le plein à la prochaine sortie.
 Est-ce qu'on prend la sortie ou est-ce qu'on reste sur l'autoroute? Supposons
 que la variable ``reservoir`` prend une valeur entre 0 et 1 et indique le
 pourcentage d'espace occupé par l'essence dans le réservoir. Une première façon
-de prendre la décision pourrait s'écrire en Python::
+de prendre la décision pourrait s'écrire en Python:
+
+.. code:: python
 
     if reservoir < 0.15:
         print('Prendre la sortie')
@@ -30,7 +32,9 @@ l'important est de comprendre comment on écrit une condition simple en Python.
 La forme ``if - else``
 ----------------------
 
-La forme générale est la suivante::
+La forme générale est la suivante:
+
+.. code:: python
 
     if <condition>:
         <code exécuté si la condition est satisfaite, i.e., True>
@@ -49,7 +53,9 @@ La forme ``if - elif - else``
 -----------------------------
 
 Parfois, il y a plusieurs cas à tester. Il est possible d'emboîter les
-conditions::
+conditions:
+
+.. code:: python
 
     if reservoir == 0:
         print("Panne d'essence")
@@ -62,7 +68,9 @@ conditions::
 Mais en Python, ce qui n'est pas le cas dans tous les langages de
 programmation, le ``else if`` s'écrit de façon abrégée ``elif`` ce qui permet
 de limiter l'indentation du code. On préférera donc écrire en Python le code
-ci-haut de la façon suivante::
+ci-haut de la façon suivante:
+
+.. code:: python
 
     if reservoir == 0:
         print("Panne d'essence")
@@ -76,7 +84,9 @@ La forme ``if`` seul
 
 La ligne ``elif`` ou la ligne ``else`` n'est pas obligatoire car parfois on ne
 veut rien faire si la condition n'est pas satisfaite. Dans ce cas, on écrit
-simplement::
+simplement:
+
+.. code:: python
 
     if reservoir == 0:
         print("Panne d'essence")
@@ -84,7 +94,9 @@ simplement::
 La forme ``if - elif - ... - elif - else``
 ------------------------------------------
 
-Il peut y avoir plusieurs lignes de ``elif``::
+Il peut y avoir plusieurs lignes de ``elif``:
+
+.. code:: python
 
     if temperature < 0:
         print("L'eau est solide")
@@ -106,7 +118,9 @@ Syntaxe compacte d'une assignation conditionnelle
 
 Parfois, on veut assigner à une variable une valeur qui dépend d'une condition.
 Par exemple, on veut calculer le minimum de deux valeurs. On peut utiliser une
-condition pour faire cette assignation::
+condition pour faire cette assignation:
+
+.. code:: pycon
 
     >>> x,y = 10, 6
     >>> if x < y:
@@ -117,7 +131,9 @@ condition pour faire cette assignation::
     >>> minimum
     6
 
-Python offre une syntaxe abrégée (inspirée du C) pour faire ceci::
+Python offre une syntaxe abrégée (inspirée du C) pour faire ceci:
+
+.. code:: pycon
 
     >>> minimum = x if x < y else y
     >>> minimum

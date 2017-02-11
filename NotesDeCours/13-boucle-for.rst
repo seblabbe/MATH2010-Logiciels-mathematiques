@@ -5,7 +5,7 @@ Boucle ``for``
 .. contents:: **Contenu**
    :local:
 
-::
+.. code:: pycon
 
     >>> from __future__ import division, print_function   # Python 3
     >>> from sympy import init_printing
@@ -36,7 +36,7 @@ moindre effort.
 .. image:: images/bart_simpson.jpg
    :width: 7cm
 
-::
+.. code:: pycon
 
     >>> for a in range(9):
     ...     print("I will not do anything bad ever again.")
@@ -54,7 +54,9 @@ La boucle ``for``
 -----------------
 
 La boucle for permet aussi de parcourir les éléments d'une liste, une chaîne
-de caractères ou en général de tout objet itérable::
+de caractères ou en général de tout objet itérable:
+
+.. code:: pycon
 
     >>> for a in [1,2,3,4]:
     ...     print(a + 100)
@@ -75,7 +77,9 @@ de caractères ou en général de tout objet itérable::
 En Python, une boucle ``for`` est identifiée par une ligne d'en-tête commançant
 par ``for`` se terminant par un deux-points ``:`` et avec la syntaxe ``for TRUC
 in MACHIN:``. La convention est de toujours utiliser 4 espaces pour indenter 
-les lignes du bloc d'instructions qui appartient à la boucle::
+les lignes du bloc d'instructions qui appartient à la boucle:
+
+.. code:: python
 
     for i in liste:                       # ligne d'en-tête
         <ligne 1 du bloc d'instruction>
@@ -93,7 +97,9 @@ Un exemple de boucle ``for`` avec Sympy
 
 Supposons que l'on désire factoriser le polynôme `x^k-1` pour toutes les
 valeurs de `k=1,...,9`. En SymPy, il est possible d'écrire onze fois le même
-calcul où on change la valeur de l'exposant `k` à chaque fois::
+calcul où on change la valeur de l'exposant `k` à chaque fois:
+
+.. code:: pycon
 
     >>> from sympy import factor
     >>> from sympy.abc import x
@@ -118,7 +124,9 @@ calcul où on change la valeur de l'exposant `k` à chaque fois::
 
 La boucle ``for`` permet répéter une action pour toutes les valeurs d'une
 liste. En utilisant une boucle ``for``, l'exemple ci-haut peut se réécrire plus
-facilement::
+facilement:
+
+.. code:: pycon
 
     >>> for k in range(1,12):
     ...     print(factor(x**k-1))
@@ -132,7 +140,9 @@ facilement::
     (x - 1)*(x + 1)*(x**2 + 1)*(x**4 + 1)
     (x - 1)*(x**2 + x + 1)*(x**6 + x**3 + 1)
 
-Pour différencier les lignes, il est possible d'afficher plus d'informations::
+Pour différencier les lignes, il est possible d'afficher plus d'informations:
+
+.. code:: pycon
 
     >>> from sympy import Eq
     >>> for k in range(2, 10):
@@ -152,7 +162,9 @@ Affectation d'une variable
 --------------------------
 
 Pour affecter une valeur dans une variable, on se rappelle que cela se fait
-en Python comme en C ou C++ ou Java avec la syntaxe::
+en Python comme en C ou C++ ou Java avec la syntaxe:
+
+.. code:: pycon
 
     >>> a = 5
 
@@ -167,7 +179,9 @@ premier. Cela produit une valeur. Ensuite, l'assignation est faite, de sorte
 que la variable sur le côté gauche se réfère maintenant à la nouvelle valeur.
 
 L'une des formes les plus courantes de l'affectation est une mise à jour,
-lorsque la nouvelle valeur de la variable dépend de son ancienne valeur::
+lorsque la nouvelle valeur de la variable dépend de son ancienne valeur:
+
+.. code:: pycon
 
     >>> n = 5
     >>> n = 3 * n + 1
@@ -177,7 +191,9 @@ ajouter un, et affecter la réponse à ``n``. Donc, après avoir exécuté les d
 lignes ci-dessus, ``n`` va pointer / se référer à l'entier ``16``.
 
 Si vous essayez d'obtenir la valeur d'une variable qui n'a jamais été
-attribuée, vous obtenez une erreur::
+attribuée, vous obtenez une erreur:
+
+.. code:: pycon
 
     >>> W = x + 1
     Traceback (most recent call last):
@@ -185,7 +201,9 @@ attribuée, vous obtenez une erreur::
     NameError: name 'x' is not defined
 
 Avant de pouvoir mettre à jour une variable, vous devez l'initialiser à une
-valeur de départ, habituellement avec une valeur simple::
+valeur de départ, habituellement avec une valeur simple:
+
+.. code:: pycon
 
     sous_total = 0
     sous_total = sous_total + 1
@@ -199,7 +217,9 @@ dans un nouvel espace en mémoire et ensuite cette nouvelle valeur est affectée
 à la variable ``sous_total``. Une façon plus efficace d'incrémenter une
 variable est de la modifier sans avoir à garder en mémoire un résultat partiel.
 En Python (comme en C), on peut incrémenter une variable avec l'opérateur
-``+=``. Donc, il suffit d'écrire::
+``+=``. Donc, il suffit d'écrire:
+
+.. code:: python
 
     sous_total += 1
 
@@ -207,7 +227,9 @@ Quelques exemples
 -----------------
 
 L'exemple suivant illustre comment calculer la somme des éléments d'une liste
-en utilisant une variable ``s`` initialisée à zéro avant la boucle::
+en utilisant une variable ``s`` initialisée à zéro avant la boucle:
+
+.. code:: pycon
 
     >>> L = [134, 13614, 73467, 1451, 134, 88]
     >>> s = 0
@@ -217,7 +239,9 @@ en utilisant une variable ``s`` initialisée à zéro avant la boucle::
     88888
 
 On écrit la même chose en utilisant le signe ``+=`` pour incrémenter la
-variable ``s``::
+variable ``s``:
+
+.. code:: pycon
 
     >>> s = 0
     >>> for a in L:
@@ -225,12 +249,16 @@ variable ``s``::
     >>> s
     88888
 
-On vérifie que le calcul est bon::
+On vérifie que le calcul est bon:
+
+.. code:: pycon
 
     >>> sum(L)
     88888
 
-L'exemple suivant double chacune des lettres d'une chaîne de caractères::
+L'exemple suivant double chacune des lettres d'une chaîne de caractères:
+
+.. code:: pycon
 
     >>> s = 'gaston'
     >>> t = ''
@@ -243,7 +271,9 @@ L'exemple suivant double chacune des lettres d'une chaîne de caractères::
 Lorsque la variable de la boucle n'est pas utilisée dans le bloc d'instruction
 la convention est d'utiliser la barre de soulignement (``_``) pour l'indiquer.
 Ici, on calcule les puissances du nombre 3. On remarque que l'expression
-d'assignation ``k *= 3`` est équivalente à ``k = k * 3``::
+d'assignation ``k *= 3`` est équivalente à ``k = k * 3``:
+
+.. code:: pycon
 
     >>> k = 1
     >>> for _ in range(10):
