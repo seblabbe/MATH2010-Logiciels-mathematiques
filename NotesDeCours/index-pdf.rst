@@ -4,6 +4,8 @@ MATH2010-1 Logiciels mathématiques
 
 .. |date| date:: %Y-%m-%d
 
+.. .. default-role:: math  # does not work!
+
 --------------
 Notes de cours
 --------------

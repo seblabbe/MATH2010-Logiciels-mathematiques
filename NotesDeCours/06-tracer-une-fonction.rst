@@ -21,8 +21,8 @@ faire des dessins. Pour activer l'affichage des graphiques dans Jupyter, on
 
 __ http://matplotlib.org/ 
 
-Tracer une fonction `\RR\to\RR`
--------------------------------
+Tracer une fonction `\mathbb{R}\to\mathbb{R}`
+---------------------------------------------
 
 On importe la fonction ``plot`` qui permet de dessiner des fonctions:
 
@@ -59,8 +59,8 @@ On trace une parabole de couleur rouge dans l'intervale `[-5, 5]` avec un titre:
 .. image:: images/youpi.png
    :width: 7cm
 
-Tracer plusieurs fonctions `\RR\to\RR`
---------------------------------------
+Tracer plusieurs fonctions `\mathbb{R}\to\mathbb{R}`
+----------------------------------------------------
 
 On trace plusieurs fonctions sur le même intervalle de la façon suivante.  Dans
 cet exemple, on a aussi spécifier une limite inférieure et supérieure pour
@@ -109,8 +109,8 @@ On affiche le graphe des trois fonctions:
 .. image:: images/x_x2_x3_colors.png
    :width: 6cm
 
-Tracer une fonction `\RR^2\to\RR`
----------------------------------
+Tracer une fonction `\mathbb{R}^2\to\mathbb{R}`
+-----------------------------------------------
 
 On importe la fonction ``plot3d`` du sous-module ``sympy.plotting``:
 
@@ -141,8 +141,8 @@ On trouvera d'autres exemples en consultant la documentation de ``plot?`` et
 ``plot3d?`` ou dans la section Plotting du tutoriel de Sympy:
 http://docs.sympy.org/latest/modules/plotting.html
 
-Dessiner une fonction `\RR\to\RR^2`
------------------------------------
+Dessiner une fonction `\mathbb{R}\to\mathbb{R}^2`
+-------------------------------------------------
 
 Dans cette section et les suivantes, on aura utilisera les fonctions et
 variables symboliques suivantes:
@@ -153,8 +153,8 @@ variables symboliques suivantes:
     >>> from sympy.abc import u, v
 
 La fonction ``plot_parametric`` permet de tracer des fonctions paramétrés
-`\RR\to\RR^2`. Par exemple, on trace la `courbe de Lissajous`__ lorsque
-`a=3` et `b=2`:
+`\mathbb{R}\to\mathbb{R}^2`. Par exemple, on trace la `courbe de Lissajous`__
+lorsque `a=3` et `b=2`:
 
 .. code:: pycon
 
@@ -167,8 +167,8 @@ La fonction ``plot_parametric`` permet de tracer des fonctions paramétrés
 __ https://en.wikipedia.org/wiki/Lissajous_curve
 
 
-Dessiner une fonction `\RR\to\RR^3`
------------------------------------
+Dessiner une fonction `\mathbb{R}\to\mathbb{R}^3`
+-------------------------------------------------
 
 La fonction ``plot3d_parametric_line`` permet de tracer des courbes dans
 l'espace 3d. Par exemple, on trace une hélice:
@@ -181,11 +181,11 @@ l'espace 3d. Par exemple, on trace une hélice:
 .. image:: images/helice.png
    :width: 8cm
 
-Dessiner une fonction `\RR^2\to\RR^3`
--------------------------------------
+Dessiner une fonction `\mathbb{R}^2\to\mathbb{R}^3`
+---------------------------------------------------
 
 La fonction ``plot3d_parametric_surface`` permet de tracer des surfaces
-dans `\RR^3`. Par exemple, on trace un tore:
+dans `\mathbb{R}^3`. Par exemple, on trace un tore:
 
 .. code:: pycon
 
@@ -226,8 +226,8 @@ On peut modifier les étendues des variables ``x`` et ``y`` de la façon suivant
 
     >>> plot_implicit(eq, (x,-2,5), (y,-5,3))
 
-Tracer une région de `\RR^2`
-----------------------------
+Tracer une région de `\mathbb{R}^2`
+-----------------------------------
 
 La fonction ``plot_implicit`` peut aussi servir à dessiner une région de points
 qui satisfont une inégalité:

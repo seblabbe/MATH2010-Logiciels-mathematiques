@@ -581,7 +581,7 @@ position où on veut l'insérer, le titre de la colonne et les données:
 En 1838, Dirichlet a contacté Gauss pour lui dire qu'il avait trouvé une
 meilleure approximation de la fontion `\pi(x)` en utilisant l'intégrale de
 l'inverse de la fonction `\log(x)`, c'est-à-dire par la fonction
-`Li(x)=\int_2^x {1\over\log(t)} dt`.
+`Li(x)=\int_2^x \frac{1}{\log(t)} dt`.
 
 En utilisant sympy, calculons les 1000 premières valeurs de `Li(x)` et
 ajoutons cette colonne dans le tableau:

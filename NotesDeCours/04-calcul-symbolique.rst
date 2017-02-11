@@ -66,8 +66,8 @@ utilisées du sous-module ``abc``:
     >>> a + a * a + epsilon
     a**2 + a + epsilon
 
-Définir les variables symboliques x_1, x_2, ..., x_n
-----------------------------------------------------
+Définir les variables symboliques `x_1`, `x_2`, ..., `x_n`
+----------------------------------------------------------
 
 En SymPy, on peut créer plusieurs variables `x_i` indicées pour `i=a,...,b-1` à
 l'aide de la fonction ``symbols("xa:b")`` où ``a`` et ``b`` sont remplacés par

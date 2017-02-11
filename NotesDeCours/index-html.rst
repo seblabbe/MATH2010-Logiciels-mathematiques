@@ -14,6 +14,8 @@ Copyright (c) 2016-2017 - Sébastien Labbé <sebastien POINT labbe A labri POINT
 
 .. |date| date:: %Y-%m-%d
 
+.. default-role:: math
+
 .. container:: title-logos
 
    .. image:: images/cc.large.png
