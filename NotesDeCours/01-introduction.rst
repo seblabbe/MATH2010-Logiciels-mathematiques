@@ -1,19 +1,13 @@
 Introduction
 ============
 
-Ces notes de cours sont rédigés en fonction du nouveau cours de logiciels
-mathématiques du programme de bachelier en sciences mathématiques de
-l'Université de Liège. Selon la `page du département`__,
+Selon la `page du département`__ de mathématiques de l'Université de Liège,
 
     *le nouveau cours de logiciels mathématiques a pour but de familiariser les
     étudiants à l'informatique, outil omniprésent en sciences, en entreprises
     ou encore pour l'enseignement.*
 
 __ http://www.math.ulg.ac.be/programme.html
-
-Donné en première année du bachelier et totalisant 10 heures d'enseignement
-théorique et 20 heures de pratique, il s'agit avant tout de donner un aperçu
-des possibilités offertes par les logiciels pour faire des mathématiques.
 
 L'environnement de travail proposé pour le cours de *Logiciel mathématiques*
 est l'environnement scientifique Python permettant d'atteindre les divers
@@ -42,11 +36,6 @@ __ http://try.jupyter.org/
 __ http://www.sympy.org/
 __ http://www.sagemath.org
 
-.. [Sage] Zimmermann, Paul, Laurent Fousse, François Maltey, Matthias
-   Meulien, Marc Mezzarobba, Clément Pernet, Nicolas M. Thiéry, et al. Calcul
-   mathématique avec Sage. S. l.: CreateSpace Independent Publishing Platform,
-   2013. http://sagebook.gforge.inria.fr/
-
 Jupyter et les outils que nous présenterons sont utilisés dans les grandes
 compagnies (Google, Microsoft, IBM, Nasa) et universités (Berkeley,
 Northwestern University, George Washington University). Elles sont aussi
@@ -68,7 +57,4 @@ __ http://www.geogebra.org/
 
 D'autre cours du même type sont disponibles en ligne tel que *Scientific
 Computing with Python* [Johansson]_.
-
-.. [Johansson] Robert Johansson, Lectures on Scientific Computing with Python,
-   https://github.com/jrjohansson/scientific-python-lectures
 

@@ -237,7 +237,9 @@ Calcul différentiel
 -------------------
 
 Pour dériver une ``fonction`` par rapport à une variable ``x``, on utilise la
-fonction ``diff`` de sympy avec la syntaxe ``diff(fonction, x)``:: 
+fonction ``diff`` de sympy avec la syntaxe ``diff(fonction, x)``:
+
+.. code:: pycon
 
     >>> from sympy import diff
 

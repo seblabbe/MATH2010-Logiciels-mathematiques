@@ -475,7 +475,9 @@ méthode ``head()``:
     4   False     2
 
 Pour afficher les cinq dernières lignes d'un tableau de données, on utilise la
-méthode ``tail()``:: 
+méthode ``tail()``:
+
+.. code:: pycon
 
     >>> df.tail()
         isprime  pi_x
@@ -972,7 +974,9 @@ série:
 
 Faisons maintenant un exemple au sujet de la météo de Ostende. Supposons qu'on
 s'intéresse à la température moyenne les jours de Noël à Ostende. D'abord, on
-crée une fonction qui teste si une date est bien le jour de Noël:: 
+crée une fonction qui teste si une date est bien le jour de Noël:
+
+.. code:: pycon
 
     >>> est_noel = lambda date:date.day==25 and date.month==12
 
@@ -1029,7 +1033,4 @@ modèles statistiques, des estimations et des tests statistiques.
 __ https://www.buzzfeed.com/news
 __ http://pandas.pydata.org/pandas-docs/stable/tutorials.html
 __ http://statsmodels.sourceforge.net/
-
-.. [TennisRacket] Methodology and code supporting the BuzzFeed News/BBC article,   "The Tennis Racket," published Jan. 17, 2016.
-   http://www.buzzfeed.com/heidiblake/the-tennis-racket
 

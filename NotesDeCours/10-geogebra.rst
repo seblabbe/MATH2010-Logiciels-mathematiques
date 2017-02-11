@@ -80,10 +80,6 @@ comprendre comment utiliser l'outil sélectionné. Sinon, on se référera à la
 `page wiki`__ qui décrit comment utiliser chacun des icônes ci-haut ou sinon
 aux chapitres 1 et 2 (pages 1 à 30) du Manuel d'introduction à GeoGebra [GeoGebra]_.
 
-.. [GeoGebra] Introduction à GeoGebra, Version 4.4,
-   traduction en français par Noël Lambert, novembre 2013,
-   http://static.geogebra.org/book/intro-fr.pdf
-
 __ https://www.geogebra.org/wiki/fr/Graphique
 
 .. Table des matières

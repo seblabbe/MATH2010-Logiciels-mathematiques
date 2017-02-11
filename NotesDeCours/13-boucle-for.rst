@@ -19,17 +19,6 @@ sujet. Le lecteur désirant en savoir plus sera invité à consulter les chapitr
 ou encore les chapitre 1 à 11 du livre en anglais de Wentworth et al. *How to
 Think Like a Computer Scientist - Learning with Python* [Thinklike]_.
 
-.. [Swinnen] Gérard Swinnen, Apprendre à programmer avec Python 3, 2012.
-   http://inforef.be/swi/download/apprendre_python3_5.pdf
-
-.. [Thinklike] Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris
-   Meyers, How to Think Like a Computer Scientist - Learning with Python, 3nd
-   Edition, 2012. http://openbookproject.net/thinkcs/python/english3e/
-
-.. [Massart] Thierry Massart, Syllabus du cours INFO-F-101 Programmation,
-   Université libre de Bruxelles, 2015-2016,
-   http://www.ulb.ac.be/di/verif/tmassart/Prog/html/
-
 Une boucle permet de faire des tâches répétitives sur un ordinateur avec un
 moindre effort.
 

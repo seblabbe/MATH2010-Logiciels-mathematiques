@@ -126,7 +126,7 @@ La syntaxe abrégée peut aussi être utilisée pour résoudre un système
 d'équations. Dans l'exemple qui suit, on calcule les points d'intersection
 d'une ellipse et d'une droite:
 
-::
+.. code:: pycon
 
     >>> solve( [x**2 + 4*y**2 -2, -10*x + 2*y -15], [x, y])
                 ____              ____                ____              ____
