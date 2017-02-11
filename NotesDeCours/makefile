@@ -17,7 +17,7 @@ rst2ipynb:
 
 html:
 	rst2html.py --link-stylesheet --cloak-email-addresses \
-                --toc-top-backlinks --stylesheet=book.css,math.css,pygments_manni.css \
+                --toc-top-backlinks --stylesheet=book.css,pygments_manni.css \
 				--stylesheet-dirs=. --syntax-highlight=short $(FILE)-html.rst $(FILE).html
 
 publish:
