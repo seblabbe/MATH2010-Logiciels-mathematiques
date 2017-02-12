@@ -5,7 +5,10 @@ Calculatrice et arithmétique avec Python
 .. contents:: **Contenu**
    :local:
 
-Dans cette section, nous assumons que la version de Python est la version 3:
+Dans cette section et dans toutes ces notes de cours, nous assumons que la
+version de Python est la version 3. Pour obtenir les mêmes résultats avec
+Python 2, il s'agit d'importer les nouveaux comportements pour la division et
+la fonction ``print`` de la façon suivante:
 
 .. code:: pycon
 

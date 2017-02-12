@@ -28,14 +28,14 @@ Notes de cours
 
    PageBreak oneColumn
 
-Ces notes de cours sont rédigées en fonction du nouveau cours de `MATH2010-1
+Ces notes de cours ont été rédigées à l'origine pour le cours de `MATH2010-1
 Logiciels mathématiques`__ introduit en 2015-2016 dans le programme de
-bachelier en sciences mathématiques de l'Université de Liège. 
-Donné en première année du bachelier et totalisant 10 heures d'enseignement
-théorique et 20 heures de pratique, il s'agit avant tout de donner un aperçu
-des possibilités offertes par les logiciels pour faire des mathématiques.
+bachelier en sciences mathématiques de l'Université de Liège.  Donné en
+première année du bachelier et totalisant 10 heures d'enseignement théorique et
+20 heures de pratique, il s'agit avant tout de donner un aperçu des
+possibilités offertes par les logiciels pour faire des mathématiques.
 
-Le cours se compose de trois parties:
+Le cours donné au printemps 2016 se composait de trois parties:
 
 **Partie 1: Utiliser un logiciel de mathématiques -- Jupyter, Python, SymPy (4h, 8h)**
   Calculatrice, arithmétique, algèbre, analyse, calcul symbolique, résolution
@@ -55,7 +55,7 @@ __ http://progcours.ulg.ac.be/cocoon/cours/MATH2010-1.html
 
 **Notes de cours (pdf):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours.pdf
 
-**Notes de cours (html):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours.html
+**Notes de cours (html):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours/
 
 **Sources sur Github:** https://github.com/seblabbe/MATH2010-Logiciels-mathematiques
 

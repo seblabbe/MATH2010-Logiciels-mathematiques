@@ -32,14 +32,14 @@ Copyright (c) 2016-2017 - Sébastien Labbé <sebastien POINT labbe A labri POINT
    :align: center
    :width: 12cm
 
-Ces notes de cours sont rédigées en fonction du nouveau cours de `MATH2010-1
+Ces notes de cours ont été rédigées à l'origine pour le cours de `MATH2010-1
 Logiciels mathématiques`__ introduit en 2015-2016 dans le programme de
-bachelier en sciences mathématiques de l'Université de Liège. 
-Donné en première année du bachelier et totalisant 10 heures d'enseignement
-théorique et 20 heures de pratique, il s'agit avant tout de donner un aperçu
-des possibilités offertes par les logiciels pour faire des mathématiques.
+bachelier en sciences mathématiques de l'Université de Liège.  Donné en
+première année du bachelier et totalisant 10 heures d'enseignement théorique et
+20 heures de pratique, il s'agit avant tout de donner un aperçu des
+possibilités offertes par les logiciels pour faire des mathématiques.
 
-Le cours se compose de trois parties:
+Le cours donné au printemps 2016 se composait de trois parties:
 
 **Partie 1: Utiliser un logiciel de mathématiques -- Jupyter, Python, SymPy (4h, 8h)**
   Calculatrice, arithmétique, algèbre, analyse, calcul symbolique, résolution
@@ -59,14 +59,14 @@ __ http://progcours.ulg.ac.be/cocoon/cours/MATH2010-1.html
 
 **Notes de cours (pdf):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours.pdf
 
-**Notes de cours (html):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours.html
+**Notes de cours (html):** http://www.slabbe.org/Enseignements/MATH2010/notesdecours/
 
 **Sources sur Github:** https://github.com/seblabbe/MATH2010-Logiciels-mathematiques
 
-**Remerciements:** Cette page web réutilise les fichiers CSS de l'excellent
-livre *From Python to Numpy* de Nicolas Rougier [Rougier]_ paru en janvier
-2017. J'ai utilisé les conseils__ de Steve George pour activer la coloration
-syntaxique dans les cellules de code Python de cette page.
+**Remerciements:** Cette page web réutilise les fichiers CSS du livre *From
+Python to Numpy* de Nicolas Rougier [Rougier]_ paru en janvier 2017. J'ai
+utilisé les conseils__ de Steve George pour activer la coloration syntaxique
+dans les cellules de code Python de cette page.
 
 __ http://www.futurile.net/2015/08/07/writing-highlighting-code-restructured-text/
 
