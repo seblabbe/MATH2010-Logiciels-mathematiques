@@ -20,6 +20,13 @@ html:
                 --toc-top-backlinks --stylesheet=book.css,pygments_manni.css \
 				--stylesheet-dirs=. --syntax-highlight=short $(FILE)-html.rst $(FILE).html
 
+# test also...
+# https://github.com/matthiaseisen/docutils-css
+html2:
+	rst2html.py --link-stylesheet --cloak-email-addresses \
+                --toc-top-backlinks --stylesheet=docutils_basic.css,pygments_manni.css \
+				--stylesheet-dirs=. --syntax-highlight=short $(FILE)-html.rst $(FILE)-v2.html
+
 publish:
 	cp index.pdf ~/GitBox/www/Enseignements/MATH2010/notesdecours.pdf
 	cp index.html ~/GitBox/www/Enseignements/MATH2010/notesdecours/
