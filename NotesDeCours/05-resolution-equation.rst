@@ -74,11 +74,10 @@ on obtient une erreur:
 
 .. code:: pycon
 
-    In [279]: solve(eq1, eq2)
+    >>> solve(eq1, eq2)
     Traceback (most recent call last):
     ...
-    TypeError: cannot determine truth value of
-    x - y == 33
+    TypeError: cannot determine truth value of x - y == 33
 
 Cela fonctionne aussi pour des systèmes d'équations non linéaires. Par exemple
 pour trouver deux nombres dont la somme est 47 et dont le produit est 510:

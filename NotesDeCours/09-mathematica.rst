@@ -201,7 +201,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 2 et 3: Calculatrice et arithmétique
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
@@ -234,7 +234,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 4: Calcul symbolique
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
@@ -257,7 +257,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 5: Résolution d'équations
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
@@ -272,7 +272,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 6: Tracer une fonction
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
@@ -293,7 +293,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 7: Calcul différentiel et intégral
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
@@ -310,7 +310,7 @@ comme ``?Factor`` ou sinon chercher des exemples sur internet.
 
 .. list-table:: Chapitre 8: Algèbre linéaire
    :header-rows: 1
-   :widths: 10 10
+   :widths: 15 15
 
    * - SymPy
      - Mathematica
