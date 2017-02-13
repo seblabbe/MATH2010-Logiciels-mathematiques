@@ -1,6 +1,6 @@
 .. ----------------------------------------------------------------------------
 .. :Author: Sébastien Labbé, Université de Liège
-.. :URL: http://www.slabbe.org/Enseignements/MATH2010/notesdecours.html
+.. :URL: http://www.slabbe.org/Enseignements/MATH2010/notesdecours/
 .. :Date: Janvier 2017
 .. :Licence: CC-SA-BY
 .. ----------------------------------------------------------------------------
@@ -63,8 +63,8 @@ __ http://progcours.ulg.ac.be/cocoon/cours/MATH2010-1.html
 
 **Sources sur Github:** https://github.com/seblabbe/MATH2010-Logiciels-mathematiques
 
-**Remerciements:** Cette page web réutilise les fichiers CSS du livre *From
-Python to Numpy* de Nicolas Rougier [Rougier]_ paru en janvier 2017. J'ai
+**Remerciements:** Cette page web réutilise le fichier ``book.css`` du livre
+*From Python to Numpy* de Nicolas Rougier [Rougier]_ paru en janvier 2017. J'ai
 utilisé les conseils__ de Steve George pour activer la coloration syntaxique
 dans les cellules de code Python de cette page.
 
