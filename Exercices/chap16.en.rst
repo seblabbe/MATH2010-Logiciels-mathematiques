@@ -32,7 +32,7 @@ What is the below program doing?
 Exercise 3
 ----------
 
-Using a ``while`` loop, write a function ``orbit\_product\_of\_digits(n)``
+Using a ``while`` loop, write a function ``orbit_product_of_digits(n)``
 which returns the list of successive iterations of the function which returns
 the product of digits, that is:
 
@@ -64,11 +64,7 @@ The Taylor series of `\sin(x)` is
     \sin x= \lim_{n\to\infty}\sum^{n}_{k=0} \frac{(-1)^k}{(2k+1)!} x^{2k+1} = x -
     \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
 
-Write a function
-
-``taylor\_sin(x)`` 
-
-which evaluates the Taylor series neglecting the terms of the sums that are
-less than `10^{-5}` in absolute value::
+Write a function ``taylor_sin(x)`` which evaluates the Taylor series neglecting
+the terms of the sums that are less than `10^{-5}` in absolute value::
 
     sage:

@@ -33,7 +33,7 @@ Exercice 3
 ----------
 
 En utilisant une boucle ``while``, écrire une fonction
-``orbite\_produit\_des\_chiffres(n)`` qui retourne la liste des itérations
+``orbite_produit_des_chiffres(n)`` qui retourne la liste des itérations
 successives de la fonction qui retourne le produit des chiffres:
 
 .. raw::
@@ -65,7 +65,7 @@ La série de Taylor de `\sin(x)` est
     \sin x= \lim_{n\to\infty}\sum^{n}_{k=0} \frac{(-1)^k}{(2k+1)!} x^{2k+1} = x -
     \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
 
-Écrire une fonction ``taylor\_sin(x)`` qui évalue la série de Taylor en
+Écrire une fonction ``taylor_sin(x)`` qui évalue la série de Taylor en
 négligeant les termes de la somme qui sont inférieurs à `10^{-5}` en valeur
 absolue::
 

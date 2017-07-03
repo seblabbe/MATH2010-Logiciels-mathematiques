@@ -13,7 +13,7 @@ Exercice 2
 ----------
 
 Le nombre 6 est un nombre *parfait*, car il est égal à la somme de ses
-diviseurs propres: `6=1+2+3`. Écrire une fonction ``est\_parfait(n)`` qui
+diviseurs propres: `6=1+2+3`. Écrire une fonction ``est_parfait(n)`` qui
 retourne vrai ou faux selon que le nombre ``n`` est parfait::
 
     sage:
@@ -86,17 +86,17 @@ Reconnaissez-vous la suite qui apparaît ?::
 
     sage:
 
-Exercice 7
+Exercice 8
 ----------
 
 Trouver un nombre `n` tel que `2013 \times n` ne s'écrit qu'avec des « `1` »::
 
     sage:
 
-Exercice 8: Conjecture de Goldbach
+Exercice 9: Conjecture de Goldbach
 ----------------------------------
 
-Écrire une fonction ``est\_premier(n)`` qui renvoie ``True`` si `n` est premier
+Écrire une fonction ``est_premier(n)`` qui renvoie ``True`` si `n` est premier
 et ``False`` sinon::
 
     sage:
@@ -110,7 +110,7 @@ Jusqu'à quelle valeur de `n` arrivez-vous vérifier la conjecture ?::
 
     sage:
 
-Exercice 9
+Exercice 10
 -----------
 
 On pose un grain de blé sur la première case d'un échiquier (`64` cases), puis
@@ -121,7 +121,7 @@ mondiale de riz par an est de `738` millions de tonnes par an (2012).)::
 
     sage:
 
-Exercice 10
+Exercice 11
 -----------
 
 Le nombre `2520` est le plus petit nombre divisible par `1, 2, 3, \ldots, 10`.
@@ -129,7 +129,7 @@ Quel est le plus petit nombre divisible par `1, 2, 3, \ldots, 20`?::
 
     sage:
 
-Exercice 11
+Exercice 12
 -----------
 
 La somme des chiffres de `2^{15} = 32768` est égale à `3 + 2 + 7 + 6 + 8 = 26`.
@@ -137,8 +137,8 @@ Quelle est la somme des chiffres de `2^{1000}` ?::
 
     sage:
 
-Exercice 12
-----------
+Exercice 13
+-----------
 
 Résoudre les premiers problèmes de https://projecteuler.net/archives::
 
