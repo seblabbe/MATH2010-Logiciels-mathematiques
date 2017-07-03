@@ -4,7 +4,7 @@ Boucle ``while``
 Exercice 1
 ----------
 
-Écire une boucle ``while`` qui affiche les nombre de 0 à 20 en ordre croissant
+Écrire une boucle ``while`` qui affiche les nombre de 0 à 20 en ordre croissant
 sans utiliser l'instruction ``if``::
 
     sage:

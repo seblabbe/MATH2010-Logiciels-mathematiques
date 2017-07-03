@@ -96,7 +96,7 @@ Trouver un nombre `n` tel que `2013 \times n` ne s'écrit qu'avec des « `1` »:
 Exercice 8: Conjecture de Goldbach
 ----------------------------------
 
-Écrire une fonction ```est\_premier``(n)` qui renvoie ``True`` si `n` est premier
+Écrire une fonction ``est\_premier(n)`` qui renvoie ``True`` si `n` est premier
 et ``False`` sinon::
 
     sage:
