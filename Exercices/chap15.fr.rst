@@ -1,0 +1,59 @@
+Fonctions ``def``
+=================
+
+Exercice 1
+----------
+
+Écrire une fonction qui calcule le périmètre et l'aire d’un triangle quelconque
+dont l'utilisateur fournit les 3 côtés.
+(Rappel : l'aire d’un triangle quelconque se calcule à l'aide de la formule
+`\sqrt{d(d-a)(d-b)(d-c)}` dans laquelle `d` désigne la longueur du
+demi-périmètre, et `a`, `b`, `c` celles des trois côtés.)::
+
+    sage:
+
+Exercice 2
+----------
+
+La durée d'ensoleillement `D(\beta, d)` à un lieu donné sur la terre est donné par
+la formule
+
+.. MATH::
+
+    D(\beta,d) = 24 - \frac{24}{\pi}\arccos\left( \tan \beta \cdot
+    \tan\left(\arcsin\left(\sin(\kappa)\cdot \sin\left(\frac{2\pi}{365}d
+    \right)\right)\right)\right)
+
+où `\kappa=\frac{23,44}{180}\pi` est l'inclinaison de la terre en radians,
+`d\in[0,365]` est le nombre de jours après l'équinoxe du printemps et
+`\beta\in[-\pi/2,\pi/2]` est la lattitude du lieu considéré.
+Écrire en Python et en important les fonctions nécessaires du module
+``math`` la fonction ``D(beta, d)``::
+
+    sage: 
+
+Construire la liste des durées d'ensoleillement à Liège pour les 31 jours du
+mois de mai 2016::
+
+    sage:
+
+.. http://maths-au-quotidien.fr/lycee/duree.pdf
+.. >>> D = 24 - S(24)/pi*acos(tan(beta)*tan(asin(sin(kappa)*sin(pi*S(2)/365*d))))
+.. >>> DD = 24 - S(24)/pi*acos(tan(beta)*tan(alpha))
+
+Exercice 3
+----------
+
+Soit la suite `u_{n+1}= \frac{1}{1+u_n^2}` avec `u_0=0`.
+Écrire une fonction ``U(n)`` qui retourne la valeur de `u_n`. Calculer `u_{20}`::
+
+    sage:
+
+Exercice 4
+----------
+
+Écrire une fonction ``produit\_des\_chiffres(n)`` qui retourne le produit
+des chiffres de `n` écrit en base 10::
+
+    sage:
+
