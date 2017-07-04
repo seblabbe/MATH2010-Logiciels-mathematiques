@@ -14,15 +14,14 @@ Write a small script that generates all these names from the two following strin
 
 If you use instruction ``for ... in ...``, the code should contain only two lines::
 
-    sage:
+    sage: # edit here
 
 Exercise 2
 ----------
 
-Write a for loop that shows this:
+Write a for loop that shows this::
 
-.. raw::
-
+    sage: # something
     +++++
     ++++++++
     +++++++++++
@@ -33,7 +32,7 @@ Write a for loop that shows this:
 
 ::
 
-    sage:
+    sage: # edit here
 
 Exercise 3
 ----------
@@ -49,7 +48,7 @@ two lists alternating them in such a way that each Month is followed by the
 corresponding number of days, that is, ``['Janvier',31,'Février',28,'Mars',31,
 etc...]``::
 
-    sage:
+    sage: # edit here
 
 Exercise 4
 ----------
@@ -64,22 +63,22 @@ An integral can be computed as a limit of a Riemann sum:
 Write a for loop which computes the above Riemann sum for values of `n=10, 100,
 1000, 10000`::
 
-    sage:
+    sage: # edit here
 
 How many digits after the decimal are correct?::
 
-    sage:
+    sage: # edit here
 
 How is this number of digits evolves when `n` is multiplied by 10?::
 
-    sage:
+    sage: # edit here
 
 Exercise 5
 ----------
 
 Write a for loop which prints the factorization for each integer from 1 to 100::
 
-    sage:
+    sage: # edit here
 
 Exercise 6
 ----------
@@ -87,7 +86,7 @@ Exercise 6
 Write a for loop which prints the derivates of the functions `f_n(x)=x^n` for
 all values of `n` from 1 to 20::
 
-    sage:
+    sage: # edit here
 
 Exercise 7
 ----------
@@ -95,7 +94,7 @@ Exercise 7
 Write a for loop which prints the primitive of the functions `\sin(x)`,
 `\cos(x)`, `\tan(x)`, `\log(x)`, `\exp(x)`, `\sinh(x)` and `\cosh(x)`::
 
-    sage:
+    sage: # edit here
 
 Exercise 8
 ----------
@@ -103,9 +102,12 @@ Exercise 8
 Define a square matrix `A` of your choice. Write a for loop which prints the
 first 10 powers of the matrix `A`. How are the coefficients behaving?::
 
-    sage:
+    sage: # edit here
 
-Some of the exericises below are from the book of (Gérard Swinnen, `Apprendre à
+Reference
+---------
+
+Some of the exercises here are from the book of (Gérard Swinnen, `Apprendre à
 programmer avec Python 3`__, 2012) that you are invited to consult to learn
 more.
 

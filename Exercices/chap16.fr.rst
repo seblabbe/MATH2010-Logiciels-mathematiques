@@ -7,18 +7,16 @@ Exercice 1
 Écrire une boucle ``while`` qui affiche les nombre de 0 à 20 en ordre croissant
 sans utiliser l'instruction ``if``::
 
-    sage:
+    sage: # edit here
 
 Même question mais en ordre décroissant::
 
-    sage:
+    sage: # edit here
 
 Exercice 2
 ----------
 
-Que fait le programme suivant?
-
-.. raw::
+Que fait le programme suivant?::
 
     a, b, c = 1, 1, 1
     while c < 11 :
@@ -27,31 +25,27 @@ Que fait le programme suivant?
 
 ::
 
-    sage:
+    sage: # edit here
 
 Exercice 3
 ----------
 
 En utilisant une boucle ``while``, écrire une fonction
 ``orbite_produit_des_chiffres(n)`` qui retourne la liste des itérations
-successives de la fonction qui retourne le produit des chiffres:
+successives de la fonction qui retourne le produit des chiffres: ``[n,
+produit_des_chiffres(n), produit_des_chiffres(produit_des_chiffres(n)), ...,
+z]`` jusqu'à ce qu'un nombre calculé ``z`` s'écrive avec un seul chiffre::
 
-.. raw::
-
-    [n, produit_des_chiffres(n), produit_des_chiffres(produit_des_chiffres(n)), ..., z]
-
-jusqu'à ce qu'un nombre calculé ``z`` s'écrive avec un seul chiffre::
-
-    sage:
+    sage: # edit here
 
 Pouvez-vous trouver un nombre `n` dont la longueur de l'orbite est plus grande
 que 5?::
 
-    sage:
+    sage: # edit here
 
 plus grande que 10?::
 
-    sage:
+    sage: # edit here
 
 ..  Conjecture: `f^k(n)` atteint un nombre < 10 en moins de k=11 iterations
 
@@ -69,4 +63,4 @@ La série de Taylor de `\sin(x)` est
 négligeant les termes de la somme qui sont inférieurs à `10^{-5}` en valeur
 absolue::
 
-    sage:
+    sage: # edit here

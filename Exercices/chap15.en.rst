@@ -7,7 +7,7 @@ Exercise 1
 Write a function computing the area of a triangle from the length of the three
 sides::
 
-    sage:
+    sage: # edit here
 
 Exercise 2
 ----------
@@ -26,12 +26,12 @@ where `\kappa=\frac{23.44}{180}\pi` is the inclination of the eart in radian,
 `\beta\in[-\pi/2,\pi/2]` is the latitude of the place in question.
 Write the function ``D(beta, d)``::
 
-    sage: 
+    sage: # edit here
 
-Construct the lsit of duration of sunshine in Marseille for the 31 days of the
+Construct the list of duration of sunshine in Marseille for the 31 days of the
 month of July 2017::
 
-    sage:
+    sage: # edit here
 
 .. http://maths-au-quotidien.fr/lycee/duree.pdf
 .. >>> D = 24 - S(24)/pi*acos(tan(beta)*tan(asin(sin(kappa)*sin(pi*S(2)/365*d))))
@@ -43,13 +43,13 @@ Exercise 3
 Let the sequence `u_{n+1}= \frac{1}{1+u_n^2}` with `u_0=0`.  Write a function
 ``U(n)`` which returns the value of `u_n`. Compute `u_{20}`::
 
-    sage:
+    sage: # edit here
 
 Exercise 4
 ----------
 
-Write a function ``product\_of\_digits(n)`` which returns the product of the
+Write a function ``product_of_digits(n)`` which returns the product of the
 digits of `n` written in base `10`::
 
-    sage:
+    sage: # edit here
 

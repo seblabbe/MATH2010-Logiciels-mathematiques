@@ -23,7 +23,7 @@ tous les éléments des deux listes en les alternant, de telle manière
 que chaque nom de mois soit suivi du nombre de jours correspondant :
 ``['Janvier',31,'Février',28,'Mars',31, etc...]``::
 
-    sage:
+    sage: # edit here
 
 Exercice 2
 ----------
@@ -38,15 +38,14 @@ génère tous ces noms à partir des deux chaînes suivantes::
 Si vous utilisez une instruction ``for ... in ...``, votre script ne devrait
 comporter que deux lignes::
 
-    sage:
+    sage: # edit here
 
 Exercice 3
 ----------
 
-Écrire une boucle qui affiche ceci:
+Écrire une boucle qui affiche ceci::
 
-.. raw::
-
+    sage: # quelque chose
     +++++
     ++++++++
     +++++++++++
@@ -57,8 +56,7 @@ Exercice 3
 
 ::
 
-    sage:
-
+    sage: # edit here
 
 Exercice 4
 ----------
@@ -73,15 +71,15 @@ Une intégrale peut se calculer comme la limite d'une somme de Riemann:
 Écrire une boucle qui calcule la somme de Riemann ci-dessus pour les
 valeurs de `n=10, 100, 1000, 10000`::
 
-    sage:
+    sage: # edit here
 
 Combien de chiffres après la virgule sont corrects? ::
 
-    sage:
+    sage: # edit here
 
 Comment ce nombre de chiffres évolue lorsque `n` est multiplié par 10?::
 
-    sage:
+    sage: # edit here
 
 Pour les prochains exercices, vous pouvez utiliser SymPy.
 
@@ -91,7 +89,7 @@ Exercice 5
 Écrire une boucle qui affiche la factorisation de tous les entiers de 1 à
 100::
 
-    sage:
+    sage: # edit here
 
 Exercice 6
 ----------
@@ -99,7 +97,7 @@ Exercice 6
 Écrire une boucle qui affiche la dérivée des fonctions `f_n(x)=x^n` pour
 toutes les valeurs de `n` de 1 à 20::
 
-    sage:
+    sage: # edit here
 
 Exercice 7
 ----------
@@ -107,7 +105,7 @@ Exercice 7
 Écrire une boucle qui affiche la primitive des fonctions `\sin(x)`,
 `\cos(x)`, `\tan(x)`, `\log(x)`, `\exp(x)`, `\sinh(x)` et `\cosh(x)`::
 
-    sage:
+    sage: # edit here
 
 Exercice 8
 ----------
@@ -116,6 +114,6 @@ Définir une matrice carrée `A` de votre choix. Écrire une boucle qui
 affiche les 10 premières puissances de la matrice `A`. Comment se
 comportent les coefficients?::
 
-    sage:
+    sage: # edit here
 
 

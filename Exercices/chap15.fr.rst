@@ -10,7 +10,7 @@ dont l'utilisateur fournit les 3 côtés.
 `\sqrt{d(d-a)(d-b)(d-c)}` dans laquelle `d` désigne la longueur du
 demi-périmètre, et `a`, `b`, `c` celles des trois côtés.)::
 
-    sage:
+    sage: # edit here
 
 Exercice 2
 ----------
@@ -30,12 +30,12 @@ où `\kappa=\frac{23,44}{180}\pi` est l'inclinaison de la terre en radians,
 Écrire en Python et en important les fonctions nécessaires du module
 ``math`` la fonction ``D(beta, d)``::
 
-    sage: 
+    sage: # edit here
 
 Construire la liste des durées d'ensoleillement à Liège pour les 31 jours du
 mois de mai 2016::
 
-    sage:
+    sage: # edit here
 
 .. http://maths-au-quotidien.fr/lycee/duree.pdf
 .. >>> D = 24 - S(24)/pi*acos(tan(beta)*tan(asin(sin(kappa)*sin(pi*S(2)/365*d))))
@@ -47,13 +47,13 @@ Exercice 3
 Soit la suite `u_{n+1}= \frac{1}{1+u_n^2}` avec `u_0=0`.
 Écrire une fonction ``U(n)`` qui retourne la valeur de `u_n`. Calculer `u_{20}`::
 
-    sage:
+    sage: # edit here
 
 Exercice 4
 ----------
 
-Écrire une fonction ``produit\_des\_chiffres(n)`` qui retourne le produit
+Écrire une fonction ``produit_des_chiffres(n)`` qui retourne le produit
 des chiffres de `n` écrit en base 10::
 
-    sage:
+    sage: # edit here
 
